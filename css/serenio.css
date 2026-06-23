@@ -1,0 +1,658 @@
+/* =========================================================================
+   Serenio — "Living Porcelain" design system (marketing site)
+   Tokens mirror the product (docs/serenio-design-spec.md + globals.css) so the
+   site and the app feel like one living system. Light-only, warm, calm.
+   ========================================================================= */
+
+@font-face {
+  font-family: "Glitten";
+  src: url("/fonts/glitten.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Core surfaces & ink (Living Porcelain) --- */
+  --canvas: #faf7f2;
+  --canvas-lilac: #f4eff6;
+  --surface: #fffcf8;
+  --surface-lilac: #ede7f3;
+  --ink: #2e2938;
+  --ink-muted: #6f6878;
+  --ink-faint: #918a98;
+
+  /* --- Brand violet family --- */
+  --plum: #59477f;
+  --plum-deep: #463663;
+  --violet: #8875b4;
+  --violet-original: #756b9e;
+  --violet-bright: #7652d6;
+  --lavender: #c8b9de;
+  --sage: #a7cfbe;
+  --mint-pale: #ddede5;
+  --rose-mist: #e8c8ce;
+  --amber-mist: #e8d29f;
+  --danger: #a94e62;
+
+  /* --- Emotional mesh anchors --- */
+  --mesh-grounded: #a7cfbe;
+  --mesh-hopeful: #d8c8ea;
+  --mesh-reflective: #8e78b6;
+  --mesh-heavy: #59477f;
+  --mesh-tender: #e7c5cf;
+  --mesh-activated: #d8b66c;
+  /* active fields (calm/reflective porcelain default) */
+  --mesh-1: var(--mesh-reflective);
+  --mesh-2: var(--mesh-grounded);
+  --mesh-3: var(--mesh-hopeful);
+  --mesh-4: var(--mesh-tender);
+
+  /* --- Type --- */
+  --font-display: "Glitten", "Iowan Old Style", Georgia, "Songti TC", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-tc: "PingFang TC", "PingFang HK", "Noto Sans TC", "Microsoft JhengHei",
+    sans-serif;
+  --font-ja: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Noto Sans JP", sans-serif;
+  --font-ko: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  /* fluid type scale (mobile -> desktop shell) */
+  --text-wordmark: clamp(3.25rem, 2.4rem + 4.2vw, 5rem);
+  --text-display: clamp(2.35rem, 1.7rem + 3.2vw, 3.6rem);
+  --text-h1: clamp(1.95rem, 1.5rem + 2vw, 2.7rem);
+  --text-h2: clamp(1.5rem, 1.25rem + 1.1vw, 1.95rem);
+  --text-h3: clamp(1.18rem, 1.07rem + 0.5vw, 1.35rem);
+  --text-body-lg: clamp(1.05rem, 1rem + 0.25vw, 1.18rem);
+  --text-body: 1rem;
+  --text-label: 0.8125rem;
+  --text-caption: 0.75rem;
+
+  /* spacing zones */
+  --gutter: clamp(1.25rem, 1rem + 2vw, 2.5rem);
+  --section-y: clamp(4.5rem, 3.5rem + 5vw, 9rem);
+  --max-shell: 1180px;
+  --max-read: 65ch;
+
+  /* shape */
+  --r-panel: 28px;
+  --r-media: 24px;
+  --r-control: 14px;
+  --r-pill: 999px;
+
+  /* elevation — violet-tinted, upper-left light */
+  --shadow-float: 0 24px 70px rgba(73, 55, 101, 0.12),
+    0 4px 16px rgba(73, 55, 101, 0.06);
+  --shadow-soft: 0 12px 34px rgba(73, 55, 101, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  --shadow-control: 0 7px 20px rgba(73, 55, 101, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  --ring-highlight: rgba(255, 255, 255, 0.65);
+
+  /* motion */
+  --ease-press: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-entry: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-screen: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-press: 120ms;
+  --dur-control: 220ms;
+  --dur-panel: 420ms;
+
+  color-scheme: light;
+}
+
+/* =========================================================================
+   Reset & base
+   ========================================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* language-driven CJK stacks + generous leading */
+:lang(zh-Hant),
+:lang(zh) {
+  font-family: var(--font-tc);
+  line-height: 1.72;
+}
+:lang(ja) {
+  font-family: var(--font-ja);
+  line-height: 1.75;
+}
+:lang(ko) {
+  font-family: var(--font-ko);
+  line-height: 1.74;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+::selection {
+  background: rgba(118, 82, 214, 0.16);
+}
+
+:focus-visible {
+  outline: 3px solid var(--violet-bright);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  transform: translateX(-50%);
+  z-index: 200;
+  padding: 0.7rem 1.2rem;
+  background: var(--plum);
+  color: #fff;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-float);
+  transition: top var(--dur-control) var(--ease-entry);
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* =========================================================================
+   Type utilities
+   ========================================================================= */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-wordmark);
+  line-height: 0.94;
+  letter-spacing: 0.2em;
+  color: var(--plum);
+  padding-left: 0.2em; /* optical correction for tracking */
+}
+.wordmark--hero {
+  font-size: clamp(2.2rem, 1.6rem + 2.6vw, 3.3rem);
+  letter-spacing: 0.18em;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.eyebrow {
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--violet);
+}
+:lang(ja) .eyebrow,
+:lang(ko) .eyebrow,
+:lang(zh-Hant) .eyebrow {
+  letter-spacing: 0.08em;
+}
+h1.section-title,
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+h3 {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  line-height: 1.25;
+}
+.lead {
+  font-size: var(--text-body-lg);
+  color: var(--ink-muted);
+  max-width: var(--max-read);
+  line-height: 1.6;
+}
+.muted {
+  color: var(--ink-muted);
+}
+.faint {
+  color: var(--ink-faint);
+}
+
+/* =========================================================================
+   Layout primitives
+   ========================================================================= */
+.shell {
+  width: 100%;
+  max-width: var(--max-shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section {
+  padding-block: var(--section-y);
+  position: relative;
+}
+.section--tight {
+  padding-block: clamp(3rem, 2.4rem + 3vw, 5rem);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+/* =========================================================================
+   Living mesh (atmosphere as interface)
+   ========================================================================= */
+.mesh {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--canvas);
+  contain: paint;
+  z-index: 0;
+}
+.mesh__blob {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(46px);
+  opacity: 0.42;
+  will-change: transform;
+  transform: translateZ(0);
+  animation: meshDrift ease-in-out infinite;
+}
+.mesh__blob--1 {
+  width: 72%;
+  aspect-ratio: 1;
+  top: -10%;
+  left: -8%;
+  background: radial-gradient(circle at 50% 50%, var(--mesh-1), transparent 66%);
+  animation-duration: 34s;
+}
+.mesh__blob--2 {
+  width: 78%;
+  aspect-ratio: 1;
+  top: 44%;
+  left: 38%;
+  background: radial-gradient(circle at 50% 50%, var(--mesh-2), transparent 66%);
+  animation-duration: 38s;
+  animation-delay: -18s;
+}
+.mesh__blob--3 {
+  width: 64%;
+  aspect-ratio: 1;
+  top: -12%;
+  left: 52%;
+  background: radial-gradient(circle at 50% 50%, var(--mesh-3), transparent 66%);
+  animation-duration: 42s;
+  animation-delay: -9s;
+}
+.mesh__well {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    58% 48% at 50% 38%,
+    rgba(255, 252, 248, 0.94),
+    rgba(255, 252, 248, 0) 72%
+  );
+}
+.mesh__base {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(250, 247, 242, 0.6), transparent);
+}
+.mesh--chromatic .mesh__blob {
+  opacity: 0.58;
+  filter: blur(40px);
+}
+@keyframes meshDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(3%, -2%, 0) scale(1.06);
+  }
+  66% {
+    transform: translate3d(-2%, 2%, 0) scale(1.03);
+  }
+}
+
+/* restrained film grain */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* =========================================================================
+   小癒 orb — abstract breathing glass (not a face)
+   ========================================================================= */
+.orb {
+  position: relative;
+  width: var(--orb-size, 132px);
+  height: var(--orb-size, 132px);
+  flex: none;
+}
+.orb__glow {
+  position: absolute;
+  inset: -28%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(142, 120, 182, 0.4), transparent 68%);
+  filter: blur(18px);
+  animation: orbGlow 4.2s ease-in-out infinite;
+}
+.orb__body {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: radial-gradient(120% 120% at 30% 24%, #fbf8fc 0%, transparent 42%),
+    radial-gradient(90% 90% at 68% 74%, #8e78b6 0%, transparent 70%),
+    radial-gradient(circle at 50% 50%, #c8b9de 0%, #8e78b6 78%);
+  box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.65),
+    inset 0 -10px 24px rgba(73, 55, 101, 0.22), 0 14px 34px rgba(73, 55, 101, 0.2);
+  animation: orbBreath 4.2s ease-in-out infinite;
+}
+.orb__swirl {
+  position: absolute;
+  inset: -20%;
+  mix-blend-mode: screen;
+  filter: blur(4px);
+  background: radial-gradient(40% 30% at 38% 40%, #fbf8fc 0%, transparent 60%),
+    radial-gradient(36% 26% at 64% 62%, #8e78b6 0%, transparent 58%);
+  animation: orbSwirl 13s ease-in-out infinite;
+}
+.orb__spec {
+  position: absolute;
+  top: 14%;
+  left: 20%;
+  width: 34%;
+  height: 24%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.92), transparent 70%);
+  filter: blur(2px);
+}
+@keyframes orbBreath {
+  0%,
+  100% {
+    transform: scale(0.985);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+@keyframes orbGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+@keyframes orbSwirl {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(-4%);
+  }
+  33% {
+    transform: rotate(14deg) translateX(4%);
+  }
+  66% {
+    transform: rotate(-8deg) translateX(-2%);
+  }
+}
+
+/* =========================================================================
+   Porcelain surface
+   ========================================================================= */
+.porcelain {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 252, 248, 0.92),
+    rgba(255, 252, 248, 0.8)
+  );
+  border: 1px solid var(--ring-highlight);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-soft);
+  -webkit-backdrop-filter: blur(20px) saturate(1.05);
+  backdrop-filter: blur(20px) saturate(1.05);
+}
+
+/* =========================================================================
+   Buttons
+   ========================================================================= */
+.btn {
+  --btn-bg: var(--plum);
+  --btn-fg: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  min-height: 52px;
+  padding: 0 1.6rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: var(--text-body);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: transform var(--dur-press) var(--ease-press),
+    box-shadow var(--dur-control) var(--ease-entry),
+    background-color var(--dur-control) var(--ease-entry);
+}
+.btn svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+.btn--primary {
+  background: linear-gradient(150deg, #6a559a, #59477f 60%, #4b3a6e);
+  box-shadow: 0 14px 30px -12px rgba(89, 71, 127, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -12px rgba(89, 71, 127, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn--secondary {
+  background: rgba(255, 252, 248, 0.85);
+  color: var(--plum);
+  border-color: var(--ring-highlight);
+  box-shadow: var(--shadow-control);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+.btn--secondary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(136, 117, 180, 0.5);
+  box-shadow: 0 12px 28px -10px rgba(89, 71, 127, 0.34);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--plum);
+  min-height: 44px;
+  padding: 0 0.4rem;
+  font-weight: 600;
+}
+.btn--ghost::after {
+  content: "";
+  width: 1.1em;
+  height: 1.1em;
+  background: currentColor;
+  -webkit-mask: var(--arrow) center / contain no-repeat;
+  mask: var(--arrow) center / contain no-repeat;
+  --arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+  transition: transform var(--dur-control) var(--ease-entry);
+}
+.btn--ghost:hover::after {
+  transform: translateX(4px);
+}
+.btn--lg {
+  min-height: 58px;
+  padding: 0 2rem;
+  font-size: var(--text-body-lg);
+}
+.btn:active {
+  transform: scale(0.975);
+}
+.btn--block {
+  width: 100%;
+}
+
+/* line icon glyph inside CTAs */
+.glyph-line {
+  width: 1.2em;
+  height: 1.2em;
+  fill: currentColor;
+}
+
+/* =========================================================================
+   Emotion chips
+   ========================================================================= */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.45em 0.95em;
+  border-radius: var(--r-pill);
+  background: rgba(255, 252, 248, 0.7);
+  border: 1px solid var(--ring-highlight);
+  box-shadow: var(--shadow-control);
+  font-size: var(--text-label);
+  font-weight: 600;
+  color: var(--plum);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.chip__dot {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 999px;
+  background: var(--chip-dot, var(--violet));
+}
+
+/* =========================================================================
+   Scroll reveal
+   ========================================================================= */
+/* Reveal only hides content when JS is present (html.js). Without JS, or if the
+   observer never fires, content stays fully visible. */
+.reveal {
+  opacity: 1;
+}
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--dur-panel) var(--ease-entry),
+    transform var(--dur-panel) var(--ease-entry);
+}
+html.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal[data-delay="1"] {
+  transition-delay: 80ms;
+}
+.reveal[data-delay="2"] {
+  transition-delay: 160ms;
+}
+.reveal[data-delay="3"] {
+  transition-delay: 240ms;
+}
+
+/* =========================================================================
+   Reduced motion / transparency
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .mesh__blob,
+  .orb__body,
+  .orb__glow,
+  .orb__swirl {
+    animation: none !important;
+  }
+  html.js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  * {
+    transition-duration: 0.12s !important;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .porcelain,
+  .chip,
+  .btn--secondary,
+  .nav,
+  [class*="backdrop"] {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background-color: rgba(255, 252, 248, 0.98) !important;
+  }
+}

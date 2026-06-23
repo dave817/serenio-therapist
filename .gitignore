@@ -1,0 +1,11 @@
+# Agent / skill tooling (installed via `npx skills add`, not site content)
+.agents/
+.claude/
+skills-lock.json
+
+# Dependencies & build noise
+node_modules/
+
+# OS / editor
+.DS_Store
+*.log

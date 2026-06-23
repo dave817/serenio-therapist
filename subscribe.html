@@ -1,13 +1,213 @@
-<!DOCTYPE html><!-- Handled by Exflow.site --><html data-wf-page="655bd5bdf51b8c3a30aa3309" data-wf-site="644b589aa284dc50b85a3a9e" data-wf-status="1"><head><meta charset="utf-8"/><title>Subscribe</title><meta content="Subscribe" property="og:title"/><meta content="Subscribe" property="twitter:title"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Webflow" name="generator"/><link href="css/serenio-therapist.webflow.shared.c742b0cc6.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:300,regular,500"]  }});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="images/favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="images/app-icon.png" rel="apple-touch-icon"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('set', 'developer_id.dZGVlNj', true);gtag('config', 'G-G69RR3LCQG');</script><link rel="alternate" hreflang="tw" href="https://www.serenio.ai">
-<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-<script>
-    Weglot.initialize({
-        api_key: 'wg_1e8a27db8baf150e5999725ac357278d3'
-    });
-</script><script>
-const urlParams = new URLSearchParams(window.location.search);
+<!DOCTYPE html>
+<html lang="en" data-page-title="meta.title.pricing">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Membership · Serenio</title>
+    <meta name="description" content="Serenio is a humane AI companion for reflective, emotionally safe conversations." />
+    <meta name="theme-color" content="#faf7f2" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/app-icon.png" />
+    <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/serenio.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <script>
+      (function () {
+        try {
+          var m = { en: "en", "zh-Hant": "zh-Hant", ja: "ja", ko: "ko" };
+          var s = localStorage.getItem("serenio.lang");
+          var l;
+          if (s && m[s]) l = m[s];
+          else {
+            var n = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
+            l = n.indexOf("zh") === 0 ? "zh-Hant" : n.indexOf("ja") === 0 ? "ja" : n.indexOf("ko") === 0 ? "ko" : "en";
+          }
+          document.documentElement.classList.add("js");
+          document.documentElement.lang = l;
+        } catch (e) {}
+      })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-G69RR3LCQG");
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="nav.home">Home</a>
 
-const token = urlParams.get("token");
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="/" aria-label="Serenio">
+          <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
+          <span class="brand__word">SERENIO</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
+          <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
+          <a class="nav__link" href="/subscribe" data-route="/subscribe" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang" data-lang-switch data-open="false">
+            <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+              <span class="lang__short">EN</span>
+            </button>
+            <ul class="lang__menu" role="menu"></ul>
+          </div>
+          <a class="btn btn--primary" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.try">Try Serenio free</a>
+        </div>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </header>
+    <div class="nav__drawer">
+      <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
+      <a class="nav__link" href="/subscribe" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
+      <a class="btn btn--primary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.try">Try Serenio free</a>
+      <a class="btn btn--secondary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+    </div>
 
-console.log("token:", token);
-</script></head><body><div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav"><div class="container w-container"><a href="/" class="brand-link w-inline-block"><img src="images/frame-2015011.png" loading="lazy" sizes="159.8333282470703px" srcset="images/frame-2015011-p-500.png 500w, images/frame-2015011.png 666w" alt="" class="image"/></a><nav role="navigation" class="w-nav-menu"><a href="/" class="w-nav-link">主頁</a><a href="/contact.html" class="w-nav-link">聯絡我們</a><a href="/privacy-policy.html" class="w-nav-link">隱私政策</a><a href="/terms-of-service.html" class="w-nav-link">法律條款</a><a href="/subscribe.html" aria-current="page" class="nav-link-6 w-nav-link w--current">常見問題</a></nav><div class="w-nav-button"><div class="w-icon-nav-menu"></div></div></div></div><div class="_01"><div class="w-container"><h1 class="heading-12">我們的<strong>願景</strong></h1><p class="paragraph">在Serenio，我們提供人性化的人工智慧情感陪伴，以支持每個人應對焦慮、憂鬱、壓力和人際互動問題。我們的目標是提供長期、穩定的心理陪伴，與深刻的個人自我洞察。在您感到脆弱時提供溫暖的支援，並在您對內心感到迷惑時，提供專屬於您的洞見。</p><h1 class="heading-12">公司背景<br/></h1><p class="paragraph">Serenio 結合了商業、資訊工程、心理、人機互動等不同領域的專業領域人才，我們來自香港、台灣、加拿大，專注於科技與心理的結合。Serenio是我們為處於高壓環境中的人們打造的第一款產品，希望能提供有效和溫暖人心的情感支持。</p><h1 class="heading-12"><strong>訂閱價格</strong><br/></h1><p class="paragraph">每月台幣199元正，無任何額外和隱藏收費。<br/></p><h1 class="heading-12"><strong>訂閱的好處</strong><br/></h1><div><div class="w-layout-grid grid-3"><div id="w-node-_1383063e-03c4-c966-52f3-c88211cb48cf-30aa3309"></div><div id="w-node-_2ab983ff-fea2-406f-84e2-0254e2b501bf-30aa3309" class="text-block-5"><strong>進階模式</strong></div><div id="w-node-febe0904-8363-3052-0ff6-2e37c203e997-30aa3309" class="text-block-6"><strong>免費模式</strong></div><div id="w-node-ccc70ddb-f993-e183-06a5-09c80ca16b44-30aa3309" class="text-block-7"><strong>聊天數量</strong></div><div id="w-node-_495b582e-ab5e-b17c-8427-989fee96e822-30aa3309" class="text-block-8">無限</div><div id="w-node-_83540303-9477-db4a-3cab-7e9155c61bc5-30aa3309" class="text-block-9">每24小時10則</div><div id="w-node-dd0beb16-ca43-7383-38c8-42a7645a0c77-30aa3309" class="text-block-10"><strong>長期記憶</strong></div><div id="w-node-_361b1f2b-a9de-580e-aebc-0fb5f8592d23-30aa3309">卓越</div><div id="w-node-dc272f10-b707-9047-4a3f-432e95b3c15f-30aa3309">無</div><div id="w-node-_489172bf-4eb1-7cda-0f12-705162a81fb9-30aa3309" class="text-block-11"><strong>個性洞察報告</strong></div><div id="w-node-_3d30bd51-2e1c-fcac-60ab-3166678874c3-30aa3309" class="text-block-12">有提供</div><div id="w-node-_8ce5b534-3e81-c5e2-9bf5-cd0931a5bbff-30aa3309">無</div></div></div></div><h1 class="heading-12">FAQ <strong>常見問題</strong><br/></h1><div class="text-block"><strong>我可以在免費模式和進階模式之間切換嗎？<br/><br/></strong>可以，您可以隨時升級到進階模式，和隨時換回到免費模式，換回到免費模式之後將不會收取您下個月的月費，請您放心。<strong><br/>‍</strong></div><div class="text-block-2"><strong>人工智慧如何理解和應對複雜的情緒？<br/>‍<br/></strong>我們的人工智慧採用先進的演算法，能夠理解和應對各種情緒狀態，提供個人化支援。<strong><br/>‍</strong></div><div class="text-block-3"><strong>Serenio適合解決嚴重的心理健康問題嗎？<br/><br/></strong>雖然Serenio可以為焦慮、憂鬱和壓力提供日常支持，但對於嚴重的心理健康問題，還是應該尋求專業人士，如醫師、心理師的幫助。<strong>‍</strong><strong>‍</strong></div></div><div class="footer"><div class="w-container"><div class="w-row"><div class="spc w-col w-col-9"><h5 class="heading-18">關於SERENIO (思癒科技有限公司)</h5><p class="paragraph-16">Serenio (思癒科技有限公司) 專注於運用AI提供日常情緒陪伴與建議。藉由流暢的 AI 聊天活動，進行思緒的整理與紓壓，並可更進一步洞察語言背後的情緒，促進自我覺察，並隨著 AI 技術的進化，提供更貼近人心、更深度的陪伴及洞見服務。<br/><br/>Serenio 於 2023 年 5 月初創於丹麥，2023 年 7 月公司於香港正式設立。我們的合作對象包含丹麥科技大學 Technical University of Denmark、Beyond Beta 新創孵化器、MICRO GRANT 丹麥創業基金、Accelerace 歐洲新創加速器等知名新創學界及產業界組織。</p></div></div></div></div><div class="footer center"><div class="container-10 w-container"><div class="footer-text">Copyright SERENIO @ 2024 (思癒科技有限公司)<br/></div><a href="/privacy-policy.html" class="link-2">隱私政策</a><a href="/terms-of-service.html" class="link-3">法律條款</a><a href="/subscribe.html" aria-current="page" class="link-8 w--current">版本比較</a></div></div><script src="js/jquery.js?site=644b589aa284dc50b85a3a9e" type="text/javascript"  ></script><script src="js/webflow.schunk.d97efad01808426c.js" type="text/javascript"></script><script src="js/webflow-script-2.js" type="text/javascript"></script></body></html>
+    <main id="main">
+      <header class="page-head">
+        <div class="mesh" aria-hidden="true">
+          <div class="mesh__blob mesh__blob--1"></div>
+          <div class="mesh__blob mesh__blob--3"></div>
+          <div class="mesh__well"></div>
+        </div>
+        <div class="shell page-head__inner">
+          <p class="eyebrow" data-i18n="sub.head.title">Membership</p>
+          <h1 data-i18n="sub.head.title">Membership</h1>
+          <p data-i18n="sub.head.sub">Start free on LINE, or go deeper with the full web app.</p>
+        </div>
+      </header>
+
+      <!-- vision + company -->
+      <section class="section section--tight">
+        <div class="shell">
+          <div class="value-grid">
+            <article class="value-card reveal">
+              <h3 data-i18n="vision.title">Our vision</h3>
+              <p data-i18n="vision.body">At Serenio, we offer humane AI emotional companionship.</p>
+            </article>
+            <article class="value-card reveal" data-delay="1">
+              <h3 data-i18n="company.title">Who we are</h3>
+              <p data-i18n="company.body">Serenio brings together people across Hong Kong, Taiwan and Canada.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- pricing -->
+      <section class="section section--tight">
+        <div class="shell">
+          <div class="section-head reveal">
+            <h2 class="section-title" data-i18n="pricing.title">Two ways to begin</h2>
+          </div>
+          <div class="pricing">
+            <article class="plan reveal">
+              <span class="plan__tag" data-i18n="plan.free.tag">On LINE</span>
+              <h3 data-i18n="plan.free.name">Companion</h3>
+              <div class="plan__price"><span class="amount" data-i18n="plan.free.price">Free</span></div>
+              <ul class="plan__features">
+                <li data-i18n="plan.free.f1">Warm, always-available conversation</li>
+                <li data-i18n="plan.free.f2">Listener, analyst and creative modes</li>
+                <li data-i18n="plan.free.f3">Right inside LINE, no new app to install</li>
+              </ul>
+              <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
+            </article>
+
+            <article class="plan plan--featured reveal" data-delay="1">
+              <span class="plan__tag" data-i18n="plan.plus.tag">Web app</span>
+              <h3 data-i18n="plan.plus.name">Serenio Plus</h3>
+              <div class="plan__price">
+                <span class="amount" data-i18n="plan.plus.amount">NT$199</span>
+                <span class="per" data-i18n="plan.plus.per">/ month</span>
+              </div>
+              <p class="faint" style="margin:-0.6rem 0 1.2rem;font-size:var(--text-label)" data-i18n="plan.plus.note">No add-ons, no hidden fees.</p>
+              <ul class="plan__features">
+                <li data-i18n="plan.plus.f1">Everything in Companion</li>
+                <li data-i18n="plan.plus.f2">Deeper emotion insight and patterns</li>
+                <li data-i18n="plan.plus.f3">Voice reflections and journaling</li>
+                <li data-i18n="plan.plus.f4">Letters that remember your story</li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="shell">
+          <div class="section-head reveal">
+            <h2 class="section-title" data-i18n="faq.title">Common questions</h2>
+          </div>
+          <div class="faq reveal">
+            <details>
+              <summary data-i18n="faq.q1">Is Serenio a replacement for therapy?</summary>
+              <p data-i18n="faq.a1">No. Serenio is a mental-health companion, not a medical provider.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q2">Who can use Serenio?</summary>
+              <p data-i18n="faq.a2">The web app service is intended for people aged 18 and over.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q3">Are my conversations private?</summary>
+              <p data-i18n="faq.a3">Yes. We don't share your conversations unless you agree.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q4">What languages does Serenio speak?</summary>
+              <p data-i18n="faq.a4">English, Traditional Chinese, Japanese and Korean.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q5">How much does it cost?</summary>
+              <p data-i18n="faq.a5">Trying Serenio on LINE is free. Serenio Plus is NT$199 per month.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <div class="footer__inner">
+          <div class="footer__about">
+            <a class="brand" href="/" aria-label="Serenio">
+              <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
+              <span class="brand__word">SERENIO</span>
+            </a>
+            <p data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+          </div>
+          <div class="footer__col">
+            <h4 data-i18n="footer.product">Product</h4>
+            <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+            <a href="/subscribe" data-i18n="nav.pricing">Membership</a>
+            <a href="/subscribe#faq" data-i18n="nav.faq">FAQ</a>
+          </div>
+          <div class="footer__col">
+            <h4 data-i18n="footer.company">Company</h4>
+            <a href="/#about" data-i18n="nav.about">About</a>
+            <a href="/contact" data-i18n="nav.contact">Contact</a>
+            <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
+            <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span data-i18n="footer.rights">© 2025 Serenio AI Limited. All rights reserved.</span>
+          <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/i18n.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
