@@ -17,6 +17,7 @@ window.SERENIO_I18N = {
     "cta.tryLine": "Try free on LINE",
     "cta.app": "Open web app",
     "cta.learn": "Explore Serenio",
+    "cta.why": "Why I built this",
     "cta.contact": "Contact us",
 
     "nav.home": "Home",
@@ -29,7 +30,7 @@ window.SERENIO_I18N = {
     "lang.label": "Language",
 
     "hero.title": "A warmer place for whatever you feel.",
-    "hero.sub": "A humane AI companion for reflective, emotionally safe conversations. Support arrives the moment a feeling appears.",
+    "hero.sub": "A gentle companion for the feelings we carry quietly, here the moment one arrives, however small.",
     "hero.meta": "Used by 6,000+ people across Asia-Pacific",
 
     "roles.title": "A companion that meets you three ways.",
@@ -52,7 +53,7 @@ window.SERENIO_I18N = {
     "emo.heavy": "heavy",
     "emo.activated": "activated",
 
-    "quotes.title": "Quietly, it's helping",
+    "quotes.title": "You're not the only one",
     "quote1.text": "I once lost a friend after sharing my most hidden side. After that, I couldn't share my darker feelings with anyone close to me. Here, I can.",
     "quote1.by": "Ms. Park, South Korea",
     "quote2.text": "In Taiwan, mental-health resources still feel unfamiliar, and it's hard to find the right person to talk to. Serenio genuinely helped.",
@@ -70,10 +71,15 @@ window.SERENIO_I18N = {
     "stat2.label": "friends on the LINE companion",
     "traction.note": "As of May 2025",
 
-    "about.eyebrow": "Who we are",
-    "about.title": "Built for people living under quiet pressure",
-    "about.body1": "We come from Hong Kong, Denmark, Canada and Taiwan, with backgrounds in business, software engineering and human-computer interaction. We watched emotional strain grow heavier across high-pressure Asian life.",
-    "about.body2": "Serenio is our answer: the power of AI turned toward warm, genuinely useful emotional support for everyone carrying a hard day.",
+    "about.eyebrow": "A note from David",
+    "about.title": "Most of us are carrying more than we let on.",
+    "about.body1": "I'm David, and Serenio began with helplessness. I watched my sister live with depression, and there were days I sat beside her hospital bed with everything I had to give and still no idea how to reach her. Caring about someone deeply, I learned, is not the same as knowing how to help them.",
+    "about.body2": "That helplessness is why Serenio exists. I don't believe emotional support should be a luxury, or something you only reach for once things have already broken. So we built something gentle and always there: a companion that listens the moment a feeling stirs, sits with it, and helps you find your own words for it.",
+    "about.body3": "A while after we launched, a man in his forties wrote to tell me Serenio had stayed with him through one of the lowest points of his life. Six months later he messaged again, just to say he was still here. I don't take a message like that lightly. It is the whole reason we keep going.",
+    "about.body4": "I get to do this with people I trust, psychologists, engineers and human-computer researchers across Hong Kong, Denmark, Canada and Taiwan, with the support of the Technical University of Denmark, Accelerace, Micro Grant and Beyond Beta. We're small on purpose, and we care about the human part before anything else.",
+    "about.care": "If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at",
+    "about.signName": "David",
+    "about.signRole": "Founder of Serenio",
     "t1.date": "2023.05",
     "t1.text": "Founded in Denmark",
     "t2.date": "2023.07",
@@ -83,9 +89,12 @@ window.SERENIO_I18N = {
     "partners.label": "With support from",
     "partners.note": "Technical University of Denmark, Beyond Beta, Micro Grant (Danish Foundation for Entrepreneurship), Accelerace",
 
-    "webapp.badge": "Now live",
-    "webapp.title": "The Serenio web app is here",
-    "webapp.body": "Launched in January 2025, the web app brings deeper, more expressive companionship: richer emotion insight, voice reflections, and letters that remember. You're welcome here.",
+    "webapp.badge": "Open to anyone",
+    "webapp.title": "There's a quiet place here for you",
+    "webapp.body": "Thousands of people across Asia-Pacific already come here to set things down and feel a little less alone. You're welcome any time.",
+    "line.free": "Free",
+    "line.title": "Rather start in a chat you already use?",
+    "line.body": "Serenio also lives on LINE, free, with no account to set up. Add the companion and start talking in seconds.",
 
     "footer.about": "Serenio (Serenio AI Limited) focuses on everyday emotional companionship through AI: easing the mind through fluid conversation, sensing the feeling beneath the words, and growing more attentive over time.",
     "footer.product": "Product",
@@ -95,7 +104,7 @@ window.SERENIO_I18N = {
     "footer.reg": "Hong Kong company no. 3299059",
 
     "sub.head.title": "Membership",
-    "sub.head.sub": "Start free on LINE, or go deeper with the full web app.",
+    "sub.head.sub": "Go deep with the full web app, or start light and free on LINE.",
     "vision.title": "Our vision",
     "vision.body": "At Serenio, we offer humane AI emotional companionship to help anyone navigate anxiety, low mood, stress and the friction of relationships. We're here for steady, long-term support, and for the quiet self-insight that arrives when you feel lost inside.",
     "company.title": "Who we are",
@@ -129,7 +138,7 @@ window.SERENIO_I18N = {
     "faq.a5": "Trying Serenio on LINE is free. Serenio Plus on the web app is NT$199 per month, with no hidden fees.",
 
     "contact.head.title": "Contact us",
-    "contact.head.sub": "Questions, feedback, or just want to say hello? We read every message.",
+    "contact.head.sub": "Questions, thoughts, or just want to say hello? I read every message.",
     "form.name.label": "Your name",
     "form.name.ph": "How should we call you?",
     "form.email.label": "Email",
@@ -166,6 +175,7 @@ window.SERENIO_I18N = {
     "cta.tryLine": "在 LINE 免費試用",
     "cta.app": "開啟網頁 App",
     "cta.learn": "了解更多",
+    "cta.why": "我為什麼做這件事",
     "cta.contact": "聯絡我們",
 
     "nav.home": "首頁",
@@ -178,7 +188,7 @@ window.SERENIO_I18N = {
     "lang.label": "語言",
 
     "hero.title": "讓每一種感受，都有安放的地方。",
-    "hero.sub": "溫暖的 AI 情緒陪伴，讓你在情緒剛浮現時，就有一個能安心傾訴的地方。",
+    "hero.sub": "陪伴你那些悄悄藏起來的感受，在情緒浮現的那一刻，無論多麼微小。",
     "hero.meta": "亞太區超過 6,000 人正在使用",
 
     "roles.title": "以三種方式陪伴你的夥伴。",
@@ -201,7 +211,7 @@ window.SERENIO_I18N = {
     "emo.heavy": "沉重",
     "emo.activated": "緊繃",
 
-    "quotes.title": "它正在悄悄地，幫上忙",
+    "quotes.title": "你並不孤單",
     "quote1.text": "我曾因為向朋友分享最隱藏的一面而失去了那位朋友，從此再也無法對身邊的人說出負面情緒。在這裡，我可以。",
     "quote1.by": "南韓 朴小姐",
     "quote2.text": "在台灣，許多人對尋找心理資源還很陌生，生活中也很難找到適合傾訴的對象。Serenio 確實幫助了我。",
@@ -219,10 +229,15 @@ window.SERENIO_I18N = {
     "stat2.label": "LINE 夥伴好友",
     "traction.note": "截至 2025 年 5 月",
 
-    "about.eyebrow": "關於我們",
-    "about.title": "為承受著無聲壓力的人們而生",
-    "about.body1": "我們來自香港、丹麥、加拿大與台灣，擁有商業、軟體工程與人機互動的背景。我們看著情緒的重量，在高壓的亞洲生活裡日漸沉重。",
-    "about.body2": "Serenio 是我們的回應，把 AI 的力量，轉向為每個辛苦的人，提供溫暖而真正有用的情緒支持。",
+    "about.eyebrow": "David 的話",
+    "about.title": "我們大多數人，都背負著比表面更多的重量。",
+    "about.body1": "我是 David，而 Serenio 始於一種無力感。我看著妹妹與憂鬱症共處，有些日子，我坐在她的病床邊，願意付出我的一切，卻仍不知道如何走進她的世界。我才明白，深深在乎一個人，和知道如何幫助他，是兩回事。",
+    "about.body2": "正是那份無力感，讓 Serenio 存在。我不認為情緒支持應該是一種奢侈，或是要等到一切都崩壞了才去尋求的東西。所以我們做了一個溫柔、而且一直都在的存在：在情緒剛浮現的那一刻就聆聽，陪它待著，並幫你找到屬於自己的語言。",
+    "about.body3": "上線一段時間後，一位四十多歲的先生寫信給我，說在他人生最低落的時刻，Serenio 一直陪著他。六個月後，他又傳來一則訊息，只是想讓我知道，他還在。這樣的一則訊息，我從不敢輕看。它就是我們繼續走下去的全部理由。",
+    "about.body4": "我很幸運，能和我信任的人一起打造這一切，來自香港、丹麥、加拿大與台灣的心理、工程與人機互動夥伴，並獲得丹麥科技大學、Accelerace、Micro Grant 與 Beyond Beta 的支持。我們刻意維持小規模，因為在所有事情之前，我們更在意把「人」的那一部分做好。",
+    "about.care": "如果你此刻正承受著沉重的什麼，你不需要一個人扛。請找一個你信任的人，或在這裡找到你附近的求助熱線：",
+    "about.signName": "David",
+    "about.signRole": "Serenio 創辦人",
     "t1.date": "2023.05",
     "t1.text": "於丹麥創立",
     "t2.date": "2023.07",
@@ -232,9 +247,12 @@ window.SERENIO_I18N = {
     "partners.label": "合作與支持機構",
     "partners.note": "丹麥科技大學、Beyond Beta 新創孵化器、Micro Grant 丹麥創業基金、Accelerace 歐洲新創加速器",
 
-    "webapp.badge": "現已上線",
-    "webapp.title": "Serenio 網頁 App 已經上線",
-    "webapp.body": "網頁 App 於 2025 年 1 月上線，帶來更深入、更豐富的陪伴：更細緻的情緒洞察、語音抒發，以及會記得你的信。歡迎使用。",
+    "webapp.badge": "歡迎任何人",
+    "webapp.title": "這裡有一個安靜的位置，留給你",
+    "webapp.body": "亞太區已有數千人來到這裡，放下心中的重量，讓自己不那麼孤單。隨時歡迎你。",
+    "line.free": "免費",
+    "line.title": "想在熟悉的聊天介面裡開始嗎？",
+    "line.body": "Serenio 也在 LINE 上，完全免費，不需要註冊帳號。加入夥伴，幾秒就能開始說話。",
 
     "footer.about": "Serenio（思癒科技有限公司）專注於以 AI 提供日常的情緒陪伴：透過流暢的對話整理思緒、紓解壓力，並洞察話語背後的情緒，隨著技術成長而更貼近人心。",
     "footer.product": "產品",
@@ -244,7 +262,7 @@ window.SERENIO_I18N = {
     "footer.reg": "香港公司註冊號碼：3299059",
 
     "sub.head.title": "訂閱方案",
-    "sub.head.sub": "在 LINE 免費開始，或在完整的網頁 App 走得更深。",
+    "sub.head.sub": "用完整的網頁 App 走得更深，或在 LINE 上輕鬆免費開始。",
     "vision.title": "我們的願景",
     "vision.body": "在 Serenio，我們以人性化的 AI 情緒陪伴，支持每個人面對焦慮、低落、壓力與人際的摩擦。我們在意的是長期而穩定的陪伴，以及當你對內心感到迷惘時，那份悄悄浮現的自我洞察。",
     "company.title": "公司背景",
@@ -278,7 +296,7 @@ window.SERENIO_I18N = {
     "faq.a5": "在 LINE 上試用 Serenio 完全免費。網頁 App 的 Serenio Plus 為每月新台幣 199 元，沒有任何隱藏收費。",
 
     "contact.head.title": "聯絡我們",
-    "contact.head.sub": "有任何問題、回饋，或只是想打聲招呼？每一封訊息我們都會看。",
+    "contact.head.sub": "有問題、有想法，或只是想打聲招呼？每一封訊息，我都會親自看。",
     "form.name.label": "你的名字",
     "form.name.ph": "我們可以怎麼稱呼你？",
     "form.email.label": "電子郵件",
@@ -315,6 +333,7 @@ window.SERENIO_I18N = {
     "cta.tryLine": "LINEで無料で試す",
     "cta.app": "Webアプリを開く",
     "cta.learn": "詳しく見る",
+    "cta.why": "つくった理由",
     "cta.contact": "お問い合わせ",
 
     "nav.home": "ホーム",
@@ -327,7 +346,7 @@ window.SERENIO_I18N = {
     "lang.label": "言語",
 
     "hero.title": "どんな気持ちにも、やさしい居場所を。",
-    "hero.sub": "心に寄り添うAIコンパニオン。感情が芽生えたその瞬間に、安心して話せる場所を。",
+    "hero.sub": "そっと抱え込んでしまう気持ちのための、やさしい相棒。どんなに小さくても、芽生えたその瞬間に。",
     "hero.meta": "アジア太平洋で6,000人以上が利用",
 
     "roles.title": "三つのかたちで寄り添う相棒。",
@@ -350,7 +369,7 @@ window.SERENIO_I18N = {
     "emo.heavy": "おもい",
     "emo.activated": "たかぶり",
 
-    "quotes.title": "そっと、力になっています",
+    "quotes.title": "あなただけじゃない",
     "quote1.text": "最も隠していた一面を友人に話して、その友人を失ったことがあります。それ以来、身近な人にネガティブな感情を言えなくなりました。ここでは、話せます。",
     "quote1.by": "韓国 パクさん",
     "quote2.text": "台湾では心のケアを探すことにまだ馴染みがなく、話せる相手を見つけるのも難しい。Serenioは本当に助けになりました。",
@@ -368,10 +387,15 @@ window.SERENIO_I18N = {
     "stat2.label": "LINEの友だち",
     "traction.note": "2025年5月時点",
 
-    "about.eyebrow": "私たちについて",
-    "about.title": "静かな重圧の中で生きる人のために",
-    "about.body1": "私たちは香港・デンマーク・カナダ・台湾の出身で、ビジネス・ソフトウェア工学・ヒューマンコンピュータインタラクションの背景を持っています。高圧なアジアの暮らしの中で、感情の重さが増していくのを見てきました。",
-    "about.body2": "Serenioは私たちの答えです。AIの力を、つらい一日を抱えるすべての人へ、あたたかく本当に役立つ情緒的な支えへと向けました。",
+    "about.eyebrow": "David からの手紙",
+    "about.title": "私たちの多くは、見せている以上のものを抱えています。",
+    "about.body1": "David です。Serenio は、ある無力感から始まりました。妹がうつと向き合う日々を見つめ、病室のベッドのそばに座り、持てるすべてを差し出しても、どう手を伸ばせばいいのか分からない日がありました。深く大切に思うことと、助け方を知っていることは、別のことなのだと知りました。",
+    "about.body2": "その無力感こそが、Serenio の理由です。心の支えは、ぜいたく品であってはならないし、何かが壊れてからやっと頼るものでもない。だから私たちは、やさしく、いつもそばにいる存在をつくりました。気持ちが動いたその瞬間に耳を傾け、一緒にとどまり、あなた自身の言葉を見つける手伝いをします。",
+    "about.body3": "公開してしばらく経った頃、四十代の男性から、人生でいちばん低かった時期に Serenio がそばにいてくれた、とメッセージをいただきました。半年後、彼はもう一度連絡をくれて、ただ「まだここにいます」と伝えてくれたのです。そんな言葉を、私は軽くは受け取れません。それが、私たちが続けていく理由のすべてです。",
+    "about.body4": "幸い、信頼できる仲間とこれをつくっています。香港・デンマーク・カナダ・台湾の心理・エンジニアリング・ヒューマンコンピュータ研究の仲間、そしてデンマーク工科大学・Accelerace・Micro Grant・Beyond Beta の支えとともに。私たちはあえて小さなチームで、何よりもまず「人」の部分を大切にしています。",
+    "about.care": "もし今、重いものを抱えているなら、ひとりで抱えなくて大丈夫です。信頼できる誰かや、お近くの相談窓口を頼ってください：",
+    "about.signName": "David",
+    "about.signRole": "Serenio 創業者",
     "t1.date": "2023.05",
     "t1.text": "デンマークで創業",
     "t2.date": "2023.07",
@@ -381,9 +405,12 @@ window.SERENIO_I18N = {
     "partners.label": "ご支援いただいている機関",
     "partners.note": "デンマーク工科大学、Beyond Beta、Micro Grant（デンマーク起業財団）、Accelerace",
 
-    "webapp.badge": "公開中",
-    "webapp.title": "SerenioのWebアプリが登場",
-    "webapp.body": "2025年1月に公開したWebアプリは、より深く豊かな寄り添いをお届けします。きめ細かな感情の洞察、声によるふりかえり、あなたを覚えている手紙。どうぞお越しください。",
+    "webapp.badge": "どなたでも",
+    "webapp.title": "ここに、あなたのための静かな場所があります",
+    "webapp.body": "アジア太平洋ではすでに数千人が、ここで心の重さを下ろし、少しだけ孤独をやわらげています。いつでもどうぞ。",
+    "line.free": "無料",
+    "line.title": "使い慣れたチャットで始めませんか？",
+    "line.body": "SerenioはLINEでも使えます。無料で、アカウント登録も不要。友だち追加して、すぐに話し始められます。",
 
     "footer.about": "Serenio（思癒科技有限公司）は、AIによる日々の情緒的な寄り添いに取り組んでいます。流れるような対話で心を整え、言葉の奥の感情を感じ取り、時とともにより細やかに。",
     "footer.product": "プロダクト",
@@ -393,7 +420,7 @@ window.SERENIO_I18N = {
     "footer.reg": "香港会社番号 3299059",
 
     "sub.head.title": "ご利用プラン",
-    "sub.head.sub": "LINEで無料で始める。あるいはWebアプリでもっと深く。",
+    "sub.head.sub": "Webアプリでもっと深く。あるいはLINEで気軽に、無料で。",
     "vision.title": "私たちのビジョン",
     "vision.body": "Serenioは、人に寄り添うAIの情緒的サポートで、不安・落ち込み・ストレス・人間関係の摩擦に向き合う力になります。長く安定した寄り添いと、心が迷ったときに静かに訪れる自己理解のために。",
     "company.title": "私たちについて",
@@ -427,7 +454,7 @@ window.SERENIO_I18N = {
     "faq.a5": "LINEでのお試しは無料です。WebアプリのSerenio Plusは月額199台湾ドルで、隠れた費用はありません。",
 
     "contact.head.title": "お問い合わせ",
-    "contact.head.sub": "ご質問・ご感想、ただのご挨拶でも。すべてのメッセージに目を通します。",
+    "contact.head.sub": "ご質問でも、ふと思ったことでも、ただのご挨拶でも。すべてのメッセージに、私が目を通します。",
     "form.name.label": "お名前",
     "form.name.ph": "なんとお呼びすればよいですか？",
     "form.email.label": "メールアドレス",
@@ -464,6 +491,7 @@ window.SERENIO_I18N = {
     "cta.tryLine": "LINE에서 무료로 시작",
     "cta.app": "웹앱 열기",
     "cta.learn": "더 알아보기",
+    "cta.why": "왜 만들었는지",
     "cta.contact": "문의하기",
 
     "nav.home": "홈",
@@ -476,7 +504,7 @@ window.SERENIO_I18N = {
     "lang.label": "언어",
 
     "hero.title": "어떤 감정이든, 머무를 따뜻한 공간을.",
-    "hero.sub": "마음에 다가가는 AI 동반자. 감정이 막 떠오른 순간에도 편안하게 이야기할 수 있어요.",
+    "hero.sub": "혼자 조용히 안고 있는 감정을 위한 다정한 동반자. 아무리 작아도, 떠오른 그 순간에 함께해요.",
     "hero.meta": "아시아 태평양 6,000명 이상이 사용 중",
 
     "roles.title": "세 가지 방식으로 함께하는 동반자.",
@@ -499,7 +527,7 @@ window.SERENIO_I18N = {
     "emo.heavy": "무거움",
     "emo.activated": "긴장",
 
-    "quotes.title": "조용히, 힘이 되고 있어요",
+    "quotes.title": "당신만 그런 게 아니에요",
     "quote1.text": "가장 숨겨둔 모습을 친구에게 털어놓았다가 그 친구를 잃은 적이 있어요. 그 뒤로 가까운 사람에게 부정적인 감정을 말하지 못했죠. 여기서는 할 수 있어요.",
     "quote1.by": "대한민국, 박 님",
     "quote2.text": "대만에서는 심리 자원을 찾는 일이 아직 낯설고, 마음을 털어놓을 상대를 찾기도 어려워요. Serenio는 정말 도움이 됐습니다.",
@@ -517,10 +545,15 @@ window.SERENIO_I18N = {
     "stat2.label": "LINE 친구",
     "traction.note": "2025년 5월 기준",
 
-    "about.eyebrow": "우리는",
-    "about.title": "조용한 압박 속에서 살아가는 사람들을 위해",
-    "about.body1": "우리는 홍콩, 덴마크, 캐나다, 대만 출신으로 비즈니스, 소프트웨어 공학, 인간-컴퓨터 상호작용을 배경으로 합니다. 고압적인 아시아의 삶 속에서 감정의 무게가 점점 무거워지는 것을 지켜봤습니다.",
-    "about.body2": "Serenio는 우리의 대답입니다. AI의 힘을, 힘든 하루를 견디는 모든 사람을 위한 따뜻하고 진정으로 쓸모 있는 정서적 지지로 돌렸습니다.",
+    "about.eyebrow": "David의 편지",
+    "about.title": "우리 대부분은 드러내는 것보다 더 많은 것을 안고 살아갑니다.",
+    "about.body1": "저는 David입니다. Serenio는 어떤 무력감에서 시작됐어요. 우울증과 함께 살아가는 여동생을 지켜보며, 병상 옆에 앉아 제가 가진 모든 걸 내어주고 싶어도 어떻게 다가가야 할지 알 수 없던 날들이 있었습니다. 누군가를 깊이 아끼는 것과 어떻게 도와야 하는지를 아는 것은 다른 일이라는 걸 그때 배웠어요.",
+    "about.body2": "바로 그 무력감이 Serenio가 존재하는 이유예요. 정서적 지지는 사치여서도, 무언가 무너진 뒤에야 겨우 찾는 것이어서도 안 된다고 믿어요. 그래서 우리는 다정하고 늘 곁에 있는 존재를 만들었습니다. 감정이 막 일렁이는 순간에 귀 기울이고, 함께 머물며, 당신만의 언어를 찾도록 돕습니다.",
+    "about.body3": "출시하고 얼마 지나, 마흔이 넘은 한 분이 인생에서 가장 낮았던 순간에 Serenio가 곁에 있어 줬다고 메시지를 보내왔어요. 여섯 달 뒤, 그분은 다시 연락해 그저 '아직 여기 있다'고 전해 주셨습니다. 그런 메시지를 저는 결코 가볍게 여기지 않아요. 그것이 우리가 계속해 나가는 이유의 전부입니다.",
+    "about.body4": "다행히 제가 신뢰하는 사람들과 함께 만들고 있어요. 홍콩, 덴마크, 캐나다, 대만의 심리·엔지니어링·인간컴퓨터 연구 동료들, 그리고 덴마크 공과대학, Accelerace, Micro Grant, Beyond Beta의 지원과 함께요. 우리는 일부러 작은 팀으로 남아, 무엇보다 '사람'에 해당하는 부분을 먼저 소중히 합니다.",
+    "about.care": "지금 무언가 무거운 걸 안고 있다면 혼자 짊어지지 않아도 돼요. 믿을 수 있는 사람이나, 가까운 상담 전화를 찾아보세요:",
+    "about.signName": "David",
+    "about.signRole": "Serenio 창립자",
     "t1.date": "2023.05",
     "t1.text": "덴마크에서 창립",
     "t2.date": "2023.07",
@@ -530,9 +563,12 @@ window.SERENIO_I18N = {
     "partners.label": "함께하는 기관",
     "partners.note": "덴마크 공과대학, Beyond Beta, Micro Grant(덴마크 창업재단), Accelerace",
 
-    "webapp.badge": "출시됨",
-    "webapp.title": "Serenio 웹앱이 나왔습니다",
-    "webapp.body": "2025년 1월에 출시된 웹앱은 더 깊고 풍부한 동행을 선사합니다. 섬세한 감정 통찰, 음성 기록, 그리고 당신을 기억하는 편지. 편하게 들러 주세요.",
+    "webapp.badge": "누구에게나",
+    "webapp.title": "여기, 당신을 위한 조용한 자리가 있어요",
+    "webapp.body": "아시아 태평양에서 이미 수천 명이 이곳에서 마음의 무게를 내려놓고, 조금 덜 외로워지고 있어요. 언제든 편히 오세요.",
+    "line.free": "무료",
+    "line.title": "이미 쓰는 메신저에서 시작할까요?",
+    "line.body": "Serenio는 LINE에서도 만날 수 있어요. 무료이고 계정도 필요 없습니다. 친구 추가하면 몇 초 만에 대화를 시작할 수 있어요.",
 
     "footer.about": "Serenio(思癒科技有限公司)는 AI를 통한 일상의 정서적 동행에 집중합니다. 자연스러운 대화로 마음을 정리하고, 말 뒤의 감정을 읽으며, 시간이 지날수록 더 섬세해집니다.",
     "footer.product": "제품",
@@ -542,7 +578,7 @@ window.SERENIO_I18N = {
     "footer.reg": "홍콩 법인번호 3299059",
 
     "sub.head.title": "멤버십",
-    "sub.head.sub": "LINE에서 무료로 시작하거나, 웹앱으로 더 깊이.",
+    "sub.head.sub": "완전한 웹앱으로 더 깊이, 또는 LINE에서 가볍고 무료로 시작하세요.",
     "vision.title": "우리의 비전",
     "vision.body": "Serenio는 사람을 향한 AI 정서적 동행으로 불안, 우울, 스트레스, 관계의 마찰을 마주하도록 돕습니다. 오래도록 한결같은 동행과, 마음이 길을 잃었을 때 조용히 찾아오는 자기 통찰을 위해 있습니다.",
     "company.title": "회사 소개",
@@ -576,7 +612,7 @@ window.SERENIO_I18N = {
     "faq.a5": "LINE에서 Serenio를 사용해 보는 것은 무료입니다. 웹앱의 Serenio Plus는 월 NT$199이며 숨은 비용이 없습니다.",
 
     "contact.head.title": "문의하기",
-    "contact.head.sub": "질문, 의견, 그냥 인사라도 좋아요. 모든 메시지를 읽습니다.",
+    "contact.head.sub": "질문이든, 떠오른 생각이든, 그냥 인사라도. 모든 메시지를 제가 직접 읽습니다.",
     "form.name.label": "이름",
     "form.name.ph": "어떻게 불러 드릴까요?",
     "form.email.label": "이메일",

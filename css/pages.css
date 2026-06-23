@@ -593,6 +593,20 @@
   position: relative;
   z-index: 1;
 }
+.traction__badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-size: var(--text-label);
+  font-weight: 600;
+}
 
 /* -------------------------------------------------------------------------
    About + partners
@@ -605,6 +619,37 @@
 }
 .about__story p + p {
   margin-top: 1.1rem;
+}
+.signoff {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.signoff__name {
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--plum);
+}
+.signoff__role {
+  font-size: var(--text-label);
+  color: var(--ink-faint);
+}
+.care-note {
+  margin-top: 1.8rem;
+  max-width: var(--max-read);
+  padding-left: 0.95rem;
+  border-left: 2px solid rgba(167, 207, 190, 0.55);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--ink-faint);
+}
+.care-note a {
+  color: var(--plum);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
 }
 .timeline {
   list-style: none;
@@ -686,6 +731,20 @@
   height: 96px;
   border-radius: 24px;
   box-shadow: var(--shadow-float);
+}
+.line-tile {
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  background: rgba(167, 207, 190, 0.22);
+  color: #3f7a64;
+  box-shadow: var(--shadow-control);
+}
+.line-tile svg {
+  width: 42px;
+  height: 42px;
 }
 @media (max-width: 620px) {
   .webapp {
