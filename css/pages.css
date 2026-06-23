@@ -635,21 +635,47 @@
   font-size: var(--text-label);
   color: var(--ink-faint);
 }
-.care-note {
-  margin-top: 1.8rem;
-  max-width: var(--max-read);
-  padding-left: 0.95rem;
-  border-left: 2px solid rgba(167, 207, 190, 0.55);
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: var(--ink-faint);
+.footer__care {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 2.2rem;
+  padding: 1.05rem 1.3rem;
+  border-radius: var(--r-media);
+  background: rgba(167, 207, 190, 0.16);
+  border: 1px solid rgba(167, 207, 190, 0.42);
 }
-.care-note a {
+.footer__care .ic {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(167, 207, 190, 0.32);
+  color: #3f7a64;
+}
+.footer__care .ic svg {
+  width: 20px;
+  height: 20px;
+}
+.footer__care p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.footer__care a {
   color: var(--plum);
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
   white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .footer__care {
+    align-items: flex-start;
+  }
 }
 .timeline {
   list-style: none;
