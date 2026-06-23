@@ -1076,6 +1076,50 @@
   }
 }
 
+/* For-organizations panel */
+.org-panel {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  border-radius: var(--r-panel);
+  text-align: center;
+  background: linear-gradient(155deg, #efe9f5, #f6f1f0 60%, #eef3ef);
+  border: 1px solid var(--ring-highlight);
+  box-shadow: var(--shadow-soft);
+}
+.org-panel .lead {
+  margin-inline: auto;
+}
+.org-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.6rem 0 2rem;
+}
+
+/* Quiet secondary B2B line on the home page */
+.minicta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem 1rem;
+  text-align: center;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--r-media);
+  border: 1px solid rgba(136, 117, 180, 0.16);
+  background: rgba(255, 252, 248, 0.5);
+}
+.minicta p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.98rem;
+}
+.minicta .btn--ghost {
+  min-height: auto;
+}
+
 /* -------------------------------------------------------------------------
    Contact form
    ------------------------------------------------------------------------- */

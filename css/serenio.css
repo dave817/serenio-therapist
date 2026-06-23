@@ -12,6 +12,16 @@
   font-display: swap;
 }
 
+/* Geist (variable) — the product's UI sans, self-hosted for an intentional,
+   cross-platform body face instead of the generic system stack. */
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/geist.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* --- Core surfaces & ink (Living Porcelain) --- */
   --canvas: #faf7f2;
@@ -49,8 +59,13 @@
   --mesh-4: var(--mesh-tender);
 
   /* --- Type --- */
-  --font-display: "Glitten", "Iowan Old Style", Georgia, "Songti TC", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+  /* Latin display = Glitten; CJK display falls to the active language's sans
+     (swappable per <html lang> below) so JP/KR headings stop borrowing
+     Chinese serif glyph forms and match the product's sans CJK. */
+  --display-cjk: "PingFang TC", "PingFang HK", "Noto Sans TC", "Microsoft JhengHei",
+    sans-serif;
+  --font-display: "Glitten", "Iowan Old Style", Georgia, var(--display-cjk);
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
     "Helvetica Neue", Arial, sans-serif;
   --font-tc: "PingFang TC", "PingFang HK", "Noto Sans TC", "Microsoft JhengHei",
     sans-serif;
@@ -99,6 +114,16 @@
   --dur-panel: 420ms;
 
   color-scheme: light;
+}
+
+/* Display CJK follows the document language so each language's headings use
+   its own native sans (and correct glyph forms). */
+:root:lang(ja) {
+  --display-cjk: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Noto Sans JP", sans-serif;
+}
+:root:lang(ko) {
+  --display-cjk: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
 /* =========================================================================

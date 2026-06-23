@@ -9,6 +9,7 @@
     <link rel="icon" href="/images/app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/images/app-icon.png" />
     <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff" as="font" type="font/woff" crossorigin />
     <link rel="stylesheet" href="/css/serenio.css" />
     <link rel="stylesheet" href="/css/pages.css" />
     <script>
@@ -47,7 +48,7 @@
         <nav class="nav__links" aria-label="Primary">
           <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
           <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-          <a class="nav__link" href="/subscribe" data-route="/subscribe" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.pricing">Membership</a>
           <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav__actions">
@@ -68,7 +69,7 @@
     <div class="nav__drawer">
       <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
       <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="/subscribe" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.pricing">Membership</a>
       <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
       <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
       <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
@@ -82,9 +83,8 @@
           <div class="mesh__well"></div>
         </div>
         <div class="shell page-head__inner">
-          <p class="eyebrow" data-i18n="sub.head.title">Membership</p>
-          <h1 data-i18n="sub.head.title">Membership</h1>
-          <p data-i18n="sub.head.sub">Start free on LINE, or go deeper with the full web app.</p>
+          <h1 data-i18n="sub.head.title">For organizations</h1>
+          <p data-i18n="sub.head.sub">Serenio is free for everyone. If you'd like to bring it to the people in your care, let's talk.</p>
         </div>
       </header>
 
@@ -110,35 +110,14 @@
           <div class="section-head reveal">
             <h2 class="section-title" data-i18n="pricing.title">Two ways to begin</h2>
           </div>
-          <div class="pricing">
-            <article class="plan plan--featured reveal">
-              <span class="plan__tag" data-i18n="plan.plus.tag">Web app</span>
-              <h3 data-i18n="plan.plus.name">Serenio Plus</h3>
-              <div class="plan__price">
-                <span class="amount" data-i18n="plan.plus.amount">NT$199</span>
-                <span class="per" data-i18n="plan.plus.per">/ month</span>
-              </div>
-              <p class="faint" style="margin:-0.6rem 0 1.2rem;font-size:var(--text-label)" data-i18n="plan.plus.note">No add-ons, no hidden fees.</p>
-              <ul class="plan__features">
-                <li data-i18n="plan.plus.f1">Everything in Companion</li>
-                <li data-i18n="plan.plus.f2">Deeper emotion insight and patterns</li>
-                <li data-i18n="plan.plus.f3">Voice reflections and journaling</li>
-                <li data-i18n="plan.plus.f4">Letters that remember your story</li>
-              </ul>
-              <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            </article>
-
-            <article class="plan reveal" data-delay="1">
-              <span class="plan__tag" data-i18n="plan.free.tag">On LINE</span>
-              <h3 data-i18n="plan.free.name">Companion</h3>
-              <div class="plan__price"><span class="amount" data-i18n="plan.free.price">Free</span></div>
-              <ul class="plan__features">
-                <li data-i18n="plan.free.f1">Warm, always-available conversation</li>
-                <li data-i18n="plan.free.f2">Listener, analyst and creative modes</li>
-                <li data-i18n="plan.free.f3">Right inside LINE, no new app to install</li>
-              </ul>
-              <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-            </article>
+          <div class="org-panel reveal">
+            <p class="lead" data-i18n="org.body">Whether you look after a team, a campus, or a community, we'll help you find the right way to bring Serenio to the people in your care.</p>
+            <div class="org-tags">
+              <span class="chip"><span class="chip__dot" style="--chip-dot:#8875b4"></span><span data-i18n="org.tag.work">Workplaces</span></span>
+              <span class="chip"><span class="chip__dot" style="--chip-dot:#a7cfbe"></span><span data-i18n="org.tag.school">Schools</span></span>
+              <span class="chip"><span class="chip__dot" style="--chip-dot:#e8c8ce"></span><span data-i18n="org.tag.care">Healthcare &amp; NGOs</span></span>
+            </div>
+            <a class="btn btn--primary btn--lg" href="/contact" data-i18n="cta.reach">Reach out</a>
           </div>
         </div>
       </section>
@@ -168,7 +147,11 @@
             </details>
             <details>
               <summary data-i18n="faq.q5">How much does it cost?</summary>
-              <p data-i18n="faq.a5">Trying Serenio on LINE is free. Serenio Plus is NT$199 per month.</p>
+              <p data-i18n="faq.a5">Serenio is free for everyone, on LINE and in the web app.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q6">Can we bring Serenio to our organization?</summary>
+              <p data-i18n="faq.a6">Yes. Reach out and we'll find the right way to bring Serenio to your people.</p>
             </details>
           </div>
         </div>
@@ -188,8 +171,8 @@
           <div class="footer__col">
             <h4 data-i18n="footer.product">Product</h4>
             <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <a href="/subscribe" data-i18n="nav.pricing">Membership</a>
-            <a href="/subscribe#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.pricing">Membership</a>
+            <a href="/for-organizations#faq" data-i18n="nav.faq">FAQ</a>
             <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
           </div>
           <div class="footer__col">
