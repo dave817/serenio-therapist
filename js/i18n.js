@@ -167,7 +167,7 @@ window.SERENIO_I18N = {
     "privacy.head.sub": "How we handle and protect your personal data.",
     "terms.head.title": "Terms of Service",
     "terms.head.sub": "The terms that govern your use of Serenio.",
-    "legal.updated": "Last updated: 22 August 2023",
+    "legal.updated": "Last updated: 2 July 2026",
   },
 
   "zh-Hant": {
@@ -333,7 +333,7 @@ window.SERENIO_I18N = {
     "privacy.head.sub": "我們如何處理並保護你的個人資料。",
     "terms.head.title": "服務條款",
     "terms.head.sub": "規範你使用 Serenio 的條款。",
-    "legal.updated": "最後更新日期：2023 年 8 月 22 日",
+    "legal.updated": "最後更新日期：2026 年 7 月 2 日",
   },
 
   ja: {
@@ -499,7 +499,7 @@ window.SERENIO_I18N = {
     "privacy.head.sub": "個人データの取り扱いと保護について。",
     "terms.head.title": "利用規約",
     "terms.head.sub": "Serenioのご利用に関する規約です。",
-    "legal.updated": "最終更新日：2023年8月22日",
+    "legal.updated": "最終更新日：2026年7月2日",
   },
 
   ko: {
@@ -665,6 +665,6 @@ window.SERENIO_I18N = {
     "privacy.head.sub": "개인정보를 어떻게 처리하고 보호하는지 안내합니다.",
     "terms.head.title": "이용약관",
     "terms.head.sub": "Serenio 이용에 적용되는 약관입니다.",
-    "legal.updated": "최종 업데이트: 2023년 8월 22일",
+    "legal.updated": "최종 업데이트: 2026년 7월 2일",
   },
 };
