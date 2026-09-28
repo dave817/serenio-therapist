@@ -1,79 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" data-page-title="meta.title.pricing">
+<html lang="en" data-page-title="meta.title.org" data-page-desc="meta.desc.org">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Membership · Serenio</title>
-    <meta name="description" content="Serenio is a humane AI companion for reflective, emotionally safe conversations." />
+    <title>For organizations · Serenio</title>
+    <meta name="description" content="Serenio is free for individuals. Workplaces, universities and care organizations can offer Serenio to their people through a paid partnership, with each person's conversations kept private." />
+    <link rel="canonical" href="https://www.serenio.ai/for-organizations" />
     <meta name="theme-color" content="#faf7f2" />
-    <link rel="icon" href="/images/app-icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/app-icon.png" />
+    <meta name="apple-itunes-app" content="app-id=6786770984" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Serenio" />
+    <meta property="og:title" content="Serenio for organizations" />
+    <meta property="og:description" content="Offer Serenio to the people in your care through a paid partnership. Free for individuals, always private to each person." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.serenio.ai/for-organizations" />
+    <meta property="og:image" content="https://www.serenio.ai/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/geist.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/serenio.css" />
-    <link rel="stylesheet" href="/css/pages.css" />
-    <script>
-      (function () {
-        try {
-          var m = { en: "en", "zh-Hant": "zh-Hant", ja: "ja", ko: "ko" };
-          var s = localStorage.getItem("serenio.lang");
-          var l;
-          if (s && m[s]) l = m[s];
-          else {
-            var n = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            l = n.indexOf("zh") === 0 ? "zh-Hant" : n.indexOf("ja") === 0 ? "ja" : n.indexOf("ko") === 0 ? "ko" : "en";
-          }
-          document.documentElement.classList.add("js");
-          document.documentElement.lang = l;
-        } catch (e) {}
-      })();
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "G-G69RR3LCQG");
-    </script>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/org-contact.css" />
+    <script src="/js/boot.js"></script>
+    <script src="/js/analytics.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="nav.home">Home</a>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header class="nav">
       <div class="nav__inner">
-        <a class="brand" href="/" aria-label="Serenio">
+        <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
           <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
           <span class="brand__word">SERENIO</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
-          <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
+          <a class="nav__link" href="/how-it-works" data-route="/how-it-works" data-i18n="nav.how">How it works</a>
           <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.org">For organizations</a>
           <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav__actions">
           <div class="lang" data-lang-switch data-open="false">
-            <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+            <button class="lang__btn" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="lang.label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
               <span class="lang__short">EN</span>
             </button>
-            <ul class="lang__menu" role="menu"></ul>
+            <ul class="lang__menu"></ul>
           </div>
-          <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+          <a class="btn btn--primary btn--sm" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-smart-cta data-track="web_app" data-i18n="cta.app">Open web app</a>
         </div>
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </header>
-    <div class="nav__drawer">
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
       <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/how-it-works" data-i18n="nav.how">How it works</a>
       <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="/for-organizations" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.org">For organizations</a>
       <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
-      <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-      <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-    </div>
+      <div class="nav__drawer-cta">
+        <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+        <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+      </div>
+    </nav>
 
     <main id="main">
       <header class="page-head">
@@ -83,76 +78,141 @@
           <div class="mesh__well"></div>
         </div>
         <div class="shell page-head__inner">
-          <h1 data-i18n="sub.head.title">For organizations</h1>
-          <p data-i18n="sub.head.sub">Serenio is free for everyone. If you'd like to bring it to the people in your care, let's talk.</p>
+          <p class="eyebrow" data-i18n="nav.org">For organizations</p>
+          <h1 data-i18n="org.title">Bring Serenio to the people in your care.</h1>
+          <p data-i18n="org.sub">Serenio is free for individuals. When a workplace, university or care organization wants to offer it to its people, we work together on a paid partnership.</p>
         </div>
       </header>
 
-      <!-- vision + company -->
-      <section class="section section--tight">
+      <!-- pricing clarity -->
+      <section class="section--tight" aria-label="Who pays" data-i18n-aria="org.priceLabel">
         <div class="shell">
-          <div class="value-grid">
-            <article class="value-card reveal">
-              <h3 data-i18n="vision.title">Our vision</h3>
-              <p data-i18n="vision.body">At Serenio, we offer humane AI emotional companionship.</p>
+          <div class="pricing-note">
+            <article class="price-card reveal">
+              <span class="price-card__tag" data-i18n="org.ind.tag">For individuals</span>
+              <p class="price-card__price" data-i18n="org.ind.price">Free</p>
+              <p data-i18n="org.ind.body">On iPhone and the web, for anyone who needs it. No subscription, no in-app purchases and no ads.</p>
             </article>
-            <article class="value-card reveal" data-delay="1">
-              <h3 data-i18n="company.title">Who we are</h3>
-              <p data-i18n="company.body">Serenio brings together people across Hong Kong, Taiwan and Canada.</p>
+            <article class="price-card price-card--org reveal" data-delay="1">
+              <span class="price-card__tag" data-i18n="org.org.tag">For organizations</span>
+              <p class="price-card__price" data-i18n="org.org.price">Paid partnership</p>
+              <p data-i18n="org.org.body">For workplaces, universities and colleges, care organizations and NGOs that want to offer Serenio to the adults in their care. We shape it with you and agree the cost together.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- pricing -->
-      <section class="section section--tight">
+      <!-- why -->
+      <section class="section" aria-labelledby="why-title">
         <div class="shell">
           <div class="section-head reveal">
-            <h2 class="section-title" data-i18n="pricing.title">Two ways to begin</h2>
+            <p class="eyebrow" data-i18n="org.why.eyebrow">Why Serenio</p>
+            <h2 class="section-title" id="why-title" data-i18n="org.why.title">Everyday support, alongside the care people already have.</h2>
           </div>
-          <div class="org-panel reveal">
-            <p class="lead" data-i18n="org.body">Whether you look after a team, a campus, or a community, we'll help you find the right way to bring Serenio to the people in your care.</p>
-            <div class="org-tags">
-              <span class="chip"><span class="chip__dot" style="--chip-dot:#8875b4"></span><span data-i18n="org.tag.work">Workplaces</span></span>
-              <span class="chip"><span class="chip__dot" style="--chip-dot:#a7cfbe"></span><span data-i18n="org.tag.school">Schools</span></span>
-              <span class="chip"><span class="chip__dot" style="--chip-dot:#e8c8ce"></span><span data-i18n="org.tag.care">Healthcare &amp; NGOs</span></span>
-            </div>
-            <a class="btn btn--primary btn--lg" href="/contact" data-i18n="cta.reach">Reach out</a>
+          <ul class="value-grid">
+            <li class="value-card reveal">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg></span>
+              <h3 data-i18n="org.v1.title">There in the in-between hours</h3>
+              <p data-i18n="org.v1.body">Feelings don't keep office hours. Yuyu is there after work, at 2 a.m. or on a Sunday, in four languages, including chat in spoken Cantonese.</p>
+            </li>
+            <li class="value-card reveal" data-delay="1">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3" /><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 5.5a3 3 0 0 1 0 5.5M17.5 14.2A5.5 5.5 0 0 1 20.5 19" /></svg></span>
+              <h3 data-i18n="org.v2.title">Built to point toward people</h3>
+              <p data-i18n="org.v2.body">When things get heavy, Yuyu surfaces 24-hour support lines and each person's own safety plan, and encourages them to reach real people. It complements professional care; it never replaces it.</p>
+            </li>
+            <li class="value-card reveal" data-delay="2">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg></span>
+              <h3 data-i18n="org.v3.title">Privacy people can trust</h3>
+              <p data-i18n="org.v3.body">Each person's conversations are private to them. We never share what anyone says to Yuyu with their employer, university or organization.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- how a partnership works -->
+      <section class="section section--tight" aria-labelledby="steps-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="org.steps.eyebrow">How it works</p>
+            <h2 class="section-title" id="steps-title" data-i18n="org.steps.title">How a partnership comes together</h2>
           </div>
+          <ol class="org-steps">
+            <li class="reveal">
+              <h3 data-i18n="org.st1.title">Tell us about your people</h3>
+              <p data-i18n="org.st1.body">Who they are, what they're carrying, and what you hope Serenio could do for them.</p>
+            </li>
+            <li class="reveal" data-delay="1">
+              <h3 data-i18n="org.st2.title">We shape it together</h3>
+              <p data-i18n="org.st2.body">We talk through what a partnership could look like for your organization, and agree its scope and cost.</p>
+            </li>
+            <li class="reveal" data-delay="2">
+              <h3 data-i18n="org.st3.title">Your people use it privately</h3>
+              <p data-i18n="org.st3.body">Each person uses Serenio on iPhone or the web, with their own account, at their own pace.</p>
+            </li>
+          </ol>
+          <ul class="org-tags reveal" aria-label="Who it's for" data-i18n-aria="org.tagsLabel">
+            <li class="chip"><span class="chip__dot" style="--chip-dot:#8875b4"></span><span data-i18n="org.tag.work">Workplaces</span></li>
+            <li class="chip"><span class="chip__dot" style="--chip-dot:#a7cfbe"></span><span data-i18n="org.tag.school">Universities and colleges</span></li>
+            <li class="chip"><span class="chip__dot" style="--chip-dot:#e8c8ce"></span><span data-i18n="org.tag.care">Care organizations and NGOs</span></li>
+            <li class="chip"><span class="chip__dot" style="--chip-dot:#e8d29f"></span><span data-i18n="org.tag.community">Community groups</span></li>
+          </ul>
         </div>
       </section>
 
       <!-- FAQ -->
-      <section class="section" id="faq">
+      <section class="section" id="faq" aria-labelledby="faq-title">
         <div class="shell">
           <div class="section-head reveal">
-            <h2 class="section-title" data-i18n="faq.title">Common questions</h2>
+            <h2 class="section-title" id="faq-title" data-i18n="org.faq.title">Questions from organizations</h2>
           </div>
           <div class="faq reveal">
             <details>
-              <summary data-i18n="faq.q1">Is Serenio a replacement for therapy?</summary>
-              <p data-i18n="faq.a1">No. Serenio is a mental-health companion, not a medical provider.</p>
+              <summary data-i18n="org.q1">Is Serenio free for organizations?</summary>
+              <p data-i18n="org.a1">No. Serenio is free for individuals. When an organization offers Serenio to its people, that's a paid partnership. Get in touch and we'll talk it through.</p>
             </details>
             <details>
-              <summary data-i18n="faq.q2">Who can use Serenio?</summary>
-              <p data-i18n="faq.a2">The web app service is intended for people aged 18 and over.</p>
+              <summary data-i18n="org.q2">Can we see what our people say to Yuyu?</summary>
+              <p data-i18n="org.a2">No. Conversations belong to each person. We don't share them with employers, universities or any organization.</p>
             </details>
             <details>
-              <summary data-i18n="faq.q3">Are my conversations private?</summary>
-              <p data-i18n="faq.a3">Yes. We don't share your conversations unless you agree.</p>
+              <summary data-i18n="org.q3">Does Serenio replace counselling or an employee assistance programme?</summary>
+              <p data-i18n="org.a3">No. Serenio is a companion for everyday feelings, not a clinical service. It works alongside professional support and points people toward it.</p>
             </details>
             <details>
-              <summary data-i18n="faq.q4">What languages does Serenio speak?</summary>
-              <p data-i18n="faq.a4">English, Traditional Chinese, Japanese and Korean.</p>
+              <summary data-i18n="org.q4">How does Serenio handle safety?</summary>
+              <p data-i18n-html="org.a4">Every message is checked for signs of crisis, and people are shown 24-hour support lines they can call with a tap. Serenio isn't an emergency service, and no one monitors conversations. <a href="/how-it-works#safety">Read exactly what happens</a>.</p>
             </details>
             <details>
-              <summary data-i18n="faq.q5">How much does it cost?</summary>
-              <p data-i18n="faq.a5">Serenio is free for everyone, on LINE and in the web app.</p>
+              <summary data-i18n="org.q5">Which languages are supported?</summary>
+              <p data-i18n="org.a5">English, Traditional Chinese (including chat in spoken Cantonese), Japanese and Korean.</p>
             </details>
             <details>
-              <summary data-i18n="faq.q6">Can we bring Serenio to our organization?</summary>
-              <p data-i18n="faq.a6">Yes. Reach out and we'll find the right way to bring Serenio to your people.</p>
+              <summary data-i18n="org.q6">Who is behind Serenio?</summary>
+              <p data-i18n="org.a6">Serenio AI Limited, a Hong Kong company (no. 3299059) founded by Dave in 2023, with a team across Hong Kong, Denmark, Canada and Taiwan.</p>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- closer -->
+      <section class="section--tight">
+        <div class="shell">
+          <div class="closer reveal">
+            <div class="closer__copy">
+              <p class="eyebrow" data-i18n="org.c.eyebrow">Let's talk</p>
+              <h2 class="section-title" data-i18n="org.c.title">Tell us about the people in your care.</h2>
+              <p class="lead" data-i18n="org.c.body">Email us, or use the contact form. Dave reads every message.</p>
+              <div class="cta-row">
+                <a class="btn btn--primary btn--lg" href="mailto:support@serenio.ai?subject=Serenio%20for%20organizations" data-track="org_email" data-i18n="org.c.email">Email us</a>
+                <a class="btn btn--ghost" href="/contact" data-i18n="org.c.form">Use the contact form</a>
+              </div>
+            </div>
+            <div class="closer__art" aria-hidden="true">
+              <div class="orb" style="--orb-size:150px">
+                <div class="orb__glow"></div>
+                <div class="orb__body"><div class="orb__swirl"></div><div class="orb__spec"></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,42 +222,45 @@
       <div class="shell">
         <div class="footer__inner">
           <div class="footer__about">
-            <a class="brand" href="/" aria-label="Serenio">
+            <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
               <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
               <span class="brand__word">SERENIO</span>
             </a>
-            <p data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+            <p data-i18n="footer.about">Serenio is a free AI companion for everyday feelings, on iPhone and the web. Yuyu listens first, remembers what matters, and points you toward people when it counts.</p>
+            <div class="footer__get">
+              <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="132" height="44" loading="lazy" /></a>
+              <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+            </div>
           </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.product">Product</h4>
-            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <a href="/for-organizations" data-i18n="nav.pricing">Membership</a>
-            <a href="/for-organizations#faq" data-i18n="nav.faq">FAQ</a>
-            <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-          </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.company">Company</h4>
+          <nav class="footer__col" aria-labelledby="footer-product">
+            <h2 class="footer__title" id="footer-product" data-i18n="footer.product">Product</h2>
+            <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="footer.iphone">Serenio for iPhone</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="footer.web">Web app</a>
+            <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="/#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.org">For organizations</a>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__title" id="footer-company" data-i18n="footer.company">Company</h2>
             <a href="/#about" data-i18n="nav.about">About</a>
             <a href="/contact" data-i18n="nav.contact">Contact</a>
             <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
             <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
-          </div>
+          </nav>
         </div>
         <div class="footer__care">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z"/></svg></span>
-          <p>
-            <span data-i18n="about.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at</span>
-            <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>
-          </p>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+          <p data-i18n-html="footer.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
         </div>
         <div class="footer__bottom">
-          <span data-i18n="footer.rights">© 2025 Serenio AI Limited. All rights reserved.</span>
+          <span>© <span data-year>2026</span> <span data-i18n="footer.rights">Serenio AI Limited. All rights reserved.</span></span>
           <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
         </div>
       </div>
     </footer>
 
-    <script src="/js/i18n.js"></script>
+    <script src="/js/i18n/core.js"></script>
+    <script src="/js/i18n/org-contact.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

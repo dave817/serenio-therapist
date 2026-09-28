@@ -1,79 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" data-page-title="meta.title.contact">
+<html lang="en" data-page-title="meta.title.contact" data-page-desc="meta.desc.contact">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact · Serenio</title>
-    <meta name="description" content="Serenio is a humane AI companion for reflective, emotionally safe conversations." />
+    <meta name="description" content="Get in touch with Serenio. Questions, feedback, partnerships, or just hello: write to support@serenio.ai." />
+    <link rel="canonical" href="https://www.serenio.ai/contact" />
     <meta name="theme-color" content="#faf7f2" />
-    <link rel="icon" href="/images/app-icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/app-icon.png" />
+    <meta name="apple-itunes-app" content="app-id=6786770984" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Serenio" />
+    <meta property="og:title" content="Contact Serenio" />
+    <meta property="og:description" content="Questions, feedback, partnerships, or just hello. We read every message." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.serenio.ai/contact" />
+    <meta property="og:image" content="https://www.serenio.ai/images/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/geist.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/serenio.css" />
-    <link rel="stylesheet" href="/css/pages.css" />
-    <script>
-      (function () {
-        try {
-          var m = { en: "en", "zh-Hant": "zh-Hant", ja: "ja", ko: "ko" };
-          var s = localStorage.getItem("serenio.lang");
-          var l;
-          if (s && m[s]) l = m[s];
-          else {
-            var n = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            l = n.indexOf("zh") === 0 ? "zh-Hant" : n.indexOf("ja") === 0 ? "ja" : n.indexOf("ko") === 0 ? "ko" : "en";
-          }
-          document.documentElement.classList.add("js");
-          document.documentElement.lang = l;
-        } catch (e) {}
-      })();
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "G-G69RR3LCQG");
-    </script>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/org-contact.css" />
+    <script src="/js/boot.js"></script>
+    <script src="/js/analytics.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="nav.home">Home</a>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header class="nav">
       <div class="nav__inner">
-        <a class="brand" href="/" aria-label="Serenio">
+        <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
           <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
           <span class="brand__word">SERENIO</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
-          <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
+          <a class="nav__link" href="/how-it-works" data-route="/how-it-works" data-i18n="nav.how">How it works</a>
           <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.org">For organizations</a>
           <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav__actions">
           <div class="lang" data-lang-switch data-open="false">
-            <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+            <button class="lang__btn" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="lang.label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
               <span class="lang__short">EN</span>
             </button>
-            <ul class="lang__menu" role="menu"></ul>
+            <ul class="lang__menu"></ul>
           </div>
-          <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+          <a class="btn btn--primary btn--sm" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-smart-cta data-track="web_app" data-i18n="cta.app">Open web app</a>
         </div>
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </header>
-    <div class="nav__drawer">
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
       <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/how-it-works" data-i18n="nav.how">How it works</a>
       <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="/for-organizations" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.org">For organizations</a>
       <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
-      <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-      <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-    </div>
+      <div class="nav__drawer-cta">
+        <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+        <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+      </div>
+    </nav>
 
     <main id="main">
       <header class="page-head">
@@ -83,61 +76,72 @@
           <div class="mesh__well"></div>
         </div>
         <div class="shell page-head__inner">
-          <p class="eyebrow" data-i18n="contact.head.title">Contact us</p>
-          <h1 data-i18n="contact.head.title">Contact us</h1>
-          <p data-i18n="contact.head.sub">Questions, feedback, or just want to say hello? We read every message.</p>
+          <p class="eyebrow" data-i18n="nav.contact">Contact</p>
+          <h1 data-i18n="contact.title">Say hello.</h1>
+          <p data-i18n="contact.sub">Questions, thoughts, feedback on Yuyu, or an idea for working together? I read every message. — Dave</p>
         </div>
       </header>
 
-      <section class="section section--tight">
+      <section class="section--tight">
         <div class="shell">
           <div class="contact">
             <form class="form reveal" data-contact-form novalidate>
               <div class="field">
                 <label for="cf-name" data-i18n="form.name.label">Your name</label>
-                <input id="cf-name" name="name" type="text" autocomplete="name" data-i18n-ph="form.name.ph" placeholder="How should we call you?" />
-                <span class="field__error" aria-live="polite"></span>
+                <input id="cf-name" name="name" type="text" autocomplete="name" aria-describedby="cf-name-err" data-i18n-ph="form.name.ph" placeholder="How should we call you?" />
+                <span class="field__error" id="cf-name-err" aria-live="polite"></span>
               </div>
               <div class="field">
                 <label for="cf-email" data-i18n="form.email.label">Email</label>
-                <input id="cf-email" name="email" type="email" autocomplete="email" data-i18n-ph="form.email.ph" placeholder="you@example.com" />
-                <span class="field__error" aria-live="polite"></span>
+                <input id="cf-email" name="email" type="email" autocomplete="email" aria-describedby="cf-email-err" placeholder="you@example.com" />
+                <span class="field__error" id="cf-email-err" aria-live="polite"></span>
               </div>
               <div class="field">
                 <label for="cf-message" data-i18n="form.msg.label">Message</label>
-                <textarea id="cf-message" name="message" data-i18n-ph="form.msg.ph" placeholder="What's on your mind?"></textarea>
-                <span class="field__error" aria-live="polite"></span>
+                <textarea id="cf-message" name="message" aria-describedby="cf-message-err" data-i18n-ph="form.msg.ph" placeholder="What's on your mind?"></textarea>
+                <span class="field__error" id="cf-message-err" aria-live="polite"></span>
               </div>
               <button class="btn btn--primary btn--block" type="submit" data-i18n="form.submit">Send message</button>
+              <p class="form__hint" data-i18n="form.hint">Sending opens your email app with the message ready to go.</p>
               <p class="form__status" role="status" aria-live="polite"></p>
             </form>
 
             <aside class="contact__aside reveal" data-delay="1">
               <div class="porcelain">
-                <h3 style="margin-bottom:0.4rem" data-i18n="contact.aside.title">Other ways to reach us</h3>
+                <h2 data-i18n="contact.aside.title">Other ways to reach us</h2>
                 <div class="contact__channel">
-                  <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></svg></span>
+                  <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></svg></span>
                   <div>
-                    <div class="faint" style="font-size:var(--text-caption)" data-i18n="form.email.label">Email</div>
+                    <div class="contact__label" data-i18n="form.email.label">Email</div>
                     <a href="mailto:support@serenio.ai">support@serenio.ai</a>
                   </div>
                 </div>
                 <div class="contact__channel">
-                  <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8" /></svg></span>
+                  <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M10.5 18.5h3" /></svg></span>
                   <div>
-                    <div class="faint" style="font-size:var(--text-caption)" data-i18n="plan.plus.tag">Web app</div>
-                    <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="contact.app.label">Open the web app</a>
+                    <div class="contact__label" data-i18n="ways.ios.kicker">iPhone app</div>
+                    <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="contact.store">Get Serenio on the App Store</a>
                   </div>
                 </div>
                 <div class="contact__channel">
-                  <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5c0 4.2-4 7.5-9 7.5-1 0-2-.1-2.9-.4L4 20l1.1-3.3C4.1 15.5 3 13.6 3 11.5 3 7.4 7 4 12 4s9 3.4 9 7.5Z" /></svg></span>
+                  <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="13" rx="2" /><path d="M8 20.5h8M12 17.5v3" /></svg></span>
                   <div>
-                    <div class="faint" style="font-size:var(--text-caption)">LINE</div>
-                    <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="contact.line.label">Chat on LINE</a>
+                    <div class="contact__label" data-i18n="ways.web.kicker">Web app</div>
+                    <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+                  </div>
+                </div>
+                <div class="contact__channel">
+                  <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3" /><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 5.5a3 3 0 0 1 0 5.5M17.5 14.2A5.5 5.5 0 0 1 20.5 19" /></svg></span>
+                  <div>
+                    <div class="contact__label" data-i18n="nav.org">For organizations</div>
+                    <a href="/for-organizations" data-i18n="contact.org">How partnerships work</a>
                   </div>
                 </div>
               </div>
-              <p class="muted" style="margin-top:1.4rem;font-size:0.9rem;line-height:1.7" data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+              <div class="crisis-note" role="note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg>
+                <p data-i18n-html="contact.crisis">Please don't wait for an email reply if you're in danger. Call 999 in Hong Kong or your local emergency number. Support lines are always on <a href="https://webapp.serenio.ai/care" target="_blank" rel="noopener">Serenio's support page</a>.</p>
+              </div>
             </aside>
           </div>
         </div>
@@ -148,42 +152,45 @@
       <div class="shell">
         <div class="footer__inner">
           <div class="footer__about">
-            <a class="brand" href="/" aria-label="Serenio">
+            <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
               <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
               <span class="brand__word">SERENIO</span>
             </a>
-            <p data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+            <p data-i18n="footer.about">Serenio is a free AI companion for everyday feelings, on iPhone and the web. Yuyu listens first, remembers what matters, and points you toward people when it counts.</p>
+            <div class="footer__get">
+              <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="132" height="44" loading="lazy" /></a>
+              <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+            </div>
           </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.product">Product</h4>
-            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <a href="/for-organizations" data-i18n="nav.pricing">Membership</a>
-            <a href="/for-organizations#faq" data-i18n="nav.faq">FAQ</a>
-            <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-          </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.company">Company</h4>
+          <nav class="footer__col" aria-labelledby="footer-product">
+            <h2 class="footer__title" id="footer-product" data-i18n="footer.product">Product</h2>
+            <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="footer.iphone">Serenio for iPhone</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="footer.web">Web app</a>
+            <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="/#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.org">For organizations</a>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__title" id="footer-company" data-i18n="footer.company">Company</h2>
             <a href="/#about" data-i18n="nav.about">About</a>
             <a href="/contact" data-i18n="nav.contact">Contact</a>
             <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
             <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
-          </div>
+          </nav>
         </div>
         <div class="footer__care">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z"/></svg></span>
-          <p>
-            <span data-i18n="about.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at</span>
-            <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>
-          </p>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+          <p data-i18n-html="footer.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
         </div>
         <div class="footer__bottom">
-          <span data-i18n="footer.rights">© 2025 Serenio AI Limited. All rights reserved.</span>
+          <span>© <span data-year>2026</span> <span data-i18n="footer.rights">Serenio AI Limited. All rights reserved.</span></span>
           <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
         </div>
       </div>
     </footer>
 
-    <script src="/js/i18n.js"></script>
+    <script src="/js/i18n/core.js"></script>
+    <script src="/js/i18n/org-contact.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

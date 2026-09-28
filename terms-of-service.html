@@ -1,79 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" data-page-title="meta.title.terms">
+<html lang="en" data-page-title="meta.title.terms" data-page-desc="meta.desc.terms">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Terms of Service · Serenio</title>
-    <meta name="description" content="The terms that govern your use of Serenio." />
+    <meta name="description" content="The terms that govern your use of Serenio's iPhone app, web app and website, provided by Serenio AI Limited, Hong Kong." />
+    <link rel="canonical" href="https://www.serenio.ai/terms-of-service" />
     <meta name="theme-color" content="#faf7f2" />
-    <link rel="icon" href="/images/app-icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/app-icon.png" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Serenio" />
+    <meta property="og:title" content="Serenio Terms of Service" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.serenio.ai/terms-of-service" />
+    <meta property="og:image" content="https://www.serenio.ai/images/og.jpg" />
     <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/geist.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/serenio.css" />
-    <link rel="stylesheet" href="/css/pages.css" />
-    <script>
-      (function () {
-        try {
-          var m = { en: "en", "zh-Hant": "zh-Hant", ja: "ja", ko: "ko" };
-          var s = localStorage.getItem("serenio.lang");
-          var l;
-          if (s && m[s]) l = m[s];
-          else {
-            var n = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            l = n.indexOf("zh") === 0 ? "zh-Hant" : n.indexOf("ja") === 0 ? "ja" : n.indexOf("ko") === 0 ? "ko" : "en";
-          }
-          document.documentElement.classList.add("js");
-          document.documentElement.lang = l;
-        } catch (e) {}
-      })();
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "G-G69RR3LCQG");
-    </script>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script src="/js/boot.js"></script>
+    <script src="/js/analytics.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="nav.home">Home</a>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header class="nav">
       <div class="nav__inner">
-        <a class="brand" href="/" aria-label="Serenio">
+        <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
           <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
           <span class="brand__word">SERENIO</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
-          <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
+          <a class="nav__link" href="/how-it-works" data-route="/how-it-works" data-i18n="nav.how">How it works</a>
           <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.org">For organizations</a>
           <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav__actions">
           <div class="lang" data-lang-switch data-open="false">
-            <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+            <button class="lang__btn" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="lang.label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
               <span class="lang__short">EN</span>
             </button>
-            <ul class="lang__menu" role="menu"></ul>
+            <ul class="lang__menu"></ul>
           </div>
-          <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+          <a class="btn btn--primary btn--sm" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-smart-cta data-track="web_app" data-i18n="cta.app">Open web app</a>
         </div>
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </header>
-    <div class="nav__drawer">
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
       <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/how-it-works" data-i18n="nav.how">How it works</a>
       <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="/for-organizations" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.org">For organizations</a>
       <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
-      <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-      <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-    </div>
+      <div class="nav__drawer-cta">
+        <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+        <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+      </div>
+    </nav>
 
     <main id="main">
       <header class="page-head">
@@ -85,91 +74,242 @@
         <div class="shell page-head__inner">
           <p class="eyebrow" data-i18n="nav.terms">Terms</p>
           <h1 data-i18n="terms.head.title">Terms of Service</h1>
-          <p data-i18n="terms.head.sub">The terms that govern your use of Serenio.</p>
+          <p data-i18n="terms.head.sub">The agreement between you and Serenio when you use our apps and website.</p>
+          <p class="page-head__note" data-i18n="legal.langNote"></p>
         </div>
       </header>
 
-      <section class="section section--tight">
+      <section class="section--tight">
         <div class="shell">
           <div class="prose" data-i18n-rich>
-            <!-- English (also the fallback for ja / ko) -->
-            <div data-lang="en">
-              <p>Welcome to Serenio. Serenio is a mental-health application service provided by Serenio AI Limited (Hong Kong company number 3299059). Before using the Serenio service, please read the following terms and conditions carefully.</p>
-              <h2>1. About these terms</h2>
-              <p>These terms are a legal agreement between you and Serenio ("Serenio", "we", "us" or "our") governing your use of the Serenio service. You must agree to these terms to use the Serenio service. If you do not agree, please do not use the Serenio service.</p>
-              <h2>2. How we modify these terms</h2>
-              <p>We may modify these terms from time to time. If we do, we will post the modified terms on the Serenio service and show "Last updated" and the date. Your continued use of the Serenio service indicates your acceptance of the modified terms. If you do not agree, your only option is to stop using the Serenio service.</p>
-              <h2>3. Eligibility</h2>
-              <p>The Serenio service is not for persons under 18 years of age. By using the Serenio service, you represent and warrant that you are at least 18 years old. If you are under 18, do not use the Serenio service.</p>
-              <h2>4. Use of the Serenio service</h2>
-              <p>We grant you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Serenio service solely for your personal, non-commercial use. You agree not to use the Serenio service for any unlawful or unauthorized purpose, and to comply with all applicable laws. You agree that you will not:</p>
+            <!-- ======================= English (also shown for ja / ko) ======================= -->
+            <div data-lang="en" lang="en">
+              <p>These Terms of Service ("Terms") are an agreement between you and Serenio AI Limited, a company incorporated in Hong Kong (company no. 3299059) ("Serenio", "we", "us"). They apply to the Serenio app for iPhone, the Serenio web app and this website (together, the "Services"). By creating an account or using the Services, you agree to these Terms and to our <a href="/privacy-policy">Privacy Policy</a>. If you don't agree, please don't use the Services.</p>
+
+              <div class="summary">
+                <h2>Please read this first</h2>
+                <ul>
+                  <li><strong>Yuyu is an AI.</strong> Serenio's companion is artificial intelligence, not a human being.</li>
+                  <li><strong>Serenio is not medical care.</strong> It is a wellbeing companion. It is not a medical device, and it doesn't provide medical, psychological or other professional advice, diagnosis or treatment.</li>
+                  <li><strong>Serenio is not an emergency service.</strong> No one monitors conversations. If you are in danger or thinking about harming yourself, call 999 in Hong Kong or your local emergency number, or contact a helpline straight away.</li>
+                  <li><strong>Serenio is for adults aged 18 and over.</strong></li>
+                </ul>
+              </div>
+
+              <h2 id="t-eligibility">1. Eligibility and your account</h2>
               <ul>
-                <li>violate or circumvent (or attempt to) any security measures we put in place to protect the Serenio service;</li>
-                <li>use the Serenio service for commercial purposes without our prior express written consent;</li>
-                <li>use the Serenio service to infringe others' intellectual property, privacy or other lawful rights;</li>
-                <li>use the Serenio service to distribute viruses, trojans, worms, bombs, corrupted data or other destructive files;</li>
-                <li>attempt to crack, reverse engineer, disassemble or otherwise obtain the source code of the Serenio service;</li>
-                <li>engage in conduct that may cause us legal liability, harm our brand or goodwill, or cause us to lose other users or partners.</li>
+                <li>You must be at least 18 years old to use the Services.</li>
+                <li>Most features need an account. Give accurate information when you sign up, keep your password safe, and tell us promptly if you think someone else has used your account. You are responsible for what happens under your account.</li>
               </ul>
-              <h2>5. Disclaimer</h2>
-              <p>Serenio is a mental-health support tool intended to help users improve their mental health. However, Serenio cannot replace professional psychotherapy or medical services. Serenio is not a medical provider and does not provide medical advice. Before using the Serenio service, you should consult your physician or another qualified medical professional.</p>
-              <h2>6. Limitations and disclaimers</h2>
-              <p>To the maximum extent permitted by law, Serenio and its affiliates, directors, officers, employees, agents, contractors, licensors and other representatives shall not be liable to you for any damages, including but not limited to any indirect, special, incidental or consequential damages, even if Serenio has been advised of the possibility of such damages.</p>
-              <h2>7. Intellectual property</h2>
-              <p>The Serenio service includes intellectual property owned by Serenio and its licensors. In using the Serenio service, you do not acquire any intellectual property or other proprietary rights.</p>
-              <h2>8. Data protection and privacy</h2>
-              <p>When using the Serenio service, you may provide us with certain personal information. We will handle your personal information in accordance with our Privacy Policy, available in the Serenio app or on our website.</p>
-              <h2>9. Termination</h2>
-              <p>Serenio may terminate or suspend your use of the Serenio service at any time. In that case, you may be unable to access the service, and Serenio is not liable for any loss you suffer as a result. After termination or suspension, all provisions of these terms continue to apply.</p>
-              <h2>10. Governing law and jurisdiction</h2>
-              <p>These terms of use and your relationship with Serenio are governed by the laws of Hong Kong. To resolve any dispute relating to the Serenio service, you shall submit to the courts of competent jurisdiction in Hong Kong.</p>
-              <h2>11. Modifications</h2>
-              <p>Serenio may modify these terms of use from time to time. If we make material changes, we will notify you through the Serenio app or our website. Your continued use of the Serenio service indicates your acceptance of the modified terms.</p>
-              <h2>12. Other terms</h2>
-              <p>If any part of these terms is deemed invalid or unenforceable, that part shall be severable and shall not affect the validity of the remaining parts. These terms constitute the entire agreement between you and Serenio and supersede any prior agreements relating to the Serenio service. Your use of the Serenio service shall not be construed as creating any agency, joint venture, employee/employer or other similar relationship between Serenio and you.</p>
-              <h2>13. Contact</h2>
-              <p>If you have any questions or suggestions about these terms of use, please contact Serenio AI Limited (Hong Kong company registration number 3299059), email <a href="mailto:support@serenio.ai">support@serenio.ai</a>.</p>
-              <p class="legal-updated" data-i18n="legal.updated">Last updated: 22 August 2023</p>
+
+              <h2 id="t-free">2. Free for individuals</h2>
+              <ul>
+                <li>The Services are free for individuals, for personal and non-commercial use. There are no subscriptions or in-app purchases.</li>
+                <li>To keep Serenio sustainable and safe for everyone, we set fair-use limits, such as a daily number of replies. We show these limits in the app and may change them.</li>
+                <li>An organization that wants to provide Serenio to its staff, students, members or clients needs a separate written partnership agreement with us, which involves fees. You may not use the Services to provide a service to others without such an agreement.</li>
+                <li>If we ever introduce paid features for individuals, we will tell you clearly beforehand, and nothing will be charged without your agreement.</li>
+              </ul>
+
+              <h2 id="t-what">3. What Serenio is, and isn't</h2>
+              <ul>
+                <li>Serenio uses AI to offer conversation, reflection and self-help practices adapted from established psychological approaches. They are for general wellbeing and self-reflection.</li>
+                <li>Serenio does not provide medical, psychological, psychiatric or other professional advice, diagnosis or treatment. The check-in uses standard questionnaires (PHQ-9 and GAD-7), but its results are not a diagnosis.</li>
+                <li>Always seek the advice of a qualified professional about any health condition, and never ignore or delay professional advice because of something you read or heard in Serenio.</li>
+                <li>Serenio is not a crisis or emergency service and cannot send help to you. Support lines shown in Serenio are run by independent organizations.</li>
+              </ul>
+
+              <h2 id="t-ai">4. AI-generated content</h2>
+              <ul>
+                <li>Yuyu's replies, reflections, insights, letters and other content are generated automatically by AI. They may be inaccurate, incomplete or unsuitable for your situation.</li>
+                <li>Use your own judgement. Don't rely on AI-generated content for decisions about your health, safety, finances or legal matters.</li>
+                <li>Yuyu draws only on what you share with it and what it was designed to do. It doesn't know you the way a person does.</li>
+              </ul>
+
+              <h2 id="t-content">5. Your content</h2>
+              <ul>
+                <li>You keep ownership of what you write, say and upload ("Your Content").</li>
+                <li>You give us a worldwide, non-exclusive, royalty-free licence to host, store, process, transmit and display Your Content only as needed to provide the Services to you, as described in our Privacy Policy. This licence ends when you delete Your Content or your account, except for copies in routine backups until they expire.</li>
+                <li>You are responsible for Your Content and confirm that you have the right to share it. Please don't share other people's sensitive personal information without good reason.</li>
+              </ul>
+
+              <h2 id="t-use">6. Acceptable use</h2>
+              <p>You agree not to:</p>
+              <ul>
+                <li>use the Services in a way that breaks the law or harms anyone;</li>
+                <li>try to break, overload or get around the Services' security, limits or safety features;</li>
+                <li>copy, reverse engineer or decompile the Services, except where the law allows it;</li>
+                <li>use bots, scrapers or other automated means to access the Services or extract data or AI outputs;</li>
+                <li>use the Services to build or train a competing product or AI model;</li>
+                <li>use the Services to harass or threaten anyone, or to create content that sexualizes or endangers children;</li>
+                <li>impersonate anyone or misrepresent your connection with anyone; or</li>
+                <li>use the Services commercially without our written agreement.</li>
+              </ul>
+              <p>If we reasonably believe these Terms have been broken, we may take appropriate action, including suspending or closing an account.</p>
+
+              <h2 id="t-ip">7. Our intellectual property</h2>
+              <p>The Services, including the software, design, the Serenio name and logo, and Yuyu, belong to Serenio or its licensors. We grant you a personal, limited, non-exclusive, non-transferable and revocable licence to use the Services for personal, non-commercial purposes under these Terms. If you send us feedback or ideas, we may use them freely and without obligation to you.</p>
+
+              <h2 id="t-privacy">8. Privacy</h2>
+              <p>Our <a href="/privacy-policy">Privacy Policy</a> explains how we handle personal data, including how the AI processes your conversations and which providers help us.</p>
+
+              <h2 id="t-third">9. Third-party services</h2>
+              <p>The Services rely on third-party providers, such as AI model providers and hosting services, and link to third-party services such as helplines. We are not responsible for third-party services that we don't control.</p>
+
+              <h2 id="t-apple">10. Apple App Store</h2>
+              <p>If you downloaded the Serenio app from Apple's App Store, the following also applies:</p>
+              <ul>
+                <li>On the App Store, the app may be listed under our founder's developer account. Serenio AI Limited provides the app and is the party to these Terms.</li>
+                <li>These Terms are between you and Serenio only, not Apple, and Apple is not responsible for the app or its content.</li>
+                <li>Apple has no obligation to provide maintenance or support for the app.</li>
+                <li>If the app fails to conform to an applicable warranty, you may notify Apple, and Apple may refund the purchase price, if any. To the maximum extent permitted by law, Apple has no other warranty obligation for the app.</li>
+                <li>Apple is not responsible for addressing any claim by you or a third party relating to the app or your use of it, including product liability claims, claims that the app fails to meet legal or regulatory requirements, and consumer protection or privacy claims.</li>
+                <li>Apple is not responsible for investigating, defending, settling or discharging any third-party claim that the app infringes intellectual property rights.</li>
+                <li>You confirm that you are not located in a country subject to a U.S. Government embargo or designated as a "terrorist supporting" country, and that you are not on any U.S. Government list of prohibited or restricted parties.</li>
+                <li>You must comply with applicable third-party terms when using the app, and with the Usage Rules in Apple's Media Services Terms and Conditions.</li>
+                <li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</li>
+                <li>Please send any questions, complaints or claims about the app to Serenio AI Limited at <a href="mailto:support@serenio.ai">support@serenio.ai</a>.</li>
+              </ul>
+
+              <h2 id="t-changes-service">11. Changes to the Services</h2>
+              <p>We keep improving Serenio, so features may change, be added or be removed. We may also suspend or discontinue all or part of the Services. If we discontinue the Services, we will try to give you reasonable notice and a way to download your data.</p>
+
+              <h2 id="t-ending">12. Ending your use</h2>
+              <p>You can stop using Serenio and delete your account at any time from inside the app. We may suspend or close your account if you break these Terms, if the law requires it, or to protect you, other people or the Services. Sections that by their nature should continue (including sections 4, 5, 7 and 13 to 16) survive after your use ends.</p>
+
+              <h2 id="t-disclaimer">13. Disclaimers</h2>
+              <p>The Services are provided "as is" and "as available". To the maximum extent permitted by law, we make no warranties of any kind, express or implied, including that the Services will be uninterrupted, error-free or fit for a particular purpose, or that AI-generated content will be accurate.</p>
+
+              <h2 id="t-liability">14. Limitation of liability</h2>
+              <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, profits or goodwill, arising from your use of the Services. Because the Services are free for individuals, our total liability to you for all claims relating to the Services is limited to HK$800.</p>
+              <p>Nothing in these Terms excludes or limits liability that cannot be excluded or limited by law, including liability for death or personal injury caused by negligence, or for fraud, and nothing affects your statutory rights as a consumer.</p>
+
+              <h2 id="t-law">15. Governing law and disputes</h2>
+              <p>These Terms are governed by the laws of the Hong Kong Special Administrative Region. The courts of Hong Kong have jurisdiction over any dispute, although if you are a consumer living elsewhere, you may also have the right to bring a claim in your local courts under mandatory local law. Before going to court, please contact us so we can try to resolve the issue informally.</p>
+
+              <h2 id="t-general">16. General</h2>
+              <p>If any part of these Terms is found to be unenforceable, the rest remains in effect. If we don't enforce a right, that isn't a waiver of it. You may not transfer your rights under these Terms without our consent; we may transfer ours as part of a reorganization, merger or sale. These Terms and our Privacy Policy are the entire agreement between you and us about the Services. If versions of these Terms in different languages conflict, the English version prevails.</p>
+
+              <h2 id="t-updates">17. Changes to these Terms</h2>
+              <p>We may update these Terms. We'll post the new version here with a new date and, for material changes, tell you in the app or by email before they take effect. If you keep using Serenio after the changes take effect, you accept the updated Terms. If you don't agree, please stop using Serenio and delete your account.</p>
+
+              <h2 id="t-contact">18. Contact</h2>
+              <p>Serenio AI Limited, Hong Kong (company no. 3299059). Email <a href="mailto:support@serenio.ai">support@serenio.ai</a>.</p>
+              <p class="legal-updated">Last updated: 28 September 2026</p>
             </div>
 
-            <!-- 繁體中文（原文） -->
+            <!-- ======================= 繁體中文 ======================= -->
             <div data-lang="zh-Hant" hidden lang="zh-Hant">
-              <p>歡迎使用 Serenio 服務！Serenio 是由 Serenio AI Limited（Hong Kong company number: 3299059）提供的一項心理健康應用程式服務。在使用 Serenio 服務之前，請您仔細閱讀以下條款和條件。</p>
-              <h2>1. 關於這些條款</h2>
-              <p>這些條款是您與 Serenio（以下簡稱「Serenio」、「我們」或「我們的」）之間的法律協議，規定您對 Serenio 服務的使用。您必須同意這些條款才能使用 Serenio 服務。如果您不同意這些條款，請不要使用 Serenio 服務。</p>
-              <h2>2. 我們如何修改這些條款？</h2>
-              <p>我們可能會不時修改這些條款。如果我們修改這些條款，我們將在 Serenio 服務上發布修改後的條款，並顯示「最近更新於」和日期。您繼續使用 Serenio 服務將表示您接受修改後的條款。如果您不同意修改後的條款，您的唯一選擇是停止使用 Serenio 服務。</p>
-              <h2>3. 使用資格</h2>
-              <p>Serenio 服務不適用於未滿 18 歲的人士。通過使用 Serenio 服務，您聲明並保證您已年滿 18 歲。如果您未滿 18 歲，請勿使用 Serenio 服務。</p>
-              <h2>4. Serenio 服務的使用</h2>
-              <p>我們授予您有限的、非專屬的、不可轉讓的、不可分割的、可撤銷的許可，允許您訪問和使用 Serenio 服務，僅用於您個人的非商業用途。您同意不得以任何方式將 Serenio 服務用於非法或未經授權的目的，並遵守所有適用的法律。您同意，您將不會：</p>
+              <p>本服務條款（下稱「本條款」）是你與 Serenio AI Limited（思癒科技有限公司，一家於香港註冊成立的公司，公司編號 3299059，下稱「Serenio」或「我們」）之間的協議，適用於 Serenio iPhone App、Serenio 網頁版及本網站（統稱「本服務」）。當你建立帳戶或使用本服務，即表示你同意本條款及我們的<a href="/privacy-policy">私隱政策</a>。如你不同意，請勿使用本服務。</p>
+
+              <div class="summary">
+                <h2>請先閱讀</h2>
+                <ul>
+                  <li><strong>小癒是 AI。</strong>Serenio 的陪伴者是人工智能，不是真人。</li>
+                  <li><strong>Serenio 不是醫療服務。</strong>它是情緒健康的陪伴者，並非醫療器材，亦不提供醫療、心理或其他專業意見、診斷或治療。</li>
+                  <li><strong>Serenio 不是緊急服務。</strong>沒有人監看對話。如你身處危險，或正考慮傷害自己，請立即致電香港 999 或當地緊急電話，或聯絡求助熱線。</li>
+                  <li><strong>Serenio 適用於 18 歲或以上的成年人。</strong></li>
+                </ul>
+              </div>
+
+              <h2 id="tz-eligibility">1. 使用資格及你的帳戶</h2>
               <ul>
-                <li>違反或繞過（或嘗試違反或繞過）任何我們為保護 Serenio 服務所設置的安全措施；</li>
-                <li>未經我們事先明確書面同意，將 Serenio 服務用於商業目的；</li>
-                <li>將 Serenio 服務用於侵犯他人的知識產權、隱私權或其他合法權益；</li>
-                <li>將 Serenio 服務用於散播病毒、木馬、蠕蟲、炸彈、腐敗數據或其他具有破壞性特徵的電子文件；</li>
-                <li>試圖破解、逆向工程、拆解或以其他方式獲取 Serenio 服務的源代碼；</li>
-                <li>進行任何可能導致我們承擔法律責任、損害我們品牌形象或商譽、或使我們失去其他用戶或合作夥伴的行為。</li>
+                <li>你必須年滿 18 歲，才可使用本服務。</li>
+                <li>大部分功能需要帳戶。註冊時請提供準確資料，妥善保管密碼；如你認為有他人使用了你的帳戶，請盡快通知我們。你須為你帳戶下發生的一切負責。</li>
               </ul>
-              <h2>5. 責任免除聲明</h2>
-              <p>Serenio 是一個心理健康輔助工具，旨在幫助用戶改善心理健康。然而，Serenio 不能代替專業的心理治療或醫療服務。Serenio 並不是一個醫療提供者，並且 Serenio 不提供醫療建議。在使用 Serenio 服務之前，您應該諮詢您的醫生或其他合格的醫療專業人士。</p>
-              <h2>6. 限制和免責聲明</h2>
-              <p>在法律允許的最大範圍內，Serenio 及其關聯公司、董事、高管、員工、代理商、承包商、許可方和其他代表不對您承擔任何責任，包括但不限於任何間接、特殊、附帶或後果性損害，即使 Serenio 已被告知此類損害的可能性。</p>
-              <h2>7. 知識產權</h2>
-              <p>Serenio 服務包括由 Serenio 及其許可方擁有的知識產權。在使用 Serenio 服務的過程中，您不會獲得任何知識產權或其他財產權。</p>
-              <h2>8. 資料保護和隱私</h2>
-              <p>在使用 Serenio 服務時，您可能會向我們提供某些個人信息。我們將根據我們的隱私政策來處理您的個人信息，該政策可在 Serenio 應用程式或我們的網站上查閱。</p>
-              <h2>9. 終止</h2>
-              <p>Serenio 可隨時終止或暫停您對 Serenio 服務的使用。在這種情況下，您可能無法訪問 Serenio 服務，並且 Serenio 對您因此而遭受的任何損失概不負責。終止或暫停後，這些使用條款中的所有條款仍將繼續有效。</p>
-              <h2>10. 法律適用和管轄</h2>
-              <p>本使用條款以及您與 Serenio 之間的關係均受香港法律管轄。在解決任何與 Serenio 服務有關的爭議時，您應提交至香港有管轄權的法院。</p>
-              <h2>11. 修改</h2>
-              <p>Serenio 可能會不時修改本使用條款。如果我們對使用條款進行重大變更，我們將通過 Serenio 應用程式或我們的網站通知您。您繼續使用 Serenio 服務即表示您接受這些修改後的使用條款。</p>
-              <h2>12. 其他條款</h2>
-              <p>如果本使用條款的任何部分被視為無效或不可執行，則該部分應視為可分割的，並且不影響其他部分的有效性和可執行性。本使用條款構成您與 Serenio 之間的完整協議，並取代與 Serenio 服務相關的任何先前協議。您對 Serenio 服務的使用不應理解為 Serenio 與您之間存在代理、合資企業、雇員／雇主或其他類似關係。</p>
-              <h2>13. 聯繫方式</h2>
-              <p>如果您對本使用條款有任何疑問或建議，請通過以下方式聯繫 Serenio AI Limited（香港公司註冊號碼：3299059），電子郵件 <a href="mailto:support@serenio.ai">support@serenio.ai</a>。</p>
-              <p class="legal-updated">本使用條款的最後更新日期為 2023 年 8 月 22 日。</p>
+
+              <h2 id="tz-free">2. 個人免費使用</h2>
+              <ul>
+                <li>本服務供個人免費使用，限於個人及非商業用途，沒有訂閱或 App 內購買。</li>
+                <li>為了讓 Serenio 能持續營運並對所有人保持安全，我們設有合理使用上限，例如每日回覆的數量。這些上限會在 App 內顯示，並可能調整。</li>
+                <li>如機構希望向其員工、學生、會員或服務對象提供 Serenio，須與我們另行簽訂書面合作協議，並須付費。未有此類協議，你不得利用本服務向他人提供服務。</li>
+                <li>如我們日後為個人推出收費功能，會事先清楚告知你；未經你同意，絕不收取任何費用。</li>
+              </ul>
+
+              <h2 id="tz-what">3. Serenio 是甚麼、不是甚麼</h2>
+              <ul>
+                <li>Serenio 運用 AI 提供對話、反思，以及改編自成熟心理學方法的自助練習，用途為一般身心健康及自我反思。</li>
+                <li>Serenio 不提供醫療、心理、精神科或其他專業意見、診斷或治療。情緒檢視採用標準問卷（PHQ-9 及 GAD-7），但結果並非診斷。</li>
+                <li>任何健康問題，請一律諮詢合資格的專業人士；切勿因為在 Serenio 讀到或聽到的內容，而忽略或延遲尋求專業意見。</li>
+                <li>Serenio 並非危機或緊急服務，無法向你派出援助。Serenio 顯示的支援熱線由獨立機構營運。</li>
+              </ul>
+
+              <h2 id="tz-ai">4. AI 產生的內容</h2>
+              <ul>
+                <li>小癒的回覆、回應、觀察、信件及其他內容，均由 AI 自動產生，可能不準確、不完整，或不適合你的情況。</li>
+                <li>請運用你自己的判斷。不要依賴 AI 產生的內容，作出關乎健康、安全、財務或法律的決定。</li>
+                <li>小癒只會根據你與它分享的內容及其設計來回應，它並不像一個人那樣認識你。</li>
+              </ul>
+
+              <h2 id="tz-content">5. 你的內容</h2>
+              <ul>
+                <li>你所寫、所說及上載的內容（「你的內容」），擁有權仍屬於你。</li>
+                <li>你授予我們一項全球性、非獨家、免版稅的許可，僅在為你提供本服務所需的範圍內，並按私隱政策所述，託管、儲存、處理、傳送及顯示你的內容。當你刪除你的內容或帳戶，此許可即告終止；例行備份中的副本則於備份到期時消失。</li>
+                <li>你須為你的內容負責，並確認你有權分享它。如無充分理由，請不要分享他人的敏感個人資料。</li>
+              </ul>
+
+              <h2 id="tz-use">6. 可接受的使用方式</h2>
+              <p>你同意不會：</p>
+              <ul>
+                <li>以違法或傷害任何人的方式使用本服務；</li>
+                <li>試圖破壞、令本服務超出負荷，或繞過其保安措施、使用上限或安全功能；</li>
+                <li>複製、反向工程或反編譯本服務，法律容許者除外；</li>
+                <li>使用機械人、爬蟲或其他自動化方式存取本服務，或擷取資料或 AI 輸出；</li>
+                <li>利用本服務建立或訓練具競爭性的產品或 AI 模型；</li>
+                <li>利用本服務騷擾或威脅他人，或製作將兒童性化或危害兒童的內容；</li>
+                <li>冒充任何人，或虛報你與任何人的關係；或</li>
+                <li>未經我們書面協議，將本服務作商業用途。</li>
+              </ul>
+              <p>如我們有合理理由相信本條款遭違反，我們可採取適當行動，包括暫停或關閉帳戶。</p>
+
+              <h2 id="tz-ip">7. 我們的知識產權</h2>
+              <p>本服務，包括軟件、設計、Serenio 名稱及標誌以及小癒，均屬 Serenio 或其授權人所有。我們授予你一項個人、有限、非獨家、不可轉讓及可撤回的許可，讓你按本條款將本服務用於個人及非商業用途。如你向我們提供意見或建議，我們可自由使用，對你不負任何責任。</p>
+
+              <h2 id="tz-privacy">8. 私隱</h2>
+              <p>我們的<a href="/privacy-policy">私隱政策</a>說明我們如何處理個人資料，包括 AI 如何處理你的對話，以及有哪些供應商協助我們。</p>
+
+              <h2 id="tz-third">9. 第三方服務</h2>
+              <p>本服務依賴第三方供應商（例如 AI 模型供應商及託管服務），並連結至求助熱線等第三方服務。對於並非由我們控制的第三方服務，我們概不負責。</p>
+
+              <h2 id="tz-apple">10. Apple App Store</h2>
+              <p>如你從 Apple 的 App Store 下載 Serenio App，以下條款亦適用：</p>
+              <ul>
+                <li>在 App Store 上，App 可能以我們創辦人的開發者帳戶上架；App 由 Serenio AI Limited 提供，並由其作為本條款的一方。</li>
+                <li>本條款只存在於你與 Serenio 之間，並非與 Apple 之間；Apple 無須為 App 或其內容負責。</li>
+                <li>Apple 並無義務為 App 提供任何維護或支援服務。</li>
+                <li>如 App 不符合任何適用的保證，你可通知 Apple，而 Apple 可退還購買價（如有）。在法律容許的最大範圍內，Apple 對 App 不負任何其他保證責任。</li>
+                <li>對於你或任何第三方就 App 或你使用 App 所提出的任何申索，包括產品責任申索、指 App 不符合法律或監管要求的申索，以及消費者保障或私隱申索，Apple 概不負責處理。</li>
+                <li>對於任何指 App 侵犯知識產權的第三方申索，Apple 無須負責調查、抗辯、和解或解除。</li>
+                <li>你確認你並非身處受美國政府禁運或被列為「支持恐怖主義」的國家，亦不在任何美國政府禁止或限制往來的名單上。</li>
+                <li>使用 App 時，你須遵守適用的第三方條款，以及 Apple 媒體服務條款及細則中的使用規則。</li>
+                <li>Apple 及其附屬公司為本條款的第三方受益人，並可向你執行本條款。</li>
+                <li>有關 App 的任何問題、投訴或申索，請寄往 Serenio AI Limited：<a href="mailto:support@serenio.ai">support@serenio.ai</a>。</li>
+              </ul>
+
+              <h2 id="tz-changes-service">11. 本服務的變更</h2>
+              <p>我們會不斷改進 Serenio，功能可能會改變、新增或移除。我們亦可能暫停或終止全部或部分本服務。如終止本服務，我們會盡量給予合理通知，並讓你下載你的資料。</p>
+
+              <h2 id="tz-ending">12. 終止使用</h2>
+              <p>你可隨時停止使用 Serenio，並在 App 內刪除帳戶。如你違反本條款、法律有所要求，或為了保護你、其他人或本服務，我們可暫停或關閉你的帳戶。按其性質應繼續有效的條款（包括第 4、5、7 及第 13 至 16 條），在你停止使用後仍然有效。</p>
+
+              <h2 id="tz-disclaimer">13. 免責聲明</h2>
+              <p>本服務按「現狀」及「現有」基礎提供。在法律容許的最大範圍內，我們不作任何明示或默示的保證，包括不保證本服務不會中斷、沒有錯誤或適合某特定用途，亦不保證 AI 產生的內容準確。</p>
+
+              <h2 id="tz-liability">14. 責任限制</h2>
+              <p>在法律容許的最大範圍內，對於因你使用本服務而引致的任何間接、附帶、特殊、相應或懲罰性損害，或任何資料、利潤或商譽損失，我們概不負責。由於本服務供個人免費使用，我們就所有與本服務有關的申索對你承擔的總責任，以港幣 800 元為上限。</p>
+              <p>本條款並不排除或限制任何依法不能排除或限制的責任，包括因疏忽導致死亡或人身傷害的責任，或欺詐責任；本條款亦不影響你作為消費者的法定權利。</p>
+
+              <h2 id="tz-law">15. 適用法律及爭議</h2>
+              <p>本條款受香港特別行政區法律管轄。香港法院對任何爭議具有管轄權；惟如你是居於其他地方的消費者，你亦可能有權依據當地強制性法律，在當地法院提出申索。在訴諸法院之前，請先聯絡我們，讓我們嘗試以非正式方式解決問題。</p>
+
+              <h2 id="tz-general">16. 一般條款</h2>
+              <p>如本條款任何部分被裁定為不可執行，其餘部分仍然有效。我們未有執行某項權利，並不代表放棄該權利。未經我們同意，你不得轉讓本條款下的權利；我們可在重組、合併或出售時轉讓我們的權利。本條款及私隱政策構成你與我們之間有關本服務的完整協議。如本條款的不同語言版本有任何歧異，以英文版本為準。</p>
+
+              <h2 id="tz-updates">17. 本條款的修訂</h2>
+              <p>我們可能更新本條款。我們會在此發佈新版本及新日期；如有重大修訂，會在生效前透過 App 或電郵通知你。修訂生效後，如你繼續使用 Serenio，即表示你接受更新後的條款。如你不同意，請停止使用 Serenio 並刪除帳戶。</p>
+
+              <h2 id="tz-contact">18. 聯絡我們</h2>
+              <p>Serenio AI Limited（思癒科技有限公司），香港公司編號 3299059。電郵：<a href="mailto:support@serenio.ai">support@serenio.ai</a>。</p>
+              <p class="legal-updated">最後更新日期：2026 年 9 月 28 日</p>
             </div>
           </div>
         </div>
@@ -180,42 +320,45 @@
       <div class="shell">
         <div class="footer__inner">
           <div class="footer__about">
-            <a class="brand" href="/" aria-label="Serenio">
+            <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
               <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
               <span class="brand__word">SERENIO</span>
             </a>
-            <p data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+            <p data-i18n="footer.about">Serenio is a free AI companion for everyday feelings, on iPhone and the web. Yuyu listens first, remembers what matters, and points you toward people when it counts.</p>
+            <div class="footer__get">
+              <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="132" height="44" loading="lazy" /></a>
+              <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+            </div>
           </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.product">Product</h4>
-            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <a href="/for-organizations" data-i18n="nav.pricing">Membership</a>
-            <a href="/for-organizations#faq" data-i18n="nav.faq">FAQ</a>
-            <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-          </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.company">Company</h4>
+          <nav class="footer__col" aria-labelledby="footer-product">
+            <h2 class="footer__title" id="footer-product" data-i18n="footer.product">Product</h2>
+            <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="footer.iphone">Serenio for iPhone</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="footer.web">Web app</a>
+            <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="/#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.org">For organizations</a>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__title" id="footer-company" data-i18n="footer.company">Company</h2>
             <a href="/#about" data-i18n="nav.about">About</a>
             <a href="/contact" data-i18n="nav.contact">Contact</a>
             <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
             <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
-          </div>
+          </nav>
         </div>
         <div class="footer__care">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z"/></svg></span>
-          <p>
-            <span data-i18n="about.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at</span>
-            <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>
-          </p>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+          <p data-i18n-html="footer.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
         </div>
         <div class="footer__bottom">
-          <span data-i18n="footer.rights">© 2025 Serenio AI Limited. All rights reserved.</span>
+          <span>© <span data-year>2026</span> <span data-i18n="footer.rights">Serenio AI Limited. All rights reserved.</span></span>
           <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
         </div>
       </div>
     </footer>
 
-    <script src="/js/i18n.js"></script>
+    <script src="/js/i18n/core.js"></script>
+    <script src="/js/i18n/legal.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

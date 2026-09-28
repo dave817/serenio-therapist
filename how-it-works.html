@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-page-title="meta.title.how" data-page-desc="meta.desc.how">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How it works · Serenio</title>
+    <meta name="description" content="How Serenio's AI companion works: the safety checks on every message, the psychology its practices come from, what happens in a hard moment, and where your words go." />
+    <link rel="canonical" href="https://www.serenio.ai/how-it-works" />
+    <meta name="theme-color" content="#faf7f2" />
+    <meta name="apple-itunes-app" content="app-id=6786770984" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Serenio" />
+    <meta property="og:title" content="How Serenio works" />
+    <meta property="og:description" content="The safety checks on every message, the psychology behind the practices, and where your words go. Plainly." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.serenio.ai/how-it-works" />
+    <meta property="og:image" content="https://www.serenio.ai/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/css/serenio.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/how.css" />
+    <script src="/js/boot.js"></script>
+    <script src="/js/analytics.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
+          <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
+          <span class="brand__word">SERENIO</span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a class="nav__link" href="/how-it-works" data-route="/how-it-works" data-i18n="nav.how">How it works</a>
+          <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.org">For organizations</a>
+          <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang" data-lang-switch data-open="false">
+            <button class="lang__btn" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="lang.label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+              <span class="lang__short">EN</span>
+            </button>
+            <ul class="lang__menu"></ul>
+          </div>
+          <a class="btn btn--primary btn--sm" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-smart-cta data-track="web_app" data-i18n="cta.app">Open web app</a>
+        </div>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </header>
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+      <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/how-it-works" data-i18n="nav.how">How it works</a>
+      <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.org">For organizations</a>
+      <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
+      <div class="nav__drawer-cta">
+        <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+        <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <header class="page-head">
+        <div class="mesh" aria-hidden="true">
+          <div class="mesh__blob mesh__blob--1"></div>
+          <div class="mesh__blob mesh__blob--2"></div>
+          <div class="mesh__blob mesh__blob--3"></div>
+          <div class="mesh__well"></div>
+        </div>
+        <div class="shell page-head__inner">
+          <p class="eyebrow" data-i18n="nav.how">How it works</p>
+          <h1 data-i18n="how.title">An AI companion you can see into.</h1>
+          <p data-i18n="how.sub">You deserve to know exactly what happens when you talk to Yuyu: how it listens, where its methods come from, what it does in a hard moment, and where your words go. Here it is, plainly.</p>
+          <ul class="toc" aria-label="On this page" data-i18n-aria="how.toc">
+            <li><a href="#short" data-i18n="how.toc.short">The short version</a></li>
+            <li><a href="#message" data-i18n="how.toc.message">Every message</a></li>
+            <li><a href="#methods" data-i18n="how.toc.methods">The methods</a></li>
+            <li><a href="#safety" data-i18n="how.toc.safety">Hard moments</a></li>
+            <li><a href="#data" data-i18n="how.toc.data">Your data</a></li>
+            <li><a href="#limits" data-i18n="how.toc.limits">Limits</a></li>
+            <li><a href="#references" data-i18n="how.toc.refs">References</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- ============================ SHORT VERSION ============================ -->
+      <section class="section section--tight how-section" id="short" aria-labelledby="short-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="short-title" data-i18n="how.toc.short">The short version</h2>
+          </div>
+          <ul class="short">
+            <li class="short__item reveal">
+              <h3 data-i18n="how.s1.title">Yuyu is an AI.</h3>
+              <p data-i18n="how.s1.body">It's software built on large language models, shaped by Serenio to listen carefully. Its replies are written by the AI: no one reads along or types on the other side.</p>
+            </li>
+            <li class="short__item reveal" data-delay="1">
+              <h3 data-i18n="how.s2.title">A companion, not a clinician.</h3>
+              <p data-i18n="how.s2.body">Yuyu doesn't diagnose, prescribe or treat. It's here for everyday feelings, and it points you toward professionals and helplines when that's what you need.</p>
+            </li>
+            <li class="short__item reveal">
+              <h3 data-i18n="how.s3.title">Safety runs first.</h3>
+              <p data-i18n="how.s3.body">Every message is checked for signs of crisis before Yuyu writes a word, and support lines are always one tap away.</p>
+            </li>
+            <li class="short__item reveal" data-delay="1">
+              <h3 data-i18n="how.s4.title">What it keeps, you can see.</h3>
+              <p data-i18n="how.s4.body">Read, edit or forget what Yuyu remembers. Download everything, or delete your account, whenever you like.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================ EVERY MESSAGE ============================ -->
+      <section class="section how-section" id="message" aria-labelledby="message-title">
+        <div class="shell">
+          <div class="pipeline">
+            <div class="pipeline__aside reveal">
+              <p class="eyebrow" data-i18n="how.toc.message">Every message</p>
+              <h2 class="section-title" id="message-title" data-i18n="how.msg.title">What happens when you send a message</h2>
+              <p class="lead" data-i18n="how.msg.lead">Six steps, in order. The first two exist only to keep you safe.</p>
+              <figure class="evidence">
+                <img src="/images/app/web-holding.webp" width="520" height="1160" loading="lazy" decoding="async" alt="The web app's side panel, What Yuyu is holding: the thread, the approach right now (listening first, no technique), memory, practices and care." data-i18n-alt="how.msg.alt" />
+                <figcaption data-i18n="how.msg.caption">In the web app, a side panel shows what Yuyu is holding right now: the thread, its current approach and what it remembers. You can change any of it.</figcaption>
+              </figure>
+            </div>
+            <ol class="steps">
+              <li class="step step--safety reveal">
+                <span class="step__num" aria-hidden="true">1</span>
+                <div>
+                  <span class="step__kicker" data-i18n="how.kicker.safety">Safety</span>
+                  <h3 data-i18n="how.st1.title">A safety check, before anything else</h3>
+                  <p data-i18n="how.st1.body">The moment your message arrives, it is screened for crisis language in English, Traditional and Simplified Chinese, written Cantonese, Japanese and Korean. It takes under a millisecond and runs before anything else, even before we check who you are. It understands everyday idioms, so 熱到想死 (“so hot I could die”) isn't mistaken for a crisis.</p>
+                </div>
+              </li>
+              <li class="step step--safety reveal">
+                <span class="step__num" aria-hidden="true">2</span>
+                <div>
+                  <span class="step__kicker" data-i18n="how.kicker.safety">Safety</span>
+                  <h3 data-i18n="how.st2.title">A second, closer read</h3>
+                  <p data-i18n="how.st2.body">A separate AI model reads your last three messages for less obvious signs of risk. It is instructed to judge meaning rather than keywords, and to choose the more careful answer when it's unsure. With clear signs of crisis, Yuyu replies with words written in advance by people, not generated on the spot, and shows support lines you can call with a tap. With less clear signs, Yuyu slows down and asks you directly about your safety.</p>
+                </div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num" aria-hidden="true">3</span>
+                <div>
+                  <h3 data-i18n="how.st3.title">Only the context you've shared</h3>
+                  <p data-i18n="how.st3.body">To reply, Yuyu draws on what you've given it: the name you'd like to be called, your age range, the note you wrote about yourself, short summaries of recent conversations, the memories most relevant right now, the practices you've tried lately and, in a hard moment, parts of your own safety plan. It doesn't look you up anywhere else.</p>
+                </div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num" aria-hidden="true">4</span>
+                <div>
+                  <h3 data-i18n="how.st4.title">Reflect first, then think it through</h3>
+                  <p data-i18n="how.st4.body">Yuyu's first job is to say back what it heard, as accurately as it can, before offering any advice. Then it gently helps you look at things from more than one side.</p>
+                </div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num" aria-hidden="true">5</span>
+                <div>
+                  <h3 data-i18n="how.st5.title">One small practice, only when it fits</h3>
+                  <p data-i18n="how.st5.body">If a practice might help, Yuyu offers one: never in your first couple of messages (except breathing or grounding), and no more than once every six replies. It won't lecture, name techniques or hand you a worksheet, and “not now” is always an answer.</p>
+                </div>
+              </li>
+              <li class="step reveal">
+                <span class="step__num" aria-hidden="true">6</span>
+                <div>
+                  <h3 data-i18n="how.st6.title">Afterwards, a quiet note</h3>
+                  <p data-i18n="how.st6.body">Yuyu notes the feeling underneath (calm, reflective, hopeful, tender, heavy, activated or guarded), updates its summary and keeps any new memories, which you can see and edit. It's a reflection, never a diagnosis. Moments of crisis are never turned into memories.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ METHODS ============================ -->
+      <section class="section how-section" id="methods" aria-labelledby="methods-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="how.toc.methods">The methods</p>
+            <h2 class="section-title" id="methods-title" data-i18n="how.m.title">Decades of psychology, adapted for a conversation.</h2>
+            <p class="lead" data-i18n="how.m.lead">Most of Yuyu's practices are adapted from cognitive behavioural therapy (CBT), one of the most extensively researched approaches in psychology. We turn them into small, conversational steps. Using a technique that comes from therapy doesn't make Serenio therapy, and we don't claim it does.</p>
+          </div>
+          <div class="methods reveal">
+            <table>
+              <caption data-i18n="how.m.caption">Each practice in Serenio, where it comes from, and what it's for</caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="how.m.col1">In Serenio</th>
+                  <th scope="col" data-i18n="how.m.col2">Where it comes from</th>
+                  <th scope="col" data-i18n="how.m.col3">What it's for</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" data-i18n="how.m.r1a">Reflecting back</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r1b">Reflective listening, from client-centred counselling</span><a class="cite" href="#ref-1">[1]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r1c">Feeling understood before anything else</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span data-i18n="practice.untangle">Untangle a thought</span> · <span data-i18n="how.m.trap">A thinking trap?</span></th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r2b">Thought records and thinking traps (cognitive distortions), from CBT</span><a class="cite" href="#ref-2">[2]</a><a class="cite" href="#ref-3">[3]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r2c">Slowing a thought down to find a fairer one</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.worst">What if the worst happens?</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r3b">Decatastrophising, from CBT</span><a class="cite" href="#ref-2">[2]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r3c">Seeing a worry at its real size</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.reframe">Reframe with Yuyu</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r4b">Socratic questioning, from CBT</span><a class="cite" href="#ref-2">[2]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r4c">Talking a thought through, one question at a time</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.step">One small step</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r5b">Behavioural activation</span><a class="cite" href="#ref-4">[4]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r5c">Something doable, and when</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.problem">Think a problem through</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r6b">Problem-solving therapy</span><a class="cite" href="#ref-5">[5]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r6c">Options, a choice and a first step</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.worry">Worry time</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r7b">Worry postponement</span><a class="cite" href="#ref-6">[6]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r7c">Parking a looping worry until later</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.ground">Ground me</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r8b">5-4-3-2-1 sensory grounding</span></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r8c">Coming back to the present, one sense at a time</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span data-i18n="practice.breathe">Breathe with me</span> · <span data-i18n="t.breath.title">Breathing space</span></th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r9b">Paced breathing (box and 4-7-8)</span></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r9c">Slowing down with a steady count</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.kind">A kinder voice</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r10b">Self-compassion</span><a class="cite" href="#ref-7">[7]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r10c">Speaking to yourself as you would to a friend</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="practice.values">What matters to me</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r11b">Values clarification</span></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r11c">Naming what matters, and one small way to live it</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="t.plan.title">My safety plan</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r12b">The Safety Planning Intervention</span><a class="cite" href="#ref-8">[8]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r12c">A plan written in calm, for the hard moments</span></td>
+                </tr>
+                <tr>
+                  <th scope="row" data-i18n="t.checkin.title">A gentle check-in</th>
+                  <td><span class="m-label" data-i18n="how.m.col2">Where it comes from</span><span data-i18n="how.m.r13b">The PHQ-9 and GAD-7 questionnaires</span><a class="cite" href="#ref-9">[9]</a><a class="cite" href="#ref-10">[10]</a></td>
+                  <td><span class="m-label" data-i18n="how.m.col3">What it's for</span><span data-i18n="how.m.r13c">Noticing how heavy the last two weeks have been</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="methods__note reveal" data-i18n="how.m.note">The check-in uses the published PHQ-9 and GAD-7 questions word for word, in all four languages, with their standard scoring. Results are a snapshot of the last two weeks, not a diagnosis; only a qualified professional can diagnose. If you answer that you've had thoughts of hurting yourself, Yuyu offers support straight away.</p>
+        </div>
+      </section>
+
+      <!-- ============================ HARD MOMENTS ============================ -->
+      <section class="section how-section" id="safety" aria-labelledby="safety-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="how.toc.safety">Hard moments</p>
+            <h2 class="section-title" id="safety-title" data-i18n="how.h.title">When a conversation gets heavy.</h2>
+            <p class="lead" data-i18n="how.h.lead">Serenio is built for everyday feelings, but hard moments happen. This is exactly what Yuyu does.</p>
+          </div>
+          <div class="safety">
+            <ul class="safety__points">
+              <li class="reveal">
+                <span class="safety__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-5 4v-14Z" /><path d="M8.5 10.5h7" /></svg></span>
+                <div>
+                  <h3 data-i18n="how.h1.title">Words written by people, straight away</h3>
+                  <p data-i18n="how.h1.body">When there are clear signs of crisis, Yuyu doesn't improvise. It replies with a message written in advance by people, and shows 24-hour support lines you can call with a tap. In Hong Kong: emergency services (999), The Samaritans (2896 0000), the Mental Health Support Hotline (18111), The Samaritan Befrienders (2389 2222) and Suicide Prevention Services (2382 0000). When you write in Japanese or Korean, you'll see lines in Japan or Korea too.</p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="safety__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg></span>
+                <div>
+                  <h3 data-i18n="how.h2.title">Then Yuyu stays</h3>
+                  <p data-i18n="how.h2.body">For the next hour, Yuyu answers under crisis guidance: it slows down, asks directly about your safety and doesn't end the conversation. It won't diagnose, name disorders, give advice about medication or promise outcomes.</p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="safety__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 7.6 7 9.5 4-1.9 7-5.2 7-9.5V6l-7-3Z" /><path d="M9 12l2 2 4-4" /></svg></span>
+                <div>
+                  <h3 data-i18n="how.h3.title">Your own plan, when you need it</h3>
+                  <p data-i18n="how.h3.body">In calmer moments you can write a safety plan in seven steps: warning signs, things that help, people and places, who to ask, professionals to contact, making your space safer, and what you're living for. When things get heavy, Yuyu can bring it back to you.</p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="safety__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+                <div>
+                  <h3 data-i18n="how.h4.title">Help is one tap from every screen</h3>
+                  <p data-i18n="how.h4.body">A support button sits on every tab, and Serenio's support page works for anyone, with no account needed.</p>
+                </div>
+              </li>
+            </ul>
+            <figure class="safety__shot reveal" data-delay="1">
+              <div class="device-browser">
+                <div class="device-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="device-browser__url">webapp.serenio.ai/care</span></div>
+                <img src="/images/app/web-care.webp" width="1000" height="1164" loading="lazy" decoding="async" alt="Serenio's support page: Support, right now and for later, with a Call 999 button and 24-hour Hong Kong support lines." data-i18n-alt="how.h.alt" />
+              </div>
+              <figcaption data-i18n-html="how.h.caption">Serenio's support page, open to anyone at <a href="https://webapp.serenio.ai/care" target="_blank" rel="noopener">webapp.serenio.ai/care</a>.</figcaption>
+            </figure>
+          </div>
+          <div class="callout reveal" role="note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 4.2 2.8 17.5A2 2 0 0 0 4.5 20.5h15a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z" /><path d="M12 9.5v4M12 17h.01" /></svg>
+            <div>
+              <h3 data-i18n="how.h.calloutTitle">Serenio is not an emergency service.</h3>
+              <p data-i18n="how.h.calloutBody">We don't monitor conversations, and no one is alerted if you're struggling. If you might act on thoughts of ending your life, call 999 in Hong Kong or your local emergency number, or go to the nearest emergency department.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ DATA ============================ -->
+      <section class="section how-section" id="data" aria-labelledby="data-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="how.toc.data">Your data</p>
+            <h2 class="section-title" id="data-title" data-i18n="how.d.title">Where your words go.</h2>
+            <p class="lead" data-i18n-html="how.d.lead">Plain answers, with nothing tucked away. The full details are in our <a href="/privacy-policy">Privacy Policy</a>.</p>
+          </div>
+          <ul class="data-cards">
+            <li class="data-card reveal">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3" /><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6" /></svg></span>
+              <h3 data-i18n="how.d1.title">Where it's stored</h3>
+              <p data-i18n="how.d1.body">Your account and history are stored with Supabase, on Amazon Web Services in Mumbai, India. Each account can only read its own records, photos and voice notes sit in private storage behind links that expire, and data is encrypted in transit and at rest.</p>
+            </li>
+            <li class="data-card reveal" data-delay="1">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+              <h3 data-i18n="how.d2.title">Who helps Yuyu reply</h3>
+              <p data-i18n="how.d2.body">Your message and its context go to Microsoft Azure OpenAI Service to write the reply, with OpenAI as a backup and for background work such as safety checks, memory and transcription. Neither uses your data to train its models. Your email address is never sent.</p>
+            </li>
+            <li class="data-card reveal" data-delay="2">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="2.5" /><circle cx="16" cy="16" r="2.5" /><path d="M10.5 8H20M4 16h9.5M4 8h1.5M18.5 16H20" /></svg></span>
+              <h3 data-i18n="how.d3.title">What you control</h3>
+              <p data-i18n="how.d3.body">See, edit, pause or forget what Yuyu remembers. Delete a journal page and what Yuyu learned from it goes too. Download everything, or delete your account and all of it, from inside the app. For data from older versions of the app, email us.</p>
+            </li>
+          </ul>
+          <div class="processors reveal">
+            <table>
+              <caption data-i18n="how.p.caption">Every service that handles your data</caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="how.p.col1">Service</th>
+                  <th scope="col" data-i18n="how.p.col2">What it does for Serenio</th>
+                  <th scope="col" data-i18n="how.p.col3">Where</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Supabase <span class="muted" data-i18n="how.p.aws">(on Amazon Web Services)</span></th>
+                  <td data-i18n="how.p.r1">Stores your account, history, photos and voice notes</td>
+                  <td data-i18n="how.p.mumbai">Mumbai, India</td>
+                </tr>
+                <tr>
+                  <th scope="row">Vercel</th>
+                  <td data-i18n="how.p.r2">Runs the web app and its servers</td>
+                  <td data-i18n="how.p.mumbai">Mumbai, India</td>
+                </tr>
+                <tr>
+                  <th scope="row">Microsoft Azure OpenAI Service</th>
+                  <td data-i18n="how.p.r3">Writes Yuyu's replies, and transcribes voice input in the iPhone app</td>
+                  <td data-i18n="how.p.azure">Microsoft Azure data centres</td>
+                </tr>
+                <tr>
+                  <th scope="row">OpenAI</th>
+                  <td data-i18n="how.p.r4">Backup replies; safety checks, memory, reflections, photo checks and voice transcription</td>
+                  <td data-i18n="how.p.us">United States</td>
+                </tr>
+                <tr>
+                  <th scope="row">Volcengine <span class="muted">(ByteDance)</span></th>
+                  <td data-i18n="how.p.r5">Paints a journal video, only if you ask for one. It receives a short description that includes up to 600 characters of your latest conversation.</td>
+                  <td data-i18n="how.p.cn">Mainland China</td>
+                </tr>
+                <tr>
+                  <th scope="row">Apple</th>
+                  <td data-i18n="how.p.r6">Speech recognition in iPhone voice conversations</td>
+                  <td data-i18n="how.p.apple">On your iPhone, or Apple's servers</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="promises reveal">
+            <li data-i18n="how.d.promise1">No ads</li>
+            <li data-i18n="how.d.promise2">No selling your data</li>
+            <li data-i18n="how.d.promise3">No analytics trackers in the apps</li>
+          </ul>
+          <p class="fine reveal" data-i18n="how.d.fine">This website (serenio.ai) uses Google Analytics to count visits, and skips it entirely if your browser asks not to be tracked.</p>
+        </div>
+      </section>
+
+      <!-- ============================ TESTING + LIMITS ============================ -->
+      <section class="section section--tight how-section" id="limits" aria-label="Testing and limits" data-i18n-aria="how.limits.label">
+        <div class="shell">
+          <div class="twoup">
+            <div class="panel reveal">
+              <p class="eyebrow" data-i18n="how.t.eyebrow">Testing</p>
+              <h2 data-i18n="how.t.title">How we check our work</h2>
+              <ul>
+                <li data-i18n="how.t.li1">Our automated test suite, hundreds of tests across the web and iPhone apps, includes a multilingual set of crisis and everyday messages for the safety checks. It's an internal check, not a clinical validation, and no automated check catches everything.</li>
+                <li data-i18n="how.t.li2">Idioms and slang are part of that set, so everyday phrases don't set off false alarms, and a clear sign of crisis is never talked down by the second check.</li>
+                <li data-i18n="how.t.li3">The web app's screens are scanned with automated accessibility tests against WCAG 2.2 AA.</li>
+                <li data-i18n="how.t.li4">Safety events are logged as category codes only, never with your words.</li>
+              </ul>
+            </div>
+            <div class="panel panel--limits reveal" data-delay="1">
+              <p class="eyebrow" data-i18n="how.toc.limits">Limits</p>
+              <h2 data-i18n="how.l.title">What Serenio can't do</h2>
+              <ul>
+                <li data-i18n="how.l.li1">Serenio hasn't been tested in clinical trials, and it isn't a medical device. It's a companion for everyday wellbeing.</li>
+                <li data-i18n="how.l.li2">AI can misunderstand or get things wrong. You know your life best, so take what helps and leave the rest.</li>
+                <li data-i18n="how.l.li3">No one watches conversations as they happen, and Serenio can't send help to you.</li>
+                <li data-i18n="how.l.li4">Yuyu can't replace the people in your life or professional care, and it's designed to point you toward both.</li>
+                <li data-i18n="how.l.li5">Serenio is for adults aged 18 and over.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ REFERENCES ============================ -->
+      <section class="section section--tight how-section" id="references" aria-labelledby="refs-title">
+        <div class="shell">
+          <div class="section-head">
+            <h2 class="section-title" id="refs-title" data-i18n="how.toc.refs">References</h2>
+            <p class="lead" data-i18n="how.r.lead">The original work behind Serenio's practices. Citing it doesn't mean the authors have reviewed or endorsed Serenio.</p>
+          </div>
+          <ol class="refs">
+            <li id="ref-1">Rogers, C. R. (1951). <em>Client-Centered Therapy: Its Current Practice, Implications, and Theory.</em> Houghton Mifflin.</li>
+            <li id="ref-2">Beck, A. T., Rush, A. J., Shaw, B. F., &amp; Emery, G. (1979). <em>Cognitive Therapy of Depression.</em> Guilford Press.</li>
+            <li id="ref-3">Burns, D. D. (1980). <em>Feeling Good: The New Mood Therapy.</em> William Morrow.</li>
+            <li id="ref-4">Jacobson, N. S., Dobson, K. S., Truax, P. A., et al. (1996). A component analysis of cognitive-behavioral treatment for depression. <em>Journal of Consulting and Clinical Psychology, 64</em>(2), 295–304.</li>
+            <li id="ref-5">D'Zurilla, T. J., &amp; Goldfried, M. R. (1971). Problem solving and behavior modification. <em>Journal of Abnormal Psychology, 78</em>(1), 107–126.</li>
+            <li id="ref-6">Borkovec, T. D., Wilkinson, L., Folensbee, R., &amp; Lerman, C. (1983). Stimulus control applications to the treatment of worry. <em>Behaviour Research and Therapy, 21</em>(3), 247–251.</li>
+            <li id="ref-7">Neff, K. D. (2003). Self-compassion: An alternative conceptualization of a healthy attitude toward oneself. <em>Self and Identity, 2</em>(2), 85–101.</li>
+            <li id="ref-8">Stanley, B., &amp; Brown, G. K. (2012). Safety Planning Intervention: A brief intervention to mitigate suicide risk. <em>Cognitive and Behavioral Practice, 19</em>(2), 256–264.</li>
+            <li id="ref-9">Kroenke, K., Spitzer, R. L., &amp; Williams, J. B. W. (2001). The PHQ-9: Validity of a brief depression severity measure. <em>Journal of General Internal Medicine, 16</em>(9), 606–613.</li>
+            <li id="ref-10">Spitzer, R. L., Kroenke, K., Williams, J. B. W., &amp; Löwe, B. (2006). A brief measure for assessing generalized anxiety disorder: The GAD-7. <em>Archives of Internal Medicine, 166</em>(10), 1092–1097.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================ CLOSER ============================ -->
+      <section class="section--tight">
+        <div class="shell">
+          <div class="closer reveal">
+            <div class="closer__copy">
+              <p class="eyebrow" data-i18n="how.c.eyebrow">See for yourself</p>
+              <h2 class="section-title" data-i18n="how.c.title">Try Serenio. It's free.</h2>
+              <p class="lead" data-i18n="how.c.body">On iPhone or on the web. Talk to Yuyu for a minute, and see how it feels to be heard first.</p>
+              <div class="cta-row">
+                <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" loading="lazy" /></a>
+                <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+              </div>
+            </div>
+            <div class="closer__art" aria-hidden="true">
+              <div class="orb" style="--orb-size:160px">
+                <div class="orb__glow"></div>
+                <div class="orb__body"><div class="orb__swirl"></div><div class="orb__spec"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell">
+        <div class="footer__inner">
+          <div class="footer__about">
+            <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
+              <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
+              <span class="brand__word">SERENIO</span>
+            </a>
+            <p data-i18n="footer.about">Serenio is a free AI companion for everyday feelings, on iPhone and the web. Yuyu listens first, remembers what matters, and points you toward people when it counts.</p>
+            <div class="footer__get">
+              <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="132" height="44" loading="lazy" /></a>
+              <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+            </div>
+          </div>
+          <nav class="footer__col" aria-labelledby="footer-product">
+            <h2 class="footer__title" id="footer-product" data-i18n="footer.product">Product</h2>
+            <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="footer.iphone">Serenio for iPhone</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="footer.web">Web app</a>
+            <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="/#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.org">For organizations</a>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__title" id="footer-company" data-i18n="footer.company">Company</h2>
+            <a href="/#about" data-i18n="nav.about">About</a>
+            <a href="/contact" data-i18n="nav.contact">Contact</a>
+            <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
+            <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
+          </nav>
+        </div>
+        <div class="footer__care">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+          <p data-i18n-html="footer.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> <span data-i18n="footer.rights">Serenio AI Limited. All rights reserved.</span></span>
+          <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/i18n/core.js"></script>
+    <script src="/js/i18n/how.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

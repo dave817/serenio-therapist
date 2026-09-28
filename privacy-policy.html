@@ -1,79 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" data-page-title="meta.title.privacy">
+<html lang="en" data-page-title="meta.title.privacy" data-page-desc="meta.desc.privacy">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy Policy · Serenio</title>
-    <meta name="description" content="How Serenio handles and protects your personal data." />
+    <meta name="description" content="How Serenio AI Limited collects, uses, shares and protects your personal data across the Serenio iPhone app, web app and website." />
+    <link rel="canonical" href="https://www.serenio.ai/privacy-policy" />
     <meta name="theme-color" content="#faf7f2" />
-    <link rel="icon" href="/images/app-icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/app-icon.png" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Serenio" />
+    <meta property="og:title" content="Serenio Privacy Policy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.serenio.ai/privacy-policy" />
+    <meta property="og:image" content="https://www.serenio.ai/images/og.jpg" />
     <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/geist.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/serenio.css" />
-    <link rel="stylesheet" href="/css/pages.css" />
-    <script>
-      (function () {
-        try {
-          var m = { en: "en", "zh-Hant": "zh-Hant", ja: "ja", ko: "ko" };
-          var s = localStorage.getItem("serenio.lang");
-          var l;
-          if (s && m[s]) l = m[s];
-          else {
-            var n = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            l = n.indexOf("zh") === 0 ? "zh-Hant" : n.indexOf("ja") === 0 ? "ja" : n.indexOf("ko") === 0 ? "ko" : "en";
-          }
-          document.documentElement.classList.add("js");
-          document.documentElement.lang = l;
-        } catch (e) {}
-      })();
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "G-G69RR3LCQG");
-    </script>
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script src="/js/boot.js"></script>
+    <script src="/js/analytics.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="nav.home">Home</a>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header class="nav">
       <div class="nav__inner">
-        <a class="brand" href="/" aria-label="Serenio">
+        <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
           <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
           <span class="brand__word">SERENIO</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
-          <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
+          <a class="nav__link" href="/how-it-works" data-route="/how-it-works" data-i18n="nav.how">How it works</a>
           <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.org">For organizations</a>
           <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav__actions">
           <div class="lang" data-lang-switch data-open="false">
-            <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+            <button class="lang__btn" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="lang.label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
               <span class="lang__short">EN</span>
             </button>
-            <ul class="lang__menu" role="menu"></ul>
+            <ul class="lang__menu"></ul>
           </div>
-          <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+          <a class="btn btn--primary btn--sm" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-smart-cta data-track="web_app" data-i18n="cta.app">Open web app</a>
         </div>
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </header>
-    <div class="nav__drawer">
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
       <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/how-it-works" data-i18n="nav.how">How it works</a>
       <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="/for-organizations" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.org">For organizations</a>
       <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
-      <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-      <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-    </div>
+      <div class="nav__drawer-cta">
+        <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+        <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+      </div>
+    </nav>
 
     <main id="main">
       <header class="page-head">
@@ -85,85 +74,328 @@
         <div class="shell page-head__inner">
           <p class="eyebrow" data-i18n="nav.privacy">Privacy</p>
           <h1 data-i18n="privacy.head.title">Privacy Policy</h1>
-          <p data-i18n="privacy.head.sub">How we handle and protect your personal data.</p>
+          <p data-i18n="privacy.head.sub">How we collect, use, share and protect your personal data, in plain words.</p>
+          <p class="page-head__note" data-i18n="legal.langNote"></p>
         </div>
       </header>
 
-      <section class="section section--tight">
+      <section class="section--tight">
         <div class="shell">
           <div class="prose" data-i18n-rich>
-            <!-- English (also the fallback for ja / ko) -->
-            <div data-lang="en">
-              <h2>What we will not share</h2>
-              <p>Unless you agree, we will not share your conversation interactions with Serenio, such as what you write or the path you take in a conversation.</p>
-              <h2>How your conversations are processed (AI)</h2>
-              <p>Serenio uses artificial intelligence to understand what you share and to respond to you. To do this, the messages you send within a conversation are transmitted securely to trusted third-party AI providers — currently Microsoft Azure OpenAI Service and OpenAI — which process them only to generate a reply. If you use voice input, your voice recording is transmitted to the same providers solely to transcribe it into text; recordings are used only for transcription and are not stored by us. Under our agreements with these providers, your conversations are not used to train their AI models. They act as our data processors and handle your data in line with their own terms and security commitments. We send only the content needed to produce a helpful response, without attaching your name or contact details. Because this processing is how the AI companion works, it cannot be switched off while you use the AI chat.</p>
-              <h2>Interactions with third-party services</h2>
-              <p>Our services may connect with third parties, such as helplines or other resources. Any information shared with or collected by third parties is governed by that third party's terms and privacy policy. We are not responsible for third parties' handling of personal data related to these resources.</p>
-              <h2>De-identified and/or aggregated data</h2>
-              <p>We may use your personal data to create de-identified and/or aggregated data, such as approximate location, information about the device you use to access our services, conversation trends, or other analytics. De-identified and/or aggregated data is not personal data, and we may use and share it in accordance with applicable law, for example with academic partners. Even when de-identified, we will not share your conversation records with Serenio without your consent.</p>
-              <h2>How is my personal data protected?</h2>
-              <p>We work to implement security measures designed to prevent accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to personal data. This may include, as applicable: following hospital-grade security policies and procedures to protect sensitive user data, in line with HIPAA requirements including the Privacy and Security Rules; using cloud-based infrastructure designed to reduce our data footprint; encrypting all personal data, both at rest and in transit; storing sensitive personal data securely in dedicated environments to ensure separation and clear access control; using technical network controls such as multi-factor authentication and deny-all/allow-by-exception to maintain controlled access; conducting and responding to penetration tests, vulnerability assessments, code reviews and internal compliance reviews; maintaining our business continuity, disaster recovery and incident response plans; and allowing employees to access personal data only where relevant to their job duties.</p>
-              <p>Despite these efforts, no security measure is perfect, and no method of data transmission or storage can guarantee against unauthorized disclosure or misuse. We therefore cannot ensure or warrant the security of any personal data you provide to us. To the maximum extent permitted by applicable law, we accept no liability for unauthorized access, use, disclosure or loss of personal data.</p>
-              <h2>How long do you store my personal data?</h2>
-              <p>We store personal data to provide you with a personalized service experience based on your past interactions, and for the other reasons described above. We retain the personal data we collect until you stop using our services, or as needed to fulfil the purposes of collection, provide our services, resolve disputes, establish legal defenses, conduct audits, pursue legitimate business purposes, enforce our agreements, and comply with applicable law. To learn more about our data retention practices, please contact us.</p>
-              <h2>What rights do I have?</h2>
-              <p>Anyone who uses the service can access, correct or delete their personal data, wherever they live or are located. In addition, under certain data protection laws, individuals may have rights over their personal data, which may include, as applicable: the right of access to the personal data we hold about you and how we use it; the right to rectification of inaccurate or incomplete personal data, including protected health information (PHI); the right to request erasure in certain circumstances; the right to restrict or object to our processing in certain circumstances; the right to data portability; the rights to obtain copies of, receive confidential communications of, restrict the use or disclosure of, and obtain an accounting of disclosures of your PHI; the right to designate a personal representative; the right to withdraw consent; and the right to obtain a paper copy of this Privacy Policy.</p>
-              <p>We will handle your request in accordance with applicable law. Please note that we will need you to take steps to verify your identity. If you wish to exercise any of these rights, please contact us.</p>
-              <h2>How do I control my personal data?</h2>
-              <p>If you have feedback or questions about any aspect of how we collect, share or use your personal data, please contact us. If your personal data is governed by the applicable data protection laws of the European Economic Area, Switzerland or the United Kingdom, you have the right to lodge a complaint with a competent supervisory authority if you believe our processing violates applicable law. You cannot opt out of certain important communications, such as updates to our terms or this Privacy Policy.</p>
-              <ul>
-                <li><strong>SMS:</strong> follow the instructions in the messages you receive, or contact us.</li>
-                <li><strong>Push notifications:</strong> we may send push notifications through one of our mobile apps; opt out by changing your device settings.</li>
-                <li><strong>Do Not Track (DNT):</strong> we honor DNT on our website. DNT preferences do not apply to mobile apps.</li>
-                <li><strong>Cookies and similar technologies:</strong> you can stop, limit or delete certain cookies depending on your browser or device permissions, on each browser and device. We use cookies only on our website, not in any mobile app. If you adjust your preferences, some services may not function properly.</li>
+            <!-- ======================= English (also shown for ja / ko) ======================= -->
+            <div data-lang="en" lang="en">
+              <div class="summary">
+                <h2>In short</h2>
+                <ul>
+                  <li>We use your data to run Serenio for you: to reply to you, keep your history, and remember what you have chosen to let Yuyu remember.</li>
+                  <li>Yuyu is an AI. To reply, your messages and related context are processed by Microsoft Azure OpenAI Service and OpenAI, which do not use your data to train their models.</li>
+                  <li>We don't sell your personal data, and we don't show ads.</li>
+                  <li>You can see and edit what Yuyu remembers, download your data and delete your account from inside the app.</li>
+                  <li>Serenio is not an emergency service, and no one monitors your conversations.</li>
+                </ul>
+              </div>
+
+              <ul class="legal-toc" aria-label="Sections">
+                <li><a href="#p-who">1. Who we are</a></li>
+                <li><a href="#p-collect">2. What we collect</a></li>
+                <li><a href="#p-use">3. How we use it</a></li>
+                <li><a href="#p-ai">4. How the AI uses it</a></li>
+                <li><a href="#p-share">5. Who we share it with</a></li>
+                <li><a href="#p-transfer">6. Transfers</a></li>
+                <li><a href="#p-keep">7. How long we keep it</a></li>
+                <li><a href="#p-protect">8. Security</a></li>
+                <li><a href="#p-rights">9. Your rights</a></li>
+                <li><a href="#p-children">10. Children</a></li>
+                <li><a href="#p-web">11. Cookies</a></li>
+                <li><a href="#p-links">12. Support lines</a></li>
+                <li><a href="#p-changes">13. Changes</a></li>
+                <li><a href="#p-contact">14. Contact</a></li>
               </ul>
-              <h2>What are my responsibilities?</h2>
-              <p>You are responsible for helping protect your personal data by securing your device, email and password. For best practices, see the U.S. Federal Trade Commission (FTC) guidance on protecting your privacy on apps and keeping your personal information secure.</p>
-              <p><strong>Protecting children's information.</strong> The service is not directed to children (defined as under 13, or another age as required by local law), and we do not knowingly collect children's personal data. If you discover that your child has provided personal data to us without your consent, please contact us. If we learn that we have collected a child's personal data in violation of applicable law, we will delete that data (unless legally required to retain it) and close the child's account.</p>
-              <p><strong>Third parties.</strong> The service may contain links to third-party websites or apps not covered by this Privacy Policy. We are not responsible for their privacy practices or content. Providing personal data to them is at your own risk.</p>
-              <h2>Changes to this Privacy Policy</h2>
-              <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you to the extent permitted by applicable law, generally by posting the updated policy on our website or app before the changes take effect, and in some cases by email. The updated terms supersede previous terms and take effect immediately upon posting, except as otherwise required or permitted by law. Continuing to use our services indicates your agreement to the updated Privacy Policy.</p>
-              <h2>Contact us</h2>
-              <p>If you have any questions, comments or complaints about this Privacy Policy or our information-handling practices, please contact Serenio AI Limited (company registration number: 3299059), email <a href="mailto:support@serenio.ai">support@serenio.ai</a>.</p>
-              <p class="legal-updated" data-i18n="legal.updated">Last updated: 22 August 2023</p>
+
+              <h2 id="p-who">1. Who we are</h2>
+              <p>Serenio AI Limited ("Serenio", "we", "us") is a company incorporated in Hong Kong (company no. 3299059). We provide the Serenio app for iPhone, the Serenio web app at webapp.serenio.ai and this website at serenio.ai (together, the "Services"). We decide how and why your personal data is processed, which makes us the data user (or "controller") under Hong Kong's Personal Data (Privacy) Ordinance (Cap. 486) and similar laws. On the App Store, the Serenio app may be listed under our founder's developer account; this policy applies to it in exactly the same way.</p>
+
+              <h2 id="p-collect">2. What we collect</h2>
+              <h3>Information you give us</h3>
+              <ul>
+                <li><strong>Account:</strong> your email address and password. Passwords are stored in hashed form by our sign-in provider.</li>
+                <li><strong>Profile:</strong> the name you'd like Yuyu to call you, your age range, language, time zone, an optional note about yourself, and your reminder preferences.</li>
+                <li><strong>What you share and create:</strong> your messages to Yuyu; journal pages (writing, voice notes and photos), with moods and tags; mood check-ins; letters and time-capsule letters; your safety plan; your answers to the check-in questionnaires (PHQ-9 and GAD-7) and their results; the practices you use; and any summaries you choose to share.</li>
+                <li><strong>Photos:</strong> images you add to a chat or your journal. We remove location data from photos when you upload them.</li>
+                <li><strong>Voice:</strong> when you speak instead of typing, your recording is sent for transcription. Recordings made in chat are not kept after they are transcribed. Voice notes you save in your journal are kept as part of your journal until you delete them.</li>
+                <li><strong>Messages to us:</strong> what you send by email or through our contact form.</li>
+              </ul>
+              <h3>Information created as you use Serenio</h3>
+              <ul>
+                <li>Yuyu's replies, and what Serenio derives from your content to be helpful: short conversation summaries; memories (for example, the people you mention, your hopes and what helps you); emotion notes (for example, "calm" or "heavy") with an estimate of intensity; topics; reflections; and insights.</li>
+                <li>Technical information needed to run and secure the Services, such as IP address, device and browser type, and timestamps, held in service logs. When the safety checks detect risk, we log only a category code, never your words.</li>
+              </ul>
+              <h3>Sensitive information</h3>
+              <p>What you share with Serenio may reveal information about your health, including your mental health, and other sensitive matters. We use it only to provide the Services to you. You choose what to share, and you can delete it at any time.</p>
+
+              <h2 id="p-use">3. How we use your data</h2>
+              <p>We use your personal data to:</p>
+              <ul>
+                <li>provide the Services: write Yuyu's replies, keep your history across sessions and devices, remember what you have let Yuyu remember, and create reflections, insights, letters and check-in results;</li>
+                <li>keep you safe: check messages for signs of crisis and show support resources;</li>
+                <li>send the reminders you ask for;</li>
+                <li>secure, maintain, fix and improve the Services, using de-identified or aggregated information wherever we can;</li>
+                <li>reply when you contact us; and</li>
+                <li>meet our legal obligations.</li>
+              </ul>
+              <p>We don't use your conversations for advertising, we don't sell your personal data, and we don't make decisions that have legal or similarly significant effects on you based solely on automated processing.</p>
+              <p>We may create de-identified or aggregated statistics, such as how many people use a feature. These don't identify you, and we may share them, including with academic partners. We will not share your conversations or journal, even de-identified, without your consent.</p>
+              <p>If you are in the European Economic Area, Switzerland or the UK, we rely on these legal bases: our contract with you (to provide the Services); your explicit consent for health information you choose to share (which you can withdraw by deleting it or your account); our legitimate interests in keeping the Services secure and improving them; and our legal obligations.</p>
+
+              <h2 id="p-ai">4. How the AI uses your data</h2>
+              <ul>
+                <li><strong>Replies.</strong> When you send a message, we send it, together with the context Yuyu needs to reply, to Microsoft Azure OpenAI Service, or to OpenAI if Azure is unavailable. That context can include the name you'd like to be called, your age range, your note about yourself, recent conversation summaries, relevant memories, recent practices and, during a support moment, parts of your safety plan. Your email address is not sent.</li>
+                <li><strong>Background work.</strong> We use OpenAI models to check messages for risk, note emotions, pick out memories, summarise conversations, write journal reflections, daily questions, insights, letters and check-in summaries, describe and check photos, build search indexes for your memories, and transcribe voice. Voice input in the iPhone app is transcribed by Microsoft Azure OpenAI Service.</li>
+                <li><strong>No model training.</strong> Microsoft and OpenAI process this data under their business terms, under which they do not use it to train their models. They may keep it for up to 30 days to detect abuse, and then delete it.</li>
+                <li><strong>Journal videos.</strong> If you ask Serenio to paint a day as a short video, a text description that includes up to 600 characters of your most recent conversation is sent to Volcengine (a ByteDance company), which creates the video on servers in mainland China. We send no account details, such as your email address, but the conversation excerpt itself may contain personal information. If you never create a video, nothing is sent to Volcengine.</li>
+                <li><strong>iPhone voice conversations.</strong> In voice mode, the iPhone app uses Apple's speech recognition. Depending on your language and device, this happens on your iPhone or on Apple's servers (Cantonese uses Apple's servers). Apple's privacy policy applies to that processing. Replies read aloud use your device's built-in voice.</li>
+                <li><strong>AI can be wrong.</strong> Yuyu's replies, reflections and insights are generated automatically and may be inaccurate or incomplete.</li>
+              </ul>
+
+              <h2 id="p-share">5. Who we share it with</h2>
+              <p>We share personal data only with service providers that process it for us under contract, and only as much as they need:</p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th scope="col">Provider</th><th scope="col">Purpose</th><th scope="col">Location</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Supabase (hosted on Amazon Web Services)</td><td>Database, sign-in and file storage</td><td>Mumbai, India</td></tr>
+                    <tr><td>Vercel</td><td>Hosting the web app and its servers</td><td>Mumbai, India (pages delivered through a global network)</td></tr>
+                    <tr><td>Microsoft (Azure OpenAI Service)</td><td>Writing Yuyu's replies, and transcribing voice input in the iPhone app</td><td>Microsoft Azure data centres</td></tr>
+                    <tr><td>OpenAI</td><td>Backup replies, safety checks, memory, reflections, photo checks and transcription</td><td>United States</td></tr>
+                    <tr><td>Volcengine (ByteDance)</td><td>Journal videos, only if you create one</td><td>Mainland China</td></tr>
+                    <tr><td>Apple</td><td>App distribution, notifications, and speech recognition in iPhone voice mode</td><td>Per Apple's terms</td></tr>
+                    <tr><td>Google</td><td>Website analytics on serenio.ai only (see section 11)</td><td>Global</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>We may also share personal data:</p>
+              <ul>
+                <li><strong>with your consent,</strong> for example when you create a link to share a check-in summary. Anyone with that link can see the lines you chose until it expires after 30 days or you revoke it;</li>
+                <li><strong>when the law requires it,</strong> or where it is necessary to protect someone's life or safety, as the law allows; and</li>
+                <li><strong>in a business transfer,</strong> such as a merger or acquisition, under confidentiality commitments and subject to this policy.</li>
+              </ul>
+              <p>We do not sell personal data or share it for advertising.</p>
+
+              <h2 id="p-transfer">6. International transfers</h2>
+              <p>Serenio is based in Hong Kong, but our providers process data elsewhere, including in India, the United States, wherever Microsoft Azure runs the Azure OpenAI Service for us and, for journal videos only, mainland China. These places may have data-protection laws that differ from yours. We choose providers with strong security commitments and rely on contractual safeguards when your data moves across borders.</p>
+
+              <h2 id="p-keep">7. How long we keep it</h2>
+              <ul>
+                <li>We keep your account and content until you delete them or your account.</li>
+                <li><strong>Journal pages:</strong> after you delete a page, you have about ten minutes to undo. It is then permanently removed, together with what Yuyu learned from it.</li>
+                <li><strong>Memories:</strong> when you forget a memory, it is removed, including from conversation summaries.</li>
+                <li><strong>Conversations:</strong> individual conversations can't yet be deleted one by one. Deleting your account deletes all of them.</li>
+                <li><strong>Shared summary links</strong> expire after 30 days, and you can revoke them sooner.</li>
+                <li><strong>Chat voice recordings</strong> are not kept after transcription.</li>
+                <li><strong>Deleting your account</strong> removes your stored files, then your account and everything linked to it, and we check that nothing is left. Copies in our providers' routine backups disappear as those backups expire.</li>
+                <li><strong>Service logs</strong> are kept for a limited time for security and troubleshooting.</li>
+                <li><strong>iPhone versions without accounts, and earlier versions:</strong> versions of the iPhone app that don't ask you to sign in (before version 1.1) keep your conversations and journal on your iPhone, and deleting the app removes them. Messages, voice for transcription and any journal-video requests are still processed by the providers described in this policy so that Yuyu can reply. Data from those versions, and from any earlier version of Serenio that we hold, is not included in the in-app download or deletion: email us and we will send it to you or delete it.</li>
+              </ul>
+
+              <h2 id="p-protect">8. How we protect it</h2>
+              <ul>
+                <li>Data is encrypted in transit (HTTPS/TLS) and encrypted at rest by our infrastructure providers.</li>
+                <li>Database rules mean each account can access only its own records.</li>
+                <li>Photos, voice notes and videos are kept in private storage and shown only through links that expire.</li>
+                <li>Access to production systems is limited to the people who need it to run Serenio.</li>
+              </ul>
+              <p>No system is perfectly secure. If a breach affects your personal data, we will notify you and the relevant authorities where the law requires.</p>
+
+              <h2 id="p-rights">9. Your rights and choices</h2>
+              <p>Wherever you live, you can:</p>
+              <ul>
+                <li>see, correct and delete your data: edit your profile, review, edit or forget memories, and delete journal pages;</li>
+                <li>download your data with "Download everything" in the You tab;</li>
+                <li>delete your account and all of its data with "Delete my account" in the You tab;</li>
+                <li>pause new memories with "Remember new things";</li>
+                <li>withdraw consent, by deleting the content concerned or your account; and</li>
+                <li>turn reminders on or off.</li>
+              </ul>
+              <p>Depending on the laws that apply to you, you may also have the right to request access to and correction of your data (in Hong Kong, under the Personal Data (Privacy) Ordinance), to restrict or object to processing, and to data portability. To make a request, email <a href="mailto:support@serenio.ai">support@serenio.ai</a>. We may need to verify your identity, and we will respond within the time the law requires (for a data access request under the Ordinance, 40 days).</p>
+              <p>If you have a concern, please contact us first. You can also complain to the Office of the Privacy Commissioner for Personal Data in Hong Kong or, if you are in the EEA, Switzerland or the UK, to your local data protection authority.</p>
+
+              <h2 id="p-children">10. Children</h2>
+              <p>Serenio is for adults aged 18 and over. It is not directed at children, and we don't knowingly collect personal data from anyone under 18. If you believe someone under 18 is using Serenio, please contact us and we will delete the account.</p>
+
+              <h2 id="p-web">11. This website: cookies and analytics</h2>
+              <p>This website (serenio.ai) uses Google Analytics to understand how many people visit and which pages help them. Google Analytics sets cookies and collects information such as pages viewed, approximate location, device and browser. If your browser sends a Do Not Track or Global Privacy Control signal, the website does not load Google Analytics at all. Advertising features are turned off for everyone, and visitors in the EEA, the UK and Switzerland are counted without analytics cookies. The website also remembers your language choice in your browser's local storage.</p>
+              <p>The Serenio apps don't contain advertising or analytics trackers. The iPhone app sends reminders only if you allow notifications, and you can turn them off at any time in the app or in iOS Settings.</p>
+
+              <h2 id="p-links">12. Support lines and other services</h2>
+              <p>Serenio shows helplines and links to other services. When you contact a helpline or visit another website, that organization's own terms and privacy policy apply.</p>
+
+              <h2 id="p-changes">13. Changes to this policy</h2>
+              <p>We may update this policy from time to time. We'll post the new version here with a new "last updated" date and, if the changes are significant, tell you in the app or by email before they take effect.</p>
+
+              <h2 id="p-contact">14. Contact us</h2>
+              <p>Serenio AI Limited (Hong Kong company no. 3299059). For privacy questions, requests and complaints, email <a href="mailto:support@serenio.ai">support@serenio.ai</a>.</p>
+              <p>If a translation of this policy differs from the English version, the English version prevails.</p>
+              <p class="legal-updated">Last updated: 28 September 2026</p>
             </div>
 
-            <!-- 繁體中文（原文） -->
+            <!-- ======================= 繁體中文 ======================= -->
             <div data-lang="zh-Hant" hidden lang="zh-Hant">
-              <h2>我們不會分享</h2>
-              <p>除非您同意，否則我們不會分享您與 Serenio 的對話互動，例如您所寫的內容或您在對話中的路徑。</p>
-              <h2>你的對話如何被處理（AI）</h2>
-              <p>小癒運用人工智能來理解你所分享的內容並回應你。為此，你在對話中發送的訊息會經安全加密傳送給我們信任的第三方 AI 服務供應商——目前為 Microsoft Azure OpenAI Service 及 OpenAI——它們僅為生成回覆而處理這些訊息。若你使用語音輸入，你的錄音會傳送給相同的供應商，僅用於轉寫成文字；錄音只用於轉寫，我們不會儲存。根據我們與這些供應商的協議，你的對話不會被用於訓練它們的 AI 模型。它們作為我們的資料處理者，並依其自身條款與安全承諾處理你的資料。我們只會傳送生成有用回覆所需的內容，不會附上你的姓名或聯絡資料。由於這項處理正是 AI 陪伴運作的方式，因此在你使用 AI 對話期間無法將其關閉。</p>
-              <h2>與第三方服務的互動</h2>
-              <p>我們的服務可能與第三方建立連接，例如求助熱線或其他資源。與第三方共享或由第三方收集的任何信息均受第三方的條款和隱私政策約束。我們對第三方處理與這些資源相關的個人數據概不負責。</p>
-              <h2>去標識化和／或聚合數據</h2>
-              <p>我們可能使用您的個人數據來創建去標識化和／或聚合數據，例如大約的位置信息、您用於訪問我們服務的設備信息、對話趨勢的信息或其他分析。去標識化和／或聚合數據不是個人數據，我們可以根據適用法律使用和分享這些數據，例如與學術合作夥伴。即使去標識化，我們也不會在未經您同意的情況下與 Serenio 分享您的對話記錄。</p>
-              <h2>我的個人數據受到哪些保護？</h2>
-              <p>我們努力實施安全措施，旨在避免意外或非法破壞、損失、更改、未經授權的披露或訪問個人數據。這可能包括（根據實際情況）：遵循醫院級別的安全政策和程序以保護敏感用戶數據，遵守 HIPAA 規定，包括隱私和安全規定；使用基於雲的基礎設施，旨在減少我們的數據足跡；對所有個人數據進行加密，無論是在休息時還是在傳輸過程中；將敏感個人數據安全地存儲在專用環境中，以確保分離和清晰的訪問控制；使用技術網絡控制，例如多因素身份驗證和拒絕所有／例外允許；進行並回應滲透測試、漏洞評估、代碼審查和內部合規審查；維護我們的業務連續性、災難恢復和事件響應計劃；僅在與工作職責相關的情況下允許員工訪問個人數據。</p>
-              <p>儘管有這些努力，但沒有任何安全措施是完美的，也沒有任何數據傳輸或存儲方法能保證防止未經授權的披露或濫用。因此，我們無法確保或擔保您向我們提供的任何個人數據的安全性。在適用法律允許的最大範圍內，我們不接受有關未經授權訪問、使用、披露或個人數據損失的責任。</p>
-              <h2>您存儲我的個人數據多久？</h2>
-              <p>我們儲存個人數據，以便根據您過去的互動為您提供個性化的服務體驗，以及為了上述其他原因。我們會保留所收集的個人數據，直到您停止使用我們的服務，或根據需要為達到收集目的、提供我們的服務、解決爭議、建立法律辯護、進行審計、追求合法業務目的、執行我們的協議以及遵守適用法律。如需了解更多有關我們的數據保留實踐的信息，請與我們聯繫。</p>
-              <h2>我有哪些權利？</h2>
-              <p>任何使用服務的人都可以訪問、更正或刪除他們的個人數據，無論他們住在哪裡或身處何地。此外，在某些數據保護法下，個人可能對其個人數據享有權利，這些權利可能包括（根據實際情況）：訪問權、更正權（包括受保護的健康信息 PHI）、在某些情況下要求刪除的權利、限制或反對處理的權利、數據可攜權，以及就受保護健康信息（PHI）獲取副本、以替代方式接收保密通信、要求限制使用或共享、獲取披露記錄、指定個人代表、撤回同意，以及獲得本隱私政策紙本副本的權利。</p>
-              <p>我們將根據適用法律處理您的請求。請注意，我們需要您採取措施以驗證您的身份。如果您希望行使上述任何權利，請與我們聯繫。</p>
-              <h2>我如何控制我的個人數據？</h2>
-              <p>如果您對我們收集、共享或使用您的個人數據的任何方面有反饋或疑問，請與我們聯繫。如果您的個人數據受歐洲經濟區、瑞士或英國適用數據保護法的管轄，且您認為我們的處理違反了適用法律，您有權向主管監管機構提出投訴。您無法退出某些類型的重要通信，例如對我們條款或本隱私政策的更新。</p>
-              <ul>
-                <li><strong>短信：</strong>按照您收到的短信中的指示，或與我們聯繫。</li>
-                <li><strong>推送通知：</strong>我們可能透過我們的移動應用程序向您發送推送通知，可透過更改設備設置選擇退出。</li>
-                <li><strong>不跟踪（DNT）：</strong>我們在網站上遵守 DNT。DNT 首選項不適用於移動應用程序。</li>
-                <li><strong>Cookie 和類似技術：</strong>您可以視瀏覽器或設備許可，停止、限制或刪除我們使用的某些 Cookie，且須在每個瀏覽器和設備上分別操作。我們僅在網站上使用 Cookie，而非任何移動應用程序。如果您調整首選項，部分服務可能無法正常運行。</li>
+              <div class="summary">
+                <h2>重點摘要</h2>
+                <ul>
+                  <li>我們使用你的資料，是為了替你運作 Serenio：回覆你、保存你的紀錄，以及記住你選擇讓小癒記住的事。</li>
+                  <li>小癒是 AI。為了回覆你，你的訊息及相關脈絡會交由 Microsoft Azure OpenAI Service 及 OpenAI 處理；它們不會使用你的資料訓練模型。</li>
+                  <li>我們不會出售你的個人資料，也不會展示廣告。</li>
+                  <li>你可以在 App 內查看及修改小癒記住的內容、下載你的資料，以及刪除帳戶。</li>
+                  <li>Serenio 並非緊急服務，也沒有人監看你的對話。</li>
+                </ul>
+              </div>
+
+              <ul class="legal-toc" aria-label="章節">
+                <li><a href="#pz-who">1. 我們是誰</a></li>
+                <li><a href="#pz-collect">2. 我們收集甚麼</a></li>
+                <li><a href="#pz-use">3. 我們如何使用</a></li>
+                <li><a href="#pz-ai">4. AI 如何使用</a></li>
+                <li><a href="#pz-share">5. 與誰分享</a></li>
+                <li><a href="#pz-transfer">6. 跨境轉移</a></li>
+                <li><a href="#pz-keep">7. 保存期限</a></li>
+                <li><a href="#pz-protect">8. 安全</a></li>
+                <li><a href="#pz-rights">9. 你的權利</a></li>
+                <li><a href="#pz-children">10. 兒童</a></li>
+                <li><a href="#pz-web">11. Cookie</a></li>
+                <li><a href="#pz-links">12. 支援熱線</a></li>
+                <li><a href="#pz-changes">13. 修訂</a></li>
+                <li><a href="#pz-contact">14. 聯絡</a></li>
               </ul>
-              <h2>我有什麼責任？</h2>
-              <p>您有責任透過保護您的設備、電子郵件和密碼，幫助保護您的個人數據。有關最佳實踐，請參閱美國聯邦貿易委員會（FTC）關於如何保護您在應用程序上的隱私與個人信息安全的指南。</p>
-              <p><strong>保護兒童信息。</strong>服務不針對兒童（定義為 13 歲以下或當地法律要求的其他年齡），我們不會故意收集兒童的個人數據。如果您發現您的孩子未經您的同意向我們提供了個人數據，請與我們聯繫。如果我們得知違反適用法律收集了兒童的個人數據，我們將刪除這些數據（除非有法律義務保留），並關閉兒童的帳戶。</p>
-              <p><strong>第三方。</strong>服務可能包含未涵蓋本隱私政策的第三方網站或應用程序的鏈接。我們不對其隱私實踐或內容負責，向其提供個人數據將由您自行承擔風險。</p>
-              <h2>本隱私政策的變更</h2>
-              <p>我們可能會不定期更新本隱私政策。如果我們進行重大更改，將在適用法律允許的範圍內通知您，通常會在變更生效前於我們的網站或應用上發布更新後的政策，某些情況下會以電子郵件通知。更新後的條款將取代之前的條款，並於發布時立即生效（法律另有要求或允許者除外）。繼續使用我們的服務即表示您同意更新後的隱私政策。</p>
-              <h2>聯繫我們</h2>
-              <p>如果您對本隱私政策或我們的信息處理做法有任何問題、意見或投訴，請聯繫 Serenio AI Limited（公司註冊號碼：3299059），電子郵件 <a href="mailto:support@serenio.ai">support@serenio.ai</a>。</p>
-              <p class="legal-updated">本隱私政策的最後更新日期為 2023 年 8 月 22 日。</p>
+
+              <h2 id="pz-who">1. 我們是誰</h2>
+              <p>Serenio AI Limited（思癒科技有限公司，下稱「Serenio」或「我們」）是一家於香港註冊成立的公司（公司編號 3299059）。我們提供 Serenio iPhone App、位於 webapp.serenio.ai 的 Serenio 網頁版，以及位於 serenio.ai 的本網站（統稱「本服務」）。由我們決定如何及為何處理你的個人資料，因此根據香港《個人資料（私隱）條例》（第 486 章）及同類法律，我們是「資料使用者」（或「控制者」）。在 App Store 上，Serenio App 可能以我們創辦人的開發者帳戶上架；本政策同樣適用。</p>
+
+              <h2 id="pz-collect">2. 我們收集甚麼</h2>
+              <h3>你提供給我們的資料</h3>
+              <ul>
+                <li><strong>帳戶：</strong>你的電郵地址及密碼。密碼由我們的登入服務供應商以雜湊形式儲存。</li>
+                <li><strong>個人檔案：</strong>你希望小癒稱呼你的名字、年齡範圍、語言、時區、一段關於你自己的選填簡介，以及提醒設定。</li>
+                <li><strong>你分享及建立的內容：</strong>你傳給小癒的訊息；日記頁面（文字、語音筆記及相片），連同心情與標籤；心情簽到；信件及時光膠囊信；你的安全計劃；你在檢視問卷（PHQ-9 及 GAD-7）中的答案及結果；你使用過的練習；以及你選擇分享的任何摘要。</li>
+                <li><strong>相片：</strong>你在對話或日記中加入的圖片。上載時，我們會移除相片中的位置資料。</li>
+                <li><strong>語音：</strong>當你用說話代替打字，你的錄音會被傳送作轉寫。在對話中錄製的錄音，轉寫後不會保留；你存入日記的語音筆記，會作為日記的一部分保存，直至你刪除為止。</li>
+                <li><strong>給我們的訊息：</strong>你透過電郵或聯絡表格傳給我們的內容。</li>
+              </ul>
+              <h3>你使用 Serenio 時產生的資料</h3>
+              <ul>
+                <li>小癒的回覆，以及 Serenio 為了幫上忙而從你的內容整理出的資料：簡短的對話摘要；記憶（例如你提到的人、你的期望、對你有幫助的事）；情緒紀錄（例如「平靜」或「沉重」）及強度估計；話題；回應與觀察。</li>
+                <li>運作及保護本服務所需的技術資料，例如 IP 地址、裝置與瀏覽器類型及時間戳記，儲存在服務紀錄中。當安全檢查偵測到風險時，我們只記錄類別代碼，絕不記錄你的原文。</li>
+              </ul>
+              <h3>敏感資料</h3>
+              <p>你與 Serenio 分享的內容，可能透露你的健康狀況（包括心理健康）及其他敏感事項。我們只會用它來為你提供本服務。分享甚麼由你決定，你亦可隨時刪除。</p>
+
+              <h2 id="pz-use">3. 我們如何使用你的資料</h2>
+              <p>我們使用你的個人資料來：</p>
+              <ul>
+                <li>提供本服務：撰寫小癒的回覆、跨對話及跨裝置保存你的紀錄、記住你允許小癒記住的事，以及產生回應、觀察、信件及檢視結果；</li>
+                <li>保護你的安全：檢查訊息有否危機跡象，並顯示支援資源；</li>
+                <li>發送你要求的提醒；</li>
+                <li>保障、維護、修正及改進本服務，並盡可能使用去識別化或匯總的資料；</li>
+                <li>在你聯絡我們時回覆你；以及</li>
+                <li>履行我們的法律責任。</li>
+              </ul>
+              <p>我們不會將你的對話用於廣告，不會出售你的個人資料，亦不會純粹以自動化處理，作出對你有法律效果或同等重大影響的決定。</p>
+              <p>我們可能製作去識別化或匯總的統計資料，例如使用某項功能的人數。這些資料不能識別你的身份，我們可能會分享它們，包括與學術合作夥伴分享。未經你同意，我們不會分享你的對話或日記，即使已去識別化亦然。</p>
+              <p>如你身處歐洲經濟區、瑞士或英國，我們依據以下法律基礎處理資料：與你之間的合約（以提供本服務）；你就自願分享的健康資料所給予的明確同意（你可透過刪除相關內容或帳戶撤回）；我們在保障及改進本服務方面的正當利益；以及我們的法律責任。</p>
+
+              <h2 id="pz-ai">4. AI 如何使用你的資料</h2>
+              <ul>
+                <li><strong>回覆。</strong>當你傳送訊息，我們會把訊息連同小癒回覆所需的脈絡，傳送至 Microsoft Azure OpenAI Service；如 Azure 無法使用，則改為傳送至 OpenAI。脈絡可能包括你希望被稱呼的名字、年齡範圍、你的自我簡介、近期對話摘要、相關記憶、近期練習，以及在支援時刻中你安全計劃的部分內容。你的電郵地址不會被傳送。</li>
+                <li><strong>背景工作。</strong>我們使用 OpenAI 的模型來檢查訊息的風險、記錄情緒、整理記憶、摘要對話、撰寫日記回應、每日問題、觀察、信件及檢視摘要、描述及檢查相片、為你的記憶建立搜尋索引，以及轉寫語音。iPhone App 的語音輸入則由 Microsoft Azure OpenAI Service 轉寫。</li>
+                <li><strong>不用於訓練模型。</strong>Microsoft 及 OpenAI 按其企業條款處理這些資料；根據這些條款，它們不會以此訓練模型。它們可能會為偵測濫用而保留資料最多 30 天，之後便會刪除。</li>
+                <li><strong>日記影片。</strong>如你請 Serenio 把某一天畫成短片，一段包含你最近對話最多 600 個字元的文字描述，會傳送至火山引擎（Volcengine，字節跳動旗下公司），由其位於中國內地的伺服器製作影片。我們不會傳送任何帳戶資料（例如你的電郵地址），但對話節錄本身可能包含個人資料。如你從未製作影片，便不會有任何資料傳送至火山引擎。</li>
+                <li><strong>iPhone 語音對話。</strong>在語音模式下，iPhone App 使用 Apple 的語音辨識。視乎語言及裝置，辨識會在你的 iPhone 上或 Apple 的伺服器上進行（廣東話會使用 Apple 的伺服器），並受 Apple 的私隱政策規管。朗讀回覆時，使用的是你裝置內置的語音。</li>
+                <li><strong>AI 可能出錯。</strong>小癒的回覆、回應及觀察均由系統自動產生，可能不準確或不完整。</li>
+              </ul>
+
+              <h2 id="pz-share">5. 我們與誰分享</h2>
+              <p>我們只會與按合約代我們處理資料的服務供應商分享個人資料，而且只分享它們所需的部分：</p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th scope="col">供應商</th><th scope="col">用途</th><th scope="col">地點</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Supabase（託管於 Amazon Web Services）</td><td>資料庫、登入及檔案儲存</td><td>印度孟買</td></tr>
+                    <tr><td>Vercel</td><td>託管網頁版及其伺服器</td><td>印度孟買（頁面經全球網絡傳送）</td></tr>
+                    <tr><td>Microsoft（Azure OpenAI Service）</td><td>撰寫小癒的回覆，以及轉寫 iPhone App 的語音輸入</td><td>Microsoft Azure 數據中心</td></tr>
+                    <tr><td>OpenAI</td><td>後備回覆、安全檢查、記憶、回應、相片檢查及轉寫</td><td>美國</td></tr>
+                    <tr><td>火山引擎（字節跳動）</td><td>日記影片，只在你製作影片時使用</td><td>中國內地</td></tr>
+                    <tr><td>Apple</td><td>App 發佈、通知，以及 iPhone 語音模式的語音辨識</td><td>依 Apple 條款</td></tr>
+                    <tr><td>Google</td><td>只用於 serenio.ai 網站的流量分析（見第 11 節）</td><td>全球</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>在以下情況，我們亦可能分享個人資料：</p>
+              <ul>
+                <li><strong>經你同意，</strong>例如你建立連結分享檢視摘要。任何持有連結的人，都能看到你選擇的內容，直至連結於 30 天後失效或你提早撤回；</li>
+                <li><strong>法律要求時，</strong>或在法律容許下，為保護某人的生命或安全而有必要時；以及</li>
+                <li><strong>業務轉移時，</strong>例如合併或收購，並須受保密承諾及本政策約束。</li>
+              </ul>
+              <p>我們不會出售個人資料，亦不會為廣告目的分享個人資料。</p>
+
+              <h2 id="pz-transfer">6. 跨境轉移</h2>
+              <p>Serenio 立足香港，但我們的供應商會在其他地方處理資料，包括印度、美國、Microsoft Azure 為我們運行 Azure OpenAI Service 的地點，以及（只限日記影片）中國內地。這些地方的資料保護法律可能與你所在地不同。我們選用有嚴格安全承諾的供應商，並在資料跨境時以合約保障作為依據。</p>
+
+              <h2 id="pz-keep">7. 我們保存多久</h2>
+              <ul>
+                <li>我們會保存你的帳戶及內容，直至你刪除它們或你的帳戶。</li>
+                <li><strong>日記頁面：</strong>刪除後約十分鐘內可以復原，之後會被永久移除，小癒從該頁學到的內容亦會一併移除。</li>
+                <li><strong>記憶：</strong>當你忘掉一則記憶，它會被移除，包括在對話摘要中。</li>
+                <li><strong>對話：</strong>目前未能逐段刪除個別對話；刪除帳戶會刪除所有對話。</li>
+                <li><strong>分享摘要的連結</strong>會在 30 天後失效，你亦可提早撤回。</li>
+                <li><strong>對話中的語音錄音</strong>轉寫後不會保留。</li>
+                <li><strong>刪除帳戶</strong>時，我們會先移除你儲存的檔案，再刪除帳戶及所有相關內容，並確認沒有任何殘留。供應商例行備份中的副本，會隨備份到期而消失。</li>
+                <li><strong>服務紀錄</strong>會為保安及排解問題而保存一段有限時間。</li>
+                <li><strong>無需帳戶的 iPhone 版本及舊版本：</strong>不要求你登入的 iPhone App 版本（1.1 版之前）會把你的對話和日記保存在你的 iPhone 上，刪除 App 即會移除。為了讓小癒回覆，訊息、需要轉寫的語音及日記影片請求，仍會交由本政策所述的供應商處理。這些版本及任何更早版本的 Serenio 中由我們保存的資料，並不包括在 App 內的下載或刪除功能中；請電郵給我們，我們會把資料提供給你或刪除。</li>
+              </ul>
+
+              <h2 id="pz-protect">8. 我們如何保護資料</h2>
+              <ul>
+                <li>資料在傳輸時加密（HTTPS/TLS），並由我們的基礎設施供應商在儲存時加密。</li>
+                <li>資料庫規則確保每個帳戶只能存取自己的紀錄。</li>
+                <li>相片、語音筆記及影片存放於私人儲存空間，只會透過會失效的連結顯示。</li>
+                <li>只有營運 Serenio 所需的人員，才可存取正式環境的系統。</li>
+              </ul>
+              <p>沒有任何系統是絕對安全的。如發生影響你個人資料的事故，我們會在法律要求時通知你及有關當局。</p>
+
+              <h2 id="pz-rights">9. 你的權利與選擇</h2>
+              <p>無論你身處何地，你都可以：</p>
+              <ul>
+                <li>查看、更正及刪除你的資料：修改個人檔案，檢視、修改或忘掉記憶，以及刪除日記頁面；</li>
+                <li>在「你」分頁使用「下載全部資料」下載你的資料；</li>
+                <li>在「你」分頁使用「刪除我的帳戶」，刪除帳戶及其所有資料；</li>
+                <li>透過「記住新的事」暫停新增記憶；</li>
+                <li>透過刪除相關內容或帳戶，撤回同意；以及</li>
+                <li>開啟或關閉提醒。</li>
+              </ul>
+              <p>視乎適用於你的法律，你亦可能有權要求查閱及更正你的資料（在香港，依據《個人資料（私隱）條例》）、限制或反對處理，以及資料可攜。如要提出要求，請電郵至 <a href="mailto:support@serenio.ai">support@serenio.ai</a>。我們或需核實你的身份，並會在法律規定的期限內回覆（根據條例提出的查閱資料要求為 40 日）。</p>
+              <p>如有疑慮，請先與我們聯絡。你亦可向香港個人資料私隱專員公署投訴；如你身處歐洲經濟區、瑞士或英國，亦可向當地的資料保護機構投訴。</p>
+
+              <h2 id="pz-children">10. 兒童</h2>
+              <p>Serenio 適用於 18 歲或以上的成年人，並非以兒童為對象，我們亦不會在知情下收集 18 歲以下人士的個人資料。如你相信有 18 歲以下人士正在使用 Serenio，請與我們聯絡，我們會刪除該帳戶。</p>
+
+              <h2 id="pz-web">11. 本網站：Cookie 與流量分析</h2>
+              <p>本網站（serenio.ai）使用 Google Analytics 了解有多少人到訪、哪些頁面對他們有幫助。Google Analytics 會設置 Cookie，並收集瀏覽的頁面、大約位置、裝置及瀏覽器等資料。如你的瀏覽器發出「請勿追蹤」（Do Not Track）或「全球隱私控制」（Global Privacy Control）訊號，本網站完全不會載入 Google Analytics。所有訪客的廣告功能均已關閉；來自歐洲經濟區、英國及瑞士的訪客，會在不使用分析 Cookie 的情況下統計。本網站亦會在瀏覽器的本機儲存空間記住你選擇的語言。</p>
+              <p>Serenio 的 App 不包含任何廣告或分析追蹤工具。iPhone App 只會在你允許通知後才發送提醒，你可隨時在 App 內或 iOS「設定」中關閉。</p>
+
+              <h2 id="pz-links">12. 支援熱線及其他服務</h2>
+              <p>Serenio 會顯示求助熱線及其他服務的連結。當你聯絡熱線或瀏覽其他網站時，將受該機構的條款及私隱政策規管。</p>
+
+              <h2 id="pz-changes">13. 本政策的修訂</h2>
+              <p>我們可能不時更新本政策。我們會在此發佈新版本並更新「最後更新」日期；如有重大修訂，會在生效前透過 App 或電郵通知你。</p>
+
+              <h2 id="pz-contact">14. 聯絡我們</h2>
+              <p>Serenio AI Limited（思癒科技有限公司，香港公司編號 3299059）。如有私隱相關的問題、要求或投訴，請電郵至 <a href="mailto:support@serenio.ai">support@serenio.ai</a>。</p>
+              <p>如中英文版本有任何歧異，以英文版本為準。</p>
+              <p class="legal-updated">最後更新日期：2026 年 9 月 28 日</p>
             </div>
           </div>
         </div>
@@ -174,42 +406,45 @@
       <div class="shell">
         <div class="footer__inner">
           <div class="footer__about">
-            <a class="brand" href="/" aria-label="Serenio">
+            <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
               <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
               <span class="brand__word">SERENIO</span>
             </a>
-            <p data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+            <p data-i18n="footer.about">Serenio is a free AI companion for everyday feelings, on iPhone and the web. Yuyu listens first, remembers what matters, and points you toward people when it counts.</p>
+            <div class="footer__get">
+              <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="132" height="44" loading="lazy" /></a>
+              <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+            </div>
           </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.product">Product</h4>
-            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <a href="/for-organizations" data-i18n="nav.pricing">Membership</a>
-            <a href="/for-organizations#faq" data-i18n="nav.faq">FAQ</a>
-            <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-          </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.company">Company</h4>
+          <nav class="footer__col" aria-labelledby="footer-product">
+            <h2 class="footer__title" id="footer-product" data-i18n="footer.product">Product</h2>
+            <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="footer.iphone">Serenio for iPhone</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="footer.web">Web app</a>
+            <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="/#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.org">For organizations</a>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__title" id="footer-company" data-i18n="footer.company">Company</h2>
             <a href="/#about" data-i18n="nav.about">About</a>
             <a href="/contact" data-i18n="nav.contact">Contact</a>
             <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
             <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
-          </div>
+          </nav>
         </div>
         <div class="footer__care">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z"/></svg></span>
-          <p>
-            <span data-i18n="about.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at</span>
-            <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>
-          </p>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+          <p data-i18n-html="footer.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
         </div>
         <div class="footer__bottom">
-          <span data-i18n="footer.rights">© 2025 Serenio AI Limited. All rights reserved.</span>
+          <span>© <span data-year>2026</span> <span data-i18n="footer.rights">Serenio AI Limited. All rights reserved.</span></span>
           <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
         </div>
       </div>
     </footer>
 
-    <script src="/js/i18n.js"></script>
+    <script src="/js/i18n/core.js"></script>
+    <script src="/js/i18n/legal.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>

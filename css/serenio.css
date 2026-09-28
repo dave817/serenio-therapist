@@ -16,7 +16,7 @@
    cross-platform body face instead of the generic system stack. */
 @font-face {
   font-family: "Geist";
-  src: url("/fonts/geist.woff") format("woff");
+  src: url("/fonts/geist.woff2") format("woff2"), url("/fonts/geist.woff") format("woff");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -29,8 +29,9 @@
   --surface: #fffcf8;
   --surface-lilac: #ede7f3;
   --ink: #2e2938;
-  --ink-muted: #6f6878;
-  --ink-faint: #918a98;
+  /* muted/faint inks keep >=4.5:1 on canvas, lilac tints and the hero mesh */
+  --ink-muted: #5f5868;
+  --ink-faint: #6d6676;
 
   /* --- Brand violet family --- */
   --plum: #59477f;
@@ -38,6 +39,7 @@
   --violet: #8875b4;
   --violet-original: #756b9e;
   --violet-bright: #7652d6;
+  --violet-ink: #6a559a; /* violet for small text: 5.8:1 on canvas */
   --lavender: #c8b9de;
   --sage: #a7cfbe;
   --mint-pale: #ddede5;
@@ -86,7 +88,7 @@
 
   /* spacing zones */
   --gutter: clamp(1.25rem, 1rem + 2vw, 2.5rem);
-  --section-y: clamp(4.5rem, 3.5rem + 5vw, 9rem);
+  --section-y: clamp(4rem, 3rem + 4vw, 7rem);
   --max-shell: 1180px;
   --max-read: 65ch;
 
@@ -112,6 +114,14 @@
   --dur-press: 120ms;
   --dur-control: 220ms;
   --dur-panel: 420ms;
+
+  /* semantic inks for care / caution surfaces */
+  --sage-ink: #3f7a64;
+  --rose-ink: #8f3f55;
+
+  /* line icons used as CSS masks */
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  --icon-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");
 
   color-scheme: light;
 }
@@ -168,6 +178,37 @@ body {
 :lang(ko) {
   font-family: var(--font-ko);
   line-height: 1.74;
+  /* Korean wraps between words, never inside a syllable block */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+/* Chinese and Japanese headings break at phrase boundaries where supported */
+:lang(zh-Hant) :is(h1, h2, h3) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+}
+/* In CJK, headings use the language's own sans for every glyph (Latin too),
+   so "AI" or "Yuyu" never switches to the Latin serif mid-heading. The
+   wordmark keeps Glitten in every language. */
+:root:lang(zh-Hant),
+:root:lang(ja),
+:root:lang(ko) {
+  --font-display: var(--display-cjk);
+}
+.brand__word,
+.wordmark {
+  font-family: "Glitten", "Iowan Old Style", Georgia, serif;
+}
+/* CJK headings are set in a real sans weight instead */
+:lang(zh-Hant) :is(.section-title, .hero__tagline, .page-head h1, .feature__copy h3, .principle h3, .way h3, .panel h2, .short__item h3, .prose h2),
+:lang(ja) :is(.section-title, .hero__tagline, .page-head h1, .feature__copy h3, .principle h3, .way h3, .panel h2, .short__item h3, .prose h2),
+:lang(ko) :is(.section-title, .hero__tagline, .page-head h1, .feature__copy h3, .principle h3, .way h3, .panel h2, .short__item h3, .prose h2) {
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 img,
@@ -258,7 +299,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--violet);
+  color: var(--violet-ink);
 }
 :lang(ja) .eyebrow,
 :lang(ko) .eyebrow,
@@ -268,6 +309,7 @@ p {
 h1.section-title,
 h2.section-title {
   font-family: var(--font-display);
+  font-weight: 400; /* Glitten ships one weight: never let the browser fake bold */
   font-size: var(--text-h1);
   line-height: 1.1;
   letter-spacing: -0.012em;
@@ -287,6 +329,12 @@ h3 {
 }
 .muted {
   color: var(--ink-muted);
+}
+.lead a {
+  color: var(--plum);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .faint {
   color: var(--ink-faint);
@@ -562,6 +610,8 @@ h3 {
   min-height: 44px;
   padding: 0 0.4rem;
   font-weight: 600;
+  white-space: normal;
+  text-align: start;
 }
 .btn--ghost::after {
   content: "";
@@ -581,11 +631,23 @@ h3 {
   padding: 0 2rem;
   font-size: var(--text-body-lg);
 }
+.btn--sm {
+  min-height: 44px;
+  padding: 0 1.2rem;
+  font-size: 0.92rem;
+}
 .btn:active {
   transform: scale(0.975);
 }
 .btn--block {
   width: 100%;
+}
+@media (max-width: 400px) {
+  .btn--lg {
+    white-space: normal;
+    text-align: center;
+    padding-inline: 1.4rem;
+  }
 }
 
 /* line icon glyph inside CTAs */
@@ -668,6 +730,32 @@ html.js .reveal.is-visible {
   }
   * {
     transition-duration: 0.12s !important;
+  }
+  /* popups appear and disappear at once (no half-visible, focusable state) */
+  .lang__menu,
+  .nav__drawer {
+    transition: none !important;
+  }
+}
+
+/* =========================================================================
+   Print: everything visible, no chrome
+   ========================================================================= */
+@media print {
+  html.js .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .nav,
+  .nav__drawer,
+  .skip-link,
+  .mesh,
+  .footer__get,
+  .toc {
+    display: none !important;
+  }
+  body {
+    background: #fff;
   }
 }
 @media (prefers-reduced-transparency: reduce) {

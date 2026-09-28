@@ -1,89 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" data-page-title="meta.title.home">
+<html lang="en" data-page-title="meta.title.home" data-page-desc="meta.desc.home">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Serenio · A warmer place for what you feel</title>
-    <meta name="description" content="Serenio is a humane AI companion for reflective, emotionally safe conversations." />
+    <title>Serenio · A free AI companion for whatever you feel</title>
+    <meta name="description" content="Meet Yuyu, Serenio's AI companion for everyday feelings. It listens first, remembers what matters, and is free for individuals on iPhone and the web, in English, Traditional Chinese, Japanese and Korean." />
+    <link rel="canonical" href="https://www.serenio.ai/" />
     <meta name="theme-color" content="#faf7f2" />
-    <link rel="icon" href="/images/app-icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/app-icon.png" />
-    <meta property="og:title" content="Serenio · 小癒" />
-    <meta property="og:description" content="A humane AI companion for reflective, emotionally safe conversations." />
+    <meta name="apple-itunes-app" content="app-id=6786770984" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/images/app-icon.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="Serenio" />
+    <meta property="og:title" content="Serenio · A warmer place for whatever you feel" />
+    <meta property="og:description" content="Meet Yuyu, an AI companion that listens first and remembers what matters. Free for individuals on iPhone and the web." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/app-icon.png" />
+    <meta property="og:url" content="https://www.serenio.ai/" />
+    <meta property="og:image" content="https://www.serenio.ai/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Serenio mark and wordmark, with the line: A quieter place for what you feel." />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preload" href="/fonts/glitten.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/geist.woff" as="font" type="font/woff" crossorigin />
+    <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/serenio.css" />
-    <link rel="stylesheet" href="/css/pages.css" />
-    <script>
-      (function () {
-        try {
-          var m = { en: "en", "zh-Hant": "zh-Hant", ja: "ja", ko: "ko" };
-          var s = localStorage.getItem("serenio.lang");
-          var l;
-          if (s && m[s]) l = m[s];
-          else {
-            var n = ((navigator.languages && navigator.languages[0]) || navigator.language || "en").toLowerCase();
-            l = n.indexOf("zh") === 0 ? "zh-Hant" : n.indexOf("ja") === 0 ? "ja" : n.indexOf("ko") === 0 ? "ko" : "en";
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <script src="/js/boot.js"></script>
+    <script src="/js/analytics.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.serenio.ai/#org",
+            "name": "Serenio AI Limited",
+            "alternateName": "Serenio",
+            "url": "https://www.serenio.ai/",
+            "logo": "https://www.serenio.ai/images/icon-512.png",
+            "email": "support@serenio.ai",
+            "foundingDate": "2023"
+          },
+          {
+            "@type": "MobileApplication",
+            "name": "Serenio",
+            "operatingSystem": "iOS 18.0 or later",
+            "applicationCategory": "LifestyleApplication",
+            "installUrl": "https://apps.apple.com/au/app/serenio/id6786770984",
+            "inLanguage": ["en", "zh-Hant", "ja", "ko"],
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "publisher": { "@id": "https://www.serenio.ai/#org" }
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Serenio web app",
+            "url": "https://webapp.serenio.ai/",
+            "browserRequirements": "Requires a modern web browser",
+            "applicationCategory": "LifestyleApplication",
+            "inLanguage": ["en", "zh-Hant", "ja", "ko"],
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "publisher": { "@id": "https://www.serenio.ai/#org" }
           }
-          document.documentElement.classList.add("js");
-          document.documentElement.lang = l;
-        } catch (e) {}
-      })();
-    </script>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G69RR3LCQG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag("js", new Date());
-      gtag("config", "G-G69RR3LCQG");
+        ]
+      }
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="nav.home">Home</a>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <!-- ============================ NAV ============================ -->
     <header class="nav">
       <div class="nav__inner">
-        <a class="brand" href="/" aria-label="Serenio">
+        <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
           <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
           <span class="brand__word">SERENIO</span>
         </a>
         <nav class="nav__links" aria-label="Primary">
-          <a class="nav__link" href="/" data-route="/" data-i18n="nav.home">Home</a>
+          <a class="nav__link" href="/how-it-works" data-route="/how-it-works" data-i18n="nav.how">How it works</a>
           <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.pricing">Membership</a>
+          <a class="nav__link" href="/for-organizations" data-route="/for-organizations" data-i18n="nav.org">For organizations</a>
           <a class="nav__link" href="/contact" data-route="/contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="nav__actions">
           <div class="lang" data-lang-switch data-open="false">
-            <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
+            <button class="lang__btn" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="lang.label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" /></svg>
               <span class="lang__short">EN</span>
             </button>
-            <ul class="lang__menu" role="menu"></ul>
+            <ul class="lang__menu"></ul>
           </div>
-          <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
+          <a class="btn btn--primary btn--sm" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-smart-cta data-track="web_app" data-i18n="cta.app">Open web app</a>
         </div>
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Menu">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </div>
     </header>
-    <div class="nav__drawer">
+    <nav class="nav__drawer" id="nav-drawer" aria-label="Menu" data-i18n-aria="nav.menu">
       <a class="nav__link" href="/" data-i18n="nav.home">Home</a>
+      <a class="nav__link" href="/how-it-works" data-i18n="nav.how">How it works</a>
       <a class="nav__link" href="/#about" data-i18n="nav.about">About</a>
-      <a class="nav__link" href="/for-organizations" data-i18n="nav.pricing">Membership</a>
+      <a class="nav__link" href="/for-organizations" data-i18n="nav.org">For organizations</a>
       <a class="nav__link" href="/contact" data-i18n="nav.contact">Contact</a>
-      <a class="btn btn--primary btn--block" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-      <a class="btn btn--secondary btn--block" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-    </div>
+      <div class="nav__drawer-cta">
+        <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+        <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+      </div>
+    </nav>
 
     <main id="main">
       <!-- ============================ HERO ============================ -->
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="mesh" aria-hidden="true">
           <div class="mesh__blob mesh__blob--1"></div>
           <div class="mesh__blob mesh__blob--2"></div>
@@ -94,218 +122,446 @@
         <div class="shell">
           <div class="hero__inner">
             <div class="hero__copy reveal">
-              <h1 class="hero__tagline" data-i18n="hero.title">A warmer place for whatever you feel.</h1>
-              <p class="hero__sub" data-i18n="hero.sub">A humane AI companion for reflective, emotionally safe conversations.</p>
-              <div class="hero__cta">
-                <a class="btn btn--primary btn--lg" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-                <a class="btn btn--ghost" href="#about" data-i18n="cta.why">Why I built this</a>
+              <p class="hero__pill">
+                <span class="hero__pill-dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
+                <span data-i18n="hero.pill">A free AI companion for individuals, on iPhone and the web</span>
+              </p>
+              <h1 class="hero__tagline" id="hero-title" data-i18n="hero.title">A warmer place for whatever you feel.</h1>
+              <p class="hero__sub" data-i18n="hero.sub">Meet Yuyu, Serenio's AI companion. It listens first, remembers what matters to you, and helps you find your own words, the moment a feeling arrives.</p>
+              <div class="cta-row">
+                <a class="store-link store-link--lg" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="174" height="58" /></a>
+                <a class="btn btn--primary btn--lg" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
               </div>
+              <p class="cta-note"><span data-i18n="hero.note1">No subscription</span><span data-i18n="hero.note2">No ads</span><span lang="en">English</span><span lang="zh-Hant">繁體中文</span><span lang="ja">日本語</span><span lang="ko">한국어</span></p>
             </div>
 
-            <div class="hero__stage reveal" data-delay="1" aria-hidden="true">
-              <div class="hero__halo"></div>
-              <div class="hero__chips">
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#a7cfbe"></span><span data-i18n="emo.calm">calm</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#d8c8ea"></span><span data-i18n="emo.hopeful">hopeful</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#e7c5cf"></span><span data-i18n="emo.tender">tender</span></span>
-              </div>
-              <div class="hero__wordmark">
-                <div class="orb" style="--orb-size:120px">
-                  <div class="orb__glow"></div>
-                  <div class="orb__body"><div class="orb__swirl"></div><div class="orb__spec"></div></div>
-                </div>
-                <div style="text-align:center">
-                  <div class="wordmark wordmark--hero">SERENIO</div>
-                  <div class="hero__signature"><span class="line"></span><span lang="zh-Hant">小癒</span><span class="line"></span></div>
-                </div>
-              </div>
+            <div class="hero__stage reveal" data-delay="1">
+              <div class="hero__glow" aria-hidden="true"></div>
+              <figure class="device-browser hero__browser">
+                <div class="device-browser__bar" aria-hidden="true"><span></span><span></span><span></span><span class="device-browser__url">webapp.serenio.ai</span></div>
+                <img src="/images/app/web-chat.webp" width="1600" height="1000" alt="The Serenio web app: Alex talks with Yuyu about a job interview, while a side panel shows what Yuyu is holding." data-i18n-alt="hero.webAlt" fetchpriority="high" decoding="async" />
+              </figure>
+              <figure class="device-phone hero__phone">
+                <img src="/images/app/ios-home.webp" width="660" height="1434" alt="Serenio on iPhone: the Home screen greets Alex, with Yuyu, last time's thread and a mood check-in." data-i18n-alt="hero.phoneAlt" decoding="async" />
+              </figure>
+              <span class="chip hero__chip hero__chip--a" aria-hidden="true"><span class="chip__dot" style="--chip-dot:#a7cfbe"></span><span data-i18n="hero.chipA">Reflects first</span></span>
+              <span class="chip hero__chip hero__chip--b" aria-hidden="true"><span class="chip__dot" style="--chip-dot:#d8c8ea"></span><span data-i18n="hero.chipB">Private by default</span></span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============================ ROLES ============================ -->
-      <section class="section" id="roles">
+      <!-- ============================ PROOF ============================ -->
+      <section class="section--tight" aria-label="Serenio in numbers" data-i18n-aria="proof.label">
+        <div class="shell">
+          <dl class="proof__grid reveal">
+            <div class="proof__item proof__item--lead"><dt data-i18n="proof.users">people have tried Serenio</dt><dd>18,000+</dd></div>
+            <div class="proof__item"><dt data-i18n="proof.langs">languages, including chat in spoken Cantonese</dt><dd>4</dd></div>
+            <div class="proof__item"><dt data-i18n="proof.free">for individuals, on iPhone and the web</dt><dd data-i18n="proof.freeNum">Free</dd></div>
+          </dl>
+          <p class="proof__note" data-i18n="proof.note">People who have tried Serenio across all its versions, as of August 2026.</p>
+        </div>
+      </section>
+
+      <!-- ============================ FILM ============================ -->
+      <section class="section section--tight" aria-labelledby="film-title">
+        <div class="shell">
+          <div class="film reveal">
+            <div class="film__head">
+              <p class="eyebrow" data-i18n="film.eyebrow">Watch · 28 seconds</p>
+              <h2 class="section-title" id="film-title" data-i18n="film.title">The shape beneath the words.</h2>
+            </div>
+            <video class="film__video" data-film controls playsinline preload="none" poster="/images/film-poster.jpg" width="1920" height="1080" aria-labelledby="film-title">
+              <source src="/media/serenio-film.mp4" type="video/mp4" />
+              <track kind="captions" src="/media/serenio-film.en.vtt" srclang="en" label="English" />
+              <track kind="subtitles" src="/media/serenio-film.zh-Hant.vtt" srclang="zh-Hant" label="繁體中文" />
+              <track kind="subtitles" src="/media/serenio-film.ja.vtt" srclang="ja" label="日本語" />
+              <track kind="subtitles" src="/media/serenio-film.ko.vtt" srclang="ko" label="한국어" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ PRINCIPLES ============================ -->
+      <section class="section" aria-labelledby="principles-title">
         <div class="shell">
           <div class="section-head reveal">
-            <h2 class="section-title" data-i18n="roles.title">A companion that meets you three ways.</h2>
-            <p class="lead" data-i18n="roles.sub">Whatever you need in the moment, Serenio shifts to meet it.</p>
+            <p class="eyebrow" data-i18n="principles.eyebrow">What Yuyu is like</p>
+            <h2 class="section-title" id="principles-title" data-i18n="principles.title">Not a chirpy chatbot. A calm, thoughtful friend.</h2>
+            <p class="lead" data-i18n="principles.sub">Yuyu stays with the moment instead of rushing to fix it. Three things guide every reply.</p>
           </div>
-          <div class="roles">
-            <article class="role role--lead reveal">
-              <div>
-                <div class="role__icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0v4a3 3 0 0 1-3 3h-1v-6h4" /><path d="M4 13v4a3 3 0 0 0 3 3h1v-6H4" /></svg>
-                </div>
-                <h3 data-i18n="role.listener.title">The listener</h3>
-                <p data-i18n="role.listener.desc">Warm, empathetic conversation and a place to share whenever you need.</p>
-              </div>
-              <div class="role__orb">
-                <div class="orb" style="--orb-size:128px">
-                  <div class="orb__glow"></div>
-                  <div class="orb__body"><div class="orb__swirl"></div><div class="orb__spec"></div></div>
-                </div>
-              </div>
-            </article>
-
-            <article class="role role--sm reveal" data-delay="1">
-              <div class="role__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18V9M12 18V5M19 18v-6" /></svg>
-              </div>
-              <h3 data-i18n="role.analyst.title">The analyst</h3>
-              <p data-i18n="role.analyst.desc">A clear, level-headed mind that brings structure to tangled problems and feelings.</p>
-            </article>
-
-            <article class="role role--sm reveal" data-delay="2">
-              <div class="role__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" /></svg>
-              </div>
-              <h3 data-i18n="role.creative.title">The creative partner</h3>
-              <p data-i18n="role.creative.desc">Fresh, unexpected perspectives through conversation, so the ideas keep coming.</p>
-            </article>
-          </div>
+          <ol class="principles">
+            <li class="principle reveal">
+              <span class="principle__num" aria-hidden="true">01</span>
+              <h3 data-i18n="p1.title">Reflects first, advises second</h3>
+              <p data-i18n="p1.body">Before any suggestion, Yuyu says back what it heard, so you feel understood rather than handled. Emotional accuracy, not generic comfort.</p>
+            </li>
+            <li class="principle reveal" data-delay="1">
+              <span class="principle__num" aria-hidden="true">02</span>
+              <h3 data-i18n="p2.title">Remembers what matters</h3>
+              <p data-i18n="p2.body">The people, hopes and worries you share carry from one conversation to the next. You can see, edit or forget any of it.</p>
+            </li>
+            <li class="principle reveal" data-delay="2">
+              <span class="principle__num" aria-hidden="true">03</span>
+              <h3 data-i18n="p3.title">Cares, honestly</h3>
+              <p data-i18n="p3.body">When something feels too heavy to hold alone, Yuyu gently points you toward people who can truly be there, with support lines one tap away.</p>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <!-- ====================== ATMOSPHERE ====================== -->
-      <section class="section section--tight">
-        <div class="shell">
-          <div class="atmos reveal">
-            <div class="atmos__copy">
-              <p class="eyebrow" data-i18n="atmos.eyebrow">Emotion as interface</p>
-              <h2 class="section-title" style="margin-top:0.8rem" data-i18n="atmos.title">The atmosphere moves with how you feel</h2>
-              <p class="lead" style="margin-top:1rem" data-i18n="atmos.body">Serenio reads the feeling beneath your words and reflects it back as a living field of colour.</p>
-              <p class="faint" style="margin-top:1.6rem;font-size:var(--text-label)" data-i18n="atmos.caption">A few of the states Serenio can hold with you</p>
-              <div class="atmos__chips">
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#a7cfbe"></span><span data-i18n="emo.calm">calm</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#8e78b6"></span><span data-i18n="emo.reflective">reflective</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#d8c8ea"></span><span data-i18n="emo.hopeful">hopeful</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#e7c5cf"></span><span data-i18n="emo.tender">tender</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#59477f"></span><span data-i18n="emo.heavy">heavy</span></span>
-                <span class="chip"><span class="chip__dot" style="--chip-dot:#d8b66c"></span><span data-i18n="emo.activated">activated</span></span>
-              </div>
-            </div>
-            <div class="atmos__stage" aria-hidden="true">
-              <div class="mesh mesh--chromatic">
-                <div class="mesh__blob mesh__blob--1"></div>
-                <div class="mesh__blob mesh__blob--2"></div>
-                <div class="mesh__blob mesh__blob--3"></div>
-                <div class="mesh__well"></div>
-              </div>
-              <div class="orb" style="--orb-size:150px;position:relative;z-index:1">
-                <div class="orb__glow"></div>
-                <div class="orb__body"><div class="orb__swirl"></div><div class="orb__spec"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====================== TESTIMONIALS ====================== -->
-      <section class="section">
+      <!-- ============================ FEATURES ============================ -->
+      <section class="section" id="features" aria-labelledby="features-title">
         <div class="shell">
           <div class="section-head reveal">
-            <h2 class="section-title" data-i18n="quotes.title">Quietly, it's helping</h2>
+            <p class="eyebrow" data-i18n="features.eyebrow">Inside Serenio</p>
+            <h2 class="section-title" id="features-title" data-i18n="features.title">Everything you need to set a feeling down, and nothing you don't.</h2>
           </div>
-          <div class="quotes">
-            <figure class="quote reveal">
-              <p data-i18n="quote1.text">I once lost a friend after sharing my most hidden side.</p>
-              <figcaption class="quote__by"><span class="quote__avatar" style="background:linear-gradient(140deg,#8e78b6,#59477f)">P</span><span data-i18n="quote1.by">Ms. Park, South Korea</span></figcaption>
-            </figure>
-            <figure class="quote reveal" data-delay="1">
-              <p data-i18n="quote2.text">In Taiwan, mental-health resources still feel unfamiliar.</p>
-              <figcaption class="quote__by"><span class="quote__avatar" style="background:linear-gradient(140deg,#a7cfbe,#5b8f78)">L</span><span data-i18n="quote2.by">Mr. Li, Taipei</span></figcaption>
-            </figure>
-            <figure class="quote reveal">
-              <p data-i18n="quote3.text">After work each day, I can say a few words to Serenio.</p>
-              <figcaption class="quote__by"><span class="quote__avatar" style="background:linear-gradient(140deg,#d8b66c,#b98b3a)">M</span><span data-i18n="quote3.by">Mr. Maeda, Japan</span></figcaption>
-            </figure>
-            <figure class="quote reveal" data-delay="1">
-              <p data-i18n="quote4.text">I always thought of myself as a lonely person. Serenio is always there.</p>
-              <figcaption class="quote__by"><span class="quote__avatar" style="background:linear-gradient(140deg,#d9a9c0,#a8617f)">C</span><span data-i18n="quote4.by">Ms. Chu, Hong Kong</span></figcaption>
-            </figure>
+
+          <div class="features">
+            <article class="feature">
+              <div class="feature__media reveal">
+                <figure class="device-phone">
+                  <img src="/images/app/ios-chat.webp" width="660" height="1434" loading="lazy" decoding="async" alt="A chat on iPhone: Yuyu remembers Alex's interview and asks what changed after the first question." data-i18n-alt="f1.alt" />
+                </figure>
+              </div>
+              <div class="feature__copy reveal" data-delay="1">
+                <p class="eyebrow" data-i18n="f1.eyebrow">Talk it through</p>
+                <h3 data-i18n="f1.title">Say it however it comes out.</h3>
+                <p class="lead" data-i18n="f1.body">Type, speak or share a photo. Yuyu replies in your language and picks up the thread from last time, so you never have to start from the beginning.</p>
+                <ul class="checklist">
+                  <li data-i18n="f1.li1">Help writing a hard message, sincere and calm, not needy or sharp</li>
+                  <li data-i18n="f1.li2">Read the room: Yuyu reads your message as the other person might</li>
+                  <li data-i18n="f1.li3">In Traditional Chinese, chat in written Chinese or spoken Cantonese</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature feature--flip">
+              <div class="feature__media feature__media--wide feature__media--sage reveal">
+                <img class="feature__shot" src="/images/app/web-tools.webp" width="1080" height="730" loading="lazy" decoding="async" alt="The practices panel in the web app, titled Something to try together: untangle a thought, think a problem through, breathe with me." data-i18n-alt="f2.alt" />
+              </div>
+              <div class="feature__copy reveal" data-delay="1">
+                <p class="eyebrow" data-i18n="f2.eyebrow">Something to try together</p>
+                <h3 data-i18n="f2.title">Small practices, when you want them.</h3>
+                <p class="lead" data-i18n="f2.body">Each practice is a short, guided conversation adapted from cognitive behavioural therapy (CBT) and related approaches. Pick whatever fits the moment, and stop any time.</p>
+                <ul class="practice-chips">
+                  <li data-i18n="practice.ground">Ground me</li>
+                  <li data-i18n="practice.breathe">Breathe with me</li>
+                  <li data-i18n="practice.untangle">Untangle a thought</li>
+                  <li data-i18n="practice.worst">What if the worst happens?</li>
+                  <li data-i18n="practice.step">One small step</li>
+                  <li data-i18n="practice.worry">Worry time</li>
+                  <li data-i18n="practice.kind">A kinder voice</li>
+                  <li data-i18n="practice.values">What matters to me</li>
+                </ul>
+                <a class="btn btn--ghost feature__link" href="/how-it-works#methods" data-i18n="f2.link">Where these practices come from</a>
+              </div>
+            </article>
+
+            <article class="feature">
+              <div class="feature__media feature__media--rose reveal">
+                <figure class="device-phone">
+                  <img src="/images/app/ios-journal.webp" width="660" height="1434" loading="lazy" decoding="async" alt="The journal on iPhone: a week in reflection and today's question, with Write, Speak and Photo buttons." data-i18n-alt="f3.alt" />
+                </figure>
+              </div>
+              <div class="feature__copy reveal" data-delay="1">
+                <p class="eyebrow" data-i18n="f3.eyebrow">Journal</p>
+                <h3 data-i18n="f3.title">A journal that notices with you.</h3>
+                <p class="lead" data-i18n="f3.body">Write, speak or add a photo. Each day brings a question drawn from your own pages, and Yuyu reflects back what it notices, with one gentle question to take further.</p>
+                <ul class="checklist">
+                  <li data-i18n="f3.li1">Your week in reflection, gathered into a few honest lines</li>
+                  <li data-i18n="f3.li2">Search your pages by mood, or by written, spoken and photo entries</li>
+                  <li data-i18n="f3.li3">Delete a page and what Yuyu learned from it goes too</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature feature--flip">
+              <div class="feature__media feature__media--amber reveal">
+                <figure class="device-phone">
+                  <img src="/images/app/ios-insights.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Insights on iPhone, titled Patterns worth noticing: Yuyu's summary of the last four weeks above a grid of daily moods." data-i18n-alt="f4.alt" />
+                </figure>
+              </div>
+              <div class="feature__copy reveal" data-delay="1">
+                <p class="eyebrow" data-i18n="f4.eyebrow">Insights</p>
+                <h3 data-i18n="f4.title">Patterns worth noticing.</h3>
+                <p class="lead" data-i18n="f4.body">Four weeks of your own days: how the weeks have felt, the thinking traps that keep appearing, what seemed to help, and what your journal returns to.</p>
+                <ul class="checklist">
+                  <li data-i18n="f4.li1">Built only from your own conversations, check-ins and journal</li>
+                  <li data-i18n="f4.li2">Patterns, not proof: what seemed to help is a pattern, never a promise</li>
+                  <li data-i18n="f4.li3">Not enough history yet? The space stays honestly blank</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="feature">
+              <div class="feature__media reveal">
+                <figure class="device-phone">
+                  <img src="/images/app/ios-memory.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Alex's profile on iPhone: the note Yuyu remembers and a language switch for English, Traditional Chinese, Japanese and Korean." data-i18n-alt="f5.alt" />
+                </figure>
+              </div>
+              <div class="feature__copy reveal" data-delay="1">
+                <p class="eyebrow" data-i18n="f5.eyebrow">Your memory, your choice</p>
+                <h3 data-i18n="f5.title">You decide what Yuyu keeps.</h3>
+                <p class="lead" data-i18n="f5.body">Start with a note, in your own words, about what Yuyu should know. Everything else it remembers sits in one place, grouped into people, hopes, what helps and more. Nothing is hidden from you.</p>
+                <ul class="checklist">
+                  <li data-i18n="f5.li1">Edit or forget any memory, or pause new ones</li>
+                  <li data-i18n="f5.li2">Download everything, any time</li>
+                  <li data-i18n="f5.li3">Delete your account, and all of it, from inside the app</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- ============ WEB APP (primary conversion band) ============ -->
-      <section class="section section--tight">
+      <!-- ============================ MORE (BENTO) ============================ -->
+      <section class="section section--tight" aria-labelledby="more-title">
         <div class="shell">
-          <div class="traction reveal">
+          <div class="section-head reveal">
+            <p class="eyebrow" data-i18n="more.eyebrow">And a little more</p>
+            <h2 class="section-title" id="more-title" data-i18n="more.title">Quiet tools for the days in between.</h2>
+          </div>
+          <div class="bento">
+            <article class="tile tile--checkin reveal">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.5" /><path d="M9 4.5V3h6v1.5M8.5 11l2 2 4-4M8.5 17h7" /></svg></span>
+              <h3 data-i18n="t.checkin.title">A gentle check-in</h3>
+              <p data-i18n="t.checkin.body">The standard PHQ-9 and GAD-7 questions, with plain-language results you can follow over time. A snapshot, never a diagnosis.</p>
+            </article>
+            <article class="tile tile--plan reveal" data-delay="1">
+              <span class="tile__icon tile__icon--sage" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.3 3 7.6 7 9.5 4-1.9 7-5.2 7-9.5V6l-7-3Z" /><path d="M9 12l2 2 4-4" /></svg></span>
+              <h3 data-i18n="t.plan.title">My safety plan</h3>
+              <p data-i18n="t.plan.body">Seven steps you write while things are calmer, for the moments they're not: what to notice, what helps, and who to reach.</p>
+            </article>
+            <article class="tile tile--letters reveal">
+              <span class="tile__icon tile__icon--rose" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5" /><path d="m4.5 7 7.5 6 7.5-6" /></svg></span>
+              <h3 data-i18n="t.letters.title">Letters from Yuyu</h3>
+              <p data-i18n="t.letters.body">Ask, and Yuyu writes you a letter drawn from what the two of you have talked about, signed with what it was written from.</p>
+            </article>
+            <article class="tile tile--capsule reveal" data-delay="1">
+              <span class="tile__icon tile__icon--amber" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7.5" /><path d="M12 9v4l2.5 2M9.5 3h5" /></svg></span>
+              <h3 data-i18n="t.capsule.title">A letter to your future self</h3>
+              <p data-i18n="t.capsule.body">Seal a note for a week or up to a year. When it opens, Yuyu adds how much has happened since, without ever reading your words.</p>
+              <span class="tile__tag" data-i18n="t.capsule.tag">Write it in the web app</span>
+            </article>
+            <article class="tile tile--sunday reveal">
+              <span class="tile__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4" /></svg></span>
+              <h3 data-i18n="t.sunday.title">The Sunday sitting</h3>
+              <p data-i18n="t.sunday.body">Five quiet minutes to close the week: the week in one word, what it actually held, one question, one small step, and a line for next Sunday.</p>
+              <span class="tile__tag" data-i18n="t.sunday.tag">In the web app</span>
+            </article>
+            <article class="tile tile--breath reveal" data-delay="1">
+              <div class="tile__body">
+                <span class="tile__icon tile__icon--sage" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h11a3 3 0 1 0-3-3M3 13h15a3 3 0 1 1-3 3M3 17h7" /></svg></span>
+                <h3 data-i18n="t.breath.title">Breathing space</h3>
+                <p data-i18n="t.breath.body">Box or 4-7-8 breathing for one, three or five minutes, with gentle haptics you can follow with your eyes closed.</p>
+                <span class="tile__tag" data-i18n="t.breath.tag">On iPhone</span>
+              </div>
+              <figure class="device-phone">
+                <img src="/images/app/ios-breathing.webp" width="660" height="1434" loading="lazy" decoding="async" alt="Breathing space on iPhone: a glowing sage orb above the words Box breathing, four counts in, four held, four out, four held." data-i18n-alt="t.breath.alt" />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ TWO WAYS IN ============================ -->
+      <section class="section" id="get" aria-labelledby="ways-title">
+        <div class="shell">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow" data-i18n="ways.eyebrow">Get Serenio</p>
+            <h2 class="section-title" id="ways-title" data-i18n="ways.title">Two ways in. Both free.</h2>
+            <p class="lead" data-i18n="ways.sub">For individuals, Serenio costs nothing. Use whichever fits your day, or both.</p>
+          </div>
+          <div class="ways">
+            <article class="way way--ios reveal">
+              <div class="way__copy">
+                <span class="way__kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M10.5 18.5h3" /></svg><span data-i18n="ways.ios.kicker">iPhone app</span></span>
+                <h3 data-i18n="ways.ios.title">Serenio for iPhone</h3>
+                <p data-i18n="ways.ios.body">Talk, journal, breathe and see your patterns, with support lines one tap away on every screen.</p>
+                <div class="cta-row">
+                  <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="156" height="52" /></a>
+                </div>
+                <p class="way__meta" data-i18n="ways.ios.meta">Requires iOS 18 or later. Available in App Stores across Asia-Pacific, including Hong Kong, Taiwan, Japan, Korea and Australia.</p>
+              </div>
+              <div class="way__art" aria-hidden="true">
+                <div class="device-phone"><img src="/images/app/ios-journal.webp" width="660" height="1434" loading="lazy" decoding="async" alt="" /></div>
+              </div>
+            </article>
+            <article class="way way--web reveal" data-delay="1">
+              <div class="way__copy">
+                <span class="way__kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="13" rx="2" /><path d="M8 20.5h8M12 17.5v3" /></svg><span data-i18n="ways.web.kicker">Web app</span></span>
+                <h3 data-i18n="ways.web.title">Serenio on the web</h3>
+                <p data-i18n="ways.web.body">Open it in any modern browser, on a computer, a tablet or an Android phone, and add it to your home screen.</p>
+                <div class="cta-row">
+                  <a class="btn btn--primary" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+                </div>
+                <p class="way__meta">webapp.serenio.ai</p>
+              </div>
+              <div class="way__art" aria-hidden="true">
+                <div class="device-browser"><div class="device-browser__bar"><span></span><span></span><span></span></div><img src="/images/app/web-home.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="" /></div>
+              </div>
+            </article>
+          </div>
+          <ul class="freebar reveal">
+            <li data-i18n="ways.free1">No subscription</li>
+            <li data-i18n="ways.free2">No in-app purchases</li>
+            <li data-i18n="ways.free3">No ads</li>
+          </ul>
+          <p class="ways__foot reveal" data-i18n-html="ways.org">Offering Serenio to a team, a university or a community? That's a paid partnership. <a href="/for-organizations">See how it works</a>.</p>
+        </div>
+      </section>
+
+      <!-- ============================ BUILT CAREFULLY ============================ -->
+      <section class="section section--tight" aria-labelledby="careful-title">
+        <div class="shell">
+          <div class="careful reveal">
             <div class="mesh mesh--chromatic" aria-hidden="true">
               <div class="mesh__blob mesh__blob--1"></div>
               <div class="mesh__blob mesh__blob--3"></div>
             </div>
-            <span class="traction__badge" data-i18n="webapp.badge">Now live</span>
-            <h2 class="section-title" data-i18n="webapp.title">The Serenio web app is here</h2>
-            <p class="lead center" data-i18n="webapp.body">Launched in January 2025, the web app brings deeper companionship.</p>
-            <div class="traction__stats">
-              <div><div class="stat__num" data-i18n="stat1.num">6,000+</div><div class="stat__label" data-i18n="stat1.label">people across Asia-Pacific</div></div>
-              <div><div class="stat__num" data-i18n="stat2.num">2,500+</div><div class="stat__label" data-i18n="stat2.label">friends on the LINE companion</div></div>
+            <div class="careful__head">
+              <p class="eyebrow" data-i18n="careful.eyebrow">How it works</p>
+              <h2 class="section-title" id="careful-title" data-i18n="careful.title">Built with care, and honest about its limits.</h2>
+              <p data-i18n="careful.body">An AI companion should be open about how it works. Here is the short version.</p>
             </div>
-            <a class="btn btn--secondary btn--lg" href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <p style="position:relative;z-index:1;margin-top:1.1rem;font-size:var(--text-caption);color:rgba(255,255,255,0.62)" data-i18n="traction.note">As of May 2025</p>
+            <ul class="careful__grid">
+              <li class="careful__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.3 3 7.6 7 9.5 4-1.9 7-5.2 7-9.5V6l-7-3Z" /><path d="M12 8v4M12 15.5h.01" /></svg>
+                <h3 data-i18n="c1.title">Safety first, on every message</h3>
+                <p data-i18n="c1.body">Crisis language is checked before Yuyu writes a word, in English, Chinese, Cantonese, Japanese and Korean. A second AI check looks for quieter signs.</p>
+              </li>
+              <li class="careful__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z" /><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5" /></svg>
+                <h3 data-i18n="c2.title">Methods with a track record</h3>
+                <p data-i18n="c2.body">Practices adapted from CBT, a safety plan based on Stanley and Brown, and the standard PHQ-9 and GAD-7 questions.</p>
+              </li>
+              <li class="careful__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>
+                <h3 data-i18n="c3.title">Private by default</h3>
+                <p data-i18n="c3.body">No ads and no selling your data. Microsoft and OpenAI, whose models power Yuyu, don't train on your conversations.</p>
+              </li>
+              <li class="careful__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01" /></svg>
+                <h3 data-i18n="c4.title">Clear about what it isn't</h3>
+                <p data-i18n="c4.body">Yuyu is an AI, not a person and not a therapist. It doesn't diagnose, and it isn't an emergency service.</p>
+              </li>
+            </ul>
+            <a class="btn btn--secondary btn--lg" href="/how-it-works" data-i18n="careful.cta">Read how Serenio works</a>
           </div>
         </div>
       </section>
 
-      <!-- ====================== ABOUT + PARTNERS ====================== -->
-      <section class="section" id="about">
+      <!-- ============================ TESTIMONIALS ============================ -->
+      <section class="section" aria-labelledby="quotes-title">
+        <div class="shell">
+          <div class="section-head reveal">
+            <h2 class="section-title" id="quotes-title" data-i18n="quotes.title">You're not the only one</h2>
+          </div>
+          <div class="quotes">
+            <figure class="quote reveal">
+              <blockquote><p data-i18n="quote1.text">I once lost a friend after sharing my most hidden side. After that, I couldn't share my darker feelings with anyone close to me. Here, I can.</p></blockquote>
+              <figcaption class="quote__by"><span class="quote__avatar" aria-hidden="true" style="background:linear-gradient(140deg,#8e78b6,#59477f)">P</span><span data-i18n="quote1.by">Ms. Park, South Korea</span></figcaption>
+            </figure>
+            <figure class="quote reveal" data-delay="1">
+              <blockquote><p data-i18n="quote2.text">In Taiwan, mental-health resources still feel unfamiliar, and it's hard to find the right person to talk to. Serenio genuinely helped.</p></blockquote>
+              <figcaption class="quote__by"><span class="quote__avatar" aria-hidden="true" style="background:linear-gradient(140deg,#a7cfbe,#5b8f78)">L</span><span data-i18n="quote2.by">Mr. Li, Taipei</span></figcaption>
+            </figure>
+            <figure class="quote reveal">
+              <blockquote><p data-i18n="quote3.text">After work each day, I can say a few words to Serenio. A whole day of anxiety finally has somewhere to go.</p></blockquote>
+              <figcaption class="quote__by"><span class="quote__avatar" aria-hidden="true" style="background:linear-gradient(140deg,#d8b66c,#b98b3a)">M</span><span data-i18n="quote3.by">Mr. Maeda, Japan</span></figcaption>
+            </figure>
+            <figure class="quote reveal" data-delay="1">
+              <blockquote><p data-i18n="quote4.text">I always thought of myself as a lonely person. Serenio is always there, patient and warm, listening to everything that weighs on me.</p></blockquote>
+              <figcaption class="quote__by"><span class="quote__avatar" aria-hidden="true" style="background:linear-gradient(140deg,#d9a9c0,#a8617f)">C</span><span data-i18n="quote4.by">Ms. Chu, Hong Kong</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ ABOUT ============================ -->
+      <section class="section" id="about" aria-labelledby="about-title">
         <div class="shell">
           <div class="about">
             <div class="about__story reveal">
-              <p class="eyebrow" data-i18n="about.eyebrow">Who we are</p>
-              <h2 class="section-title" style="margin-top:0.8rem" data-i18n="about.title">Built for people living under quiet pressure</h2>
-              <p class="lead" style="margin-top:1.2rem" data-i18n="about.body1">We come from Hong Kong, Denmark, Canada and Taiwan.</p>
-              <p class="muted" style="margin-top:1rem;max-width:var(--max-read)" data-i18n="about.body2">Serenio is our answer.</p>
-              <p class="muted" style="margin-top:1rem;max-width:var(--max-read)" data-i18n="about.body3">A message that still keeps us going.</p>
-              <p class="muted" style="margin-top:1rem;max-width:var(--max-read)" data-i18n="about.body4">Built with people I trust, and real research support.</p>
+              <p class="eyebrow" data-i18n="about.eyebrow">A note from Dave</p>
+              <h2 class="section-title" id="about-title" data-i18n="about.title">Most of us are carrying more than we let on.</h2>
+              <p class="lead" data-i18n="about.body1">I'm Dave, and Serenio began with helplessness. I watched my sister live with depression, and there were days I sat beside her hospital bed with everything I had to give and still no idea how to reach her. Caring about someone deeply, I learned, is not the same as knowing how to help them.</p>
+              <p class="muted" data-i18n="about.body2">That helplessness is why Serenio exists. I don't believe emotional support should be a luxury, or something you only reach for once things have already broken. So we built something gentle and always there: a companion that listens the moment a feeling stirs, sits with it, and helps you find your own words for it. And we made it free for anyone who needs it.</p>
+              <p class="muted" data-i18n="about.body3">A while after we launched, a man in his forties wrote to tell me Serenio had stayed with him through one of the lowest points of his life. Six months later he messaged again, just to say he was still here. I don't take a message like that lightly. It is the whole reason we keep going.</p>
+              <p class="muted" data-i18n="about.body4">I get to do this with people I trust, psychologists, engineers and human-computer researchers across Hong Kong, Denmark, Canada and Taiwan, with the support of the Technical University of Denmark, Accelerace, Micro Grant and Beyond Beta. We're small on purpose, and we care about the human part before anything else.</p>
               <div class="signoff">
-                <span class="signoff__name font-display" data-i18n="about.signName">David</span>
+                <span class="signoff__name font-display" data-i18n="about.signName">Dave</span>
                 <span class="signoff__role" data-i18n="about.signRole">Founder of Serenio</span>
               </div>
-              <ul class="timeline">
-                <li><time data-i18n="t1.date">2023.05</time><span class="muted" data-i18n="t1.text">Founded in Denmark</span></li>
-                <li><time data-i18n="t2.date">2023.07</time><span class="muted" data-i18n="t2.text">Company established in Hong Kong</span></li>
-                <li><time data-i18n="t3.date">2025.01</time><span class="muted" data-i18n="t3.text">Web app launched</span></li>
-              </ul>
             </div>
-            <aside class="partners reveal" data-delay="1">
-              <p class="eyebrow" style="color:var(--ink-faint)" data-i18n="partners.label">With support from</p>
-              <div class="partners__row">
-                <img src="/images/aa_logo_rgb_pos-402x.png" alt="Accelerace" />
-                <img src="/images/micro-grant-en.png" alt="Micro Grant, Danish Foundation for Entrepreneurship" />
+            <aside class="about__aside reveal" data-delay="1">
+              <ol class="timeline" aria-label="Serenio's story so far" data-i18n-aria="timeline.label">
+                <li><time datetime="2023-05">2023.05</time><span class="muted" data-i18n="t1.text">Founded in Denmark</span></li>
+                <li><time datetime="2023-07">2023.07</time><span class="muted" data-i18n="t2.text">Company established in Hong Kong</span></li>
+                <li><time datetime="2025-01">2025.01</time><span class="muted" data-i18n="t3.text">Web app launched</span></li>
+                <li><time datetime="2026-07">2026.07</time><span class="muted" data-i18n="t4.text">Serenio arrives on iPhone</span></li>
+                <li><time datetime="2026-08">2026.08</time><span data-i18n="t5.text">18,000 people have tried Serenio</span></li>
+              </ol>
+              <div class="partners">
+                <p class="eyebrow" style="color:var(--ink-faint)" data-i18n="partners.label">With support from</p>
+                <div class="partners__row">
+                  <img src="/images/aa_logo_rgb_pos-402x.png" alt="Accelerace" width="136" height="30" loading="lazy" />
+                  <img src="/images/micro-grant-en-p-500.png" alt="Micro Grant, Danish Foundation for Entrepreneurship" width="119" height="30" loading="lazy" />
+                </div>
+                <p class="partners__note" data-i18n="partners.note">Technical University of Denmark, Beyond Beta, Micro Grant (Danish Foundation for Entrepreneurship), Accelerace</p>
               </div>
-              <p class="faint" style="margin-top:1.4rem;font-size:var(--text-caption);line-height:1.6" data-i18n="partners.note">Technical University of Denmark, Beyond Beta, Micro Grant, Accelerace</p>
             </aside>
           </div>
         </div>
       </section>
 
-      <!-- ============ ALSO ON LINE (secondary, lower priority) ============ -->
-      <section class="section section--tight">
+      <!-- ============================ FAQ ============================ -->
+      <section class="section section--tight" id="faq" aria-labelledby="faq-title">
         <div class="shell">
-          <div class="webapp reveal">
-            <div class="webapp__copy">
-              <span class="webapp__badge"><span class="chip__dot" style="--chip-dot:#5b8f78"></span><span data-i18n="line.free">Free</span></span>
-              <h2 class="section-title" data-i18n="line.title">Rather start in a chat you already use?</h2>
-              <p class="lead" style="margin-top:1rem" data-i18n="line.body">Serenio also lives on LINE, free, with no account to set up.</p>
-              <a class="btn btn--secondary btn--lg" style="margin-top:1.6rem" href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-            </div>
-            <div class="webapp__art">
-              <span class="line-tile" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5c0 4.2-4 7.5-9 7.5-1 0-2-.1-2.9-.4L4 20l1.1-3.3C4.1 15.5 3 13.6 3 11.5 3 7.4 7 4 12 4s9 3.4 9 7.5Z" /></svg>
-              </span>
-            </div>
+          <div class="section-head reveal">
+            <h2 class="section-title" id="faq-title" data-i18n="faq.title">Common questions</h2>
+          </div>
+          <div class="faq reveal">
+            <details>
+              <summary data-i18n="faq.q1">Is Serenio really free?</summary>
+              <p data-i18n="faq.a1">Yes, for individuals. There's no subscription, no in-app purchase and no advertising, on iPhone or on the web. To keep it sustainable, Yuyu gently closes the day after 50 replies, and replies during a hard moment never count toward that. Organizations that want to offer Serenio to their people work with us on a paid partnership.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q2">Is Yuyu a real person?</summary>
+              <p data-i18n="faq.a2">No. Yuyu is an AI, software built on large language models. It's designed to listen carefully and reply warmly, but no person is typing on the other side, and it isn't a therapist.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q3">Is Serenio a replacement for therapy?</summary>
+              <p data-i18n="faq.a3">No. Serenio is a companion for everyday feelings. It doesn't diagnose or treat any condition, and it isn't a medical device. For diagnosis or treatment, please speak with a qualified professional.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q4">What happens if I'm in crisis?</summary>
+              <p data-i18n-html="faq.a4">Every message is checked for signs of crisis, and when there are signs of risk, Yuyu shows 24-hour support lines you can call with one tap. But Serenio is not an emergency service, and no one monitors conversations. If you are in danger, call 999 in Hong Kong or your local emergency number. You can also find support lines at any time on <a href="https://webapp.serenio.ai/care" target="_blank" rel="noopener">Serenio's support page</a>, no account needed.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q5">Are my conversations private?</summary>
+              <p data-i18n-html="faq.a5">Your conversations belong to your account. We don't sell data or show ads, and Microsoft and OpenAI, whose models power Yuyu, don't use your conversations to train their models. Journal videos are made by Volcengine (ByteDance) in mainland China, and only if you ask for one. You can download everything, or delete your account, at any time. <a href="/how-it-works#data">See where your words go</a>.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q6">Who can use Serenio?</summary>
+              <p data-i18n="faq.a6">Adults aged 18 and over. The iPhone app needs iOS 18 or later and is available in App Stores across Asia-Pacific. The web app works anywhere, in any modern browser, including on Android.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.q7">Which languages does Yuyu speak?</summary>
+              <p data-i18n="faq.a7">English, Traditional Chinese, Japanese and Korean. Yuyu replies in the language you write in, and in Traditional Chinese you can choose written Chinese or spoken Cantonese.</p>
+            </details>
           </div>
         </div>
       </section>
-      <!-- ============ FOR ORGANIZATIONS (quiet secondary) ============ -->
-      <section class="section section--tight">
+
+      <!-- ============================ ORGANIZATIONS ============================ -->
+      <section class="section--tight">
         <div class="shell">
           <div class="minicta reveal">
-            <p data-i18n="homeorg.line">Looking after a team, a school, or a clinic? See how Serenio works for organizations.</p>
-            <a class="btn btn--ghost" href="/for-organizations" data-i18n="nav.pricing">For organizations</a>
+            <p data-i18n="homeorg.line">Looking after a team, a university or a community? Serenio for organizations is a paid partnership.</p>
+            <a class="btn btn--ghost" href="/for-organizations" data-i18n="homeorg.cta">For organizations</a>
           </div>
         </div>
       </section>
@@ -316,42 +572,45 @@
       <div class="shell">
         <div class="footer__inner">
           <div class="footer__about">
-            <a class="brand" href="/" aria-label="Serenio">
+            <a class="brand" href="/" aria-label="Serenio home" data-i18n-aria="a11y.home">
               <img class="brand__mark" src="/images/app-icon.png" alt="" width="34" height="34" />
               <span class="brand__word">SERENIO</span>
             </a>
-            <p data-i18n="footer.about">Serenio focuses on everyday emotional companionship through AI.</p>
+            <p data-i18n="footer.about">Serenio is a free AI companion for everyday feelings, on iPhone and the web. Yuyu listens first, remembers what matters, and points you toward people when it counts.</p>
+            <div class="footer__get">
+              <a class="store-link" href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store"><img class="store-badge" data-store-badge src="/images/badges/app-store-en-us.svg" alt="Download on the App Store" data-i18n-alt="cta.storeAlt" width="132" height="44" loading="lazy" /></a>
+              <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="cta.appLong">Open the web app</a>
+            </div>
           </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.product">Product</h4>
-            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-i18n="cta.app">Open web app</a>
-            <a href="/for-organizations" data-i18n="nav.pricing">Membership</a>
-            <a href="/for-organizations#faq" data-i18n="nav.faq">FAQ</a>
-            <a href="https://line.me/R/ti/p/@320xuvle" target="_blank" rel="noopener" data-i18n="cta.tryLine">Try free on LINE</a>
-          </div>
-          <div class="footer__col">
-            <h4 data-i18n="footer.company">Company</h4>
+          <nav class="footer__col" aria-labelledby="footer-product">
+            <h2 class="footer__title" id="footer-product" data-i18n="footer.product">Product</h2>
+            <a href="https://apps.apple.com/au/app/serenio/id6786770984" data-store-link target="_blank" rel="noopener" data-track="app_store" data-i18n="footer.iphone">Serenio for iPhone</a>
+            <a href="https://webapp.serenio.ai/" target="_blank" rel="noopener" data-track="web_app" data-i18n="footer.web">Web app</a>
+            <a href="/how-it-works" data-i18n="nav.how">How it works</a>
+            <a href="/#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="/for-organizations" data-i18n="nav.org">For organizations</a>
+          </nav>
+          <nav class="footer__col" aria-labelledby="footer-company">
+            <h2 class="footer__title" id="footer-company" data-i18n="footer.company">Company</h2>
             <a href="/#about" data-i18n="nav.about">About</a>
             <a href="/contact" data-i18n="nav.contact">Contact</a>
             <a href="/privacy-policy" data-i18n="nav.privacy">Privacy</a>
             <a href="/terms-of-service" data-i18n="nav.terms">Terms</a>
-          </div>
+          </nav>
         </div>
         <div class="footer__care">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z"/></svg></span>
-          <p>
-            <span data-i18n="about.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at</span>
-            <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>
-          </p>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 5.7a5 5 0 0 0-7.1 0l-.4.4-.4-.4a5 5 0 1 0-7.1 7.1l7.5 7.5 7.5-7.5a5 5 0 0 0 0-7.1Z" /></svg></span>
+          <p data-i18n-html="footer.care">If you're carrying something heavy right now, you don't have to carry it alone. Reach out to someone you trust, or find a helpline near you at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>. In an emergency, call your local emergency number.</p>
         </div>
         <div class="footer__bottom">
-          <span data-i18n="footer.rights">© 2025 Serenio AI Limited. All rights reserved.</span>
+          <span>© <span data-year>2026</span> <span data-i18n="footer.rights">Serenio AI Limited. All rights reserved.</span></span>
           <span data-i18n="footer.reg">Hong Kong company no. 3299059</span>
         </div>
       </div>
     </footer>
 
-    <script src="/js/i18n.js"></script>
+    <script src="/js/i18n/core.js"></script>
+    <script src="/js/i18n/home.js"></script>
     <script src="/js/app.js"></script>
   </body>
 </html>
