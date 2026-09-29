@@ -5,7 +5,7 @@
   "zh-Hant": {
     "meta.title.404": "找不到頁面 · Serenio",
     "nf.title": "這一頁走失了。",
-    "nf.body": "連結可能已經過時，或頁面已經搬走。讓我們帶你到一個安靜一點的地方。",
+    "nf.body": "連結可能舊了，或者頁面搬走了。我們帶你去一個安靜點的地方吧。",
     "nf.home": "回到 Serenio",
     "nf.care": "此刻需要支援？<a href=\"https://webapp.serenio.ai/care\" style=\"color:var(--plum);font-weight:600;text-decoration:underline\">找一條支援熱線</a>。",
   },
