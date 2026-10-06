@@ -59,6 +59,9 @@
     "footer.care": "如果你此刻心裡很重，不必一個人扛。找一個你信任的人談談，或到 <a href=\"https://findahelpline.com\" target=\"_blank\" rel=\"noopener\">findahelpline.com</a> 找你附近的求助熱線。如遇緊急情況，請致電當地的緊急電話。",
     "footer.rights": "思癒科技有限公司　保留一切權利。",
     "footer.reg": "香港公司註冊編號 3299059",
+    "footer.businessAddress": "營業地址：",
+    "footer.businessRegistration": "商業登記號碼：",
+    "footer.duns": "D-U-N-S 編號：",
 
     "form.name.label": "你的名字",
     "form.name.ph": "我們可以怎樣稱呼你？",
@@ -119,6 +122,9 @@
     "footer.care": "もし今、重いものを抱えているなら、ひとりで抱えなくて大丈夫です。信頼できる誰かに話すか、<a href=\"https://findahelpline.com\" target=\"_blank\" rel=\"noopener\">findahelpline.com</a> でお近くの相談窓口を探してください。緊急のときは、地域の緊急通報番号へ。",
     "footer.rights": "Serenio AI Limited. All rights reserved.",
     "footer.reg": "香港会社番号 3299059",
+    "footer.businessAddress": "事業所所在地：",
+    "footer.businessRegistration": "事業登録番号：",
+    "footer.duns": "D-U-N-S番号：",
 
     "form.name.label": "お名前",
     "form.name.ph": "なんとお呼びすればよいですか？",
@@ -179,6 +185,9 @@
     "footer.care": "지금 마음이 많이 무겁다면, 혼자 견디지 않아도 돼요. 믿을 만한 사람에게 연락하거나 <a href=\"https://findahelpline.com\" target=\"_blank\" rel=\"noopener\">findahelpline.com</a>에서 가까운 상담 전화를 찾아보세요. 긴급한 상황이라면 지역 긴급 전화로 연락하세요.",
     "footer.rights": "Serenio AI Limited. All rights reserved.",
     "footer.reg": "홍콩 법인번호 3299059",
+    "footer.businessAddress": "사업장 주소:",
+    "footer.businessRegistration": "사업자 등록번호:",
+    "footer.duns": "D-U-N-S 번호:",
 
     "form.name.label": "이름",
     "form.name.ph": "어떻게 불러 드릴까요?",
